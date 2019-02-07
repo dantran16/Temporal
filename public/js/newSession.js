@@ -13,3 +13,7 @@ function initializePage() {
 function newSession(){
 	location.replace(location.href+"newSession");
 }
+
+function homePage(){
+	location.replace(location.href);
+}
