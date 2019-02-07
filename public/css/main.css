@@ -44,7 +44,24 @@
 
 	color: #000000;
  }
+.container-header h3 {
+	/* ON GOING SESSIONS */
 
+	position: absolute;
+	width: 198px;
+	height: 22px;
+	left: 31px;
+	top: 196px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	color: #000000;
+}
 #Chem-6A {
 	position: absolute;
 	width: 358px;
@@ -52,7 +69,10 @@
 	left: 28px;
 	top: 28px;
 
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25);
+	background: #C4C4C4;
+border-radius: 5px;
 } 
 
 #Workout {
@@ -62,7 +82,10 @@
 	left: 28px;
 	top: 100px;
 
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25); 
+	background: #C4C4C4;
+border-radius: 5px;
 }
 
 #Study {
@@ -72,9 +95,36 @@
 	left: 28px;
 	top: 175px;
 
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25);
+	background: #C4C4C4;
+border-radius: 5px;
 }
+#Chores {
+	position: absolute;
+	width: 358px;
+	height: 55px;
+	left: 28px;
+	top: 250px;
 
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25);
+	background: #C4C4C4;
+border-radius: 5px;
+font-family: 'Rubik', sans-serif;
+}
+#Study2 {
+	position: absolute;
+	width: 358px;
+	height: 55px;
+	left: 28px;
+	top: 325px;
+
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25);
+	background: #C4C4C4;
+border-radius: 5px;
+}
  #Favorites {
  	/* Favorites */
 
@@ -83,6 +133,16 @@
 			height: 72px;
 			left: 278px;
 			top: 95px;
+			font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 12px;
+text-align: center;
+letter-spacing: 0.08em;
+color: #FFFFFF;
+background: #6D6D6D;
+
  } 
 
  #Calendar {
@@ -91,8 +151,19 @@
 	height: 72px;
 	left: 36px;
 	top: 95px;
-
+	
+	background: #6D6D6D;
+	border-radius: 14px;
 	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
+
+	font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 12px;
+text-align: center;
+letter-spacing: 0.08em;
+color: #FFFFFF;
  }
  #Goals {
  	position: absolute;
@@ -100,6 +171,17 @@
 	height: 72px;
 	left: 157px;
 	top: 95px;
+	background: #6D6D6D;
+border-radius: 14px;
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 12px;
+text-align: center;
+letter-spacing: 0.08em;
+
+color: #FFFFFF;
 
 	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
  }
@@ -111,7 +193,8 @@
 	width: 177px;
 	height: 43px;
 	left: 118px;
-	top: 662px;
+	top: 662px; 
+	text-align: center;
 
 	background: #6D6D6D;
 	border-radius: 100px;
