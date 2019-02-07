@@ -1,15 +1,40 @@
+<!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>New Task</title>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/main-theme.css" rel="stylesheet">
+		<script src="js/introHCI.js"></script>
 </head>
 <body>
-	<div class="pageHeader"> 
-		<h1>New Task</h1>
+	<div class='background'>
+		<div class="container-header">
+			<img src="svg/back-btn.svg" alt="BACK" id='btn-back'>
+			<h1>New Session</h1>
+			<img src="svg/about.svg" alt='INFO' id='btn-info'>
+			<h2>Edit Name...</h2>
+		</div>
 
-			<p> Edit Name... </p> 
+		<div class='btn-task-item'>
+			<a href="/newTask" id="task-item-text" role="button"> + New Task </a>
+		</div>
+
+		<div class='btn-check'>
+			<img src="svg/check.svg" alt="DONE" id='btn-check'>
+			<a href="/done" id="task-item-text" role="button"> </a>
+		</div>
+
+		<div class='container-options'>
+			<img src="svg/back-btn.svg" alt="BACK" id='btn-option-arrow'>
+			<a id='session-option-txt'> Session Options </a>
+		</div>
 	</div>
 
-	<div class=
-
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
