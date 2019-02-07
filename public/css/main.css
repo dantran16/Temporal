@@ -111,7 +111,10 @@
 	width: 177px;
 	height: 43px;
 	left: 118px;
-	top: 600px;
+	top: 662px;
+
+	background: #6D6D6D;
+	border-radius: 100px;
  }
 
  #button-deets{ 
@@ -122,9 +125,10 @@
 	font-size: 18px;
 	letter-spacing: 0.05em;
 
-	color: black;
-	left: 128px;
-	top: 672px;
+	display: inline-block;
+	margin-top: 11px;
+
+	color: white;
  }
 
  /* ----------------** JOHNNYS EDITS **----------------- */
@@ -132,7 +136,7 @@
 .background {
 	position: absolute;
 	width: 414px;
-	height: 716px;
+	height: 736px;
 	left: 0px;
 	top: 0px;
 
