@@ -213,6 +213,51 @@ color: #FFFFFF;
 
 	color: white;
  }
+ /*------chemSession----*/
+ .Assignment-1{
+ 	position: absolute;
+left: 5.59%;
+right: 49.72%;
+top: 0%;
+bottom: 0%;
+
+font-family: Rubik;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 22px;
+letter-spacing: 0.03em;
+
+color: #000000;
+
+} 
+#Line{
+	position: absolute;
+left: 0%;
+right: 97.77%;
+top: 40.74%;
+bottom: 40.74%;
+
+opacity: 0.5;
+border: 1px solid #000000;
+}
+#star{
+	position: absolute;
+left: 89.11%;
+right: 5.03%;
+top: 85.19%;
+bottom: -62.96%;
+
+transform: rotate(-180deg);
+}
+#edit{
+	position: absolute;
+left: 94.13%;
+right: 0%;
+top: 7.41%;
+bottom: 15.21%;
+}
+
 
  /* ----------------** JOHNNYS EDITS **----------------- */
 
