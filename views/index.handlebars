@@ -1,40 +1,56 @@
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>Final Project</title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/main-theme.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
 </head>
 <body>
-	<div class='background'>
+	<div class="screen-container">
 		<div class="container-header"> 
-			<img src="svg/back-btn.svg" alt="BACK" id='btn-back'>
+			<img src="svg/menu.svg" alt="BACK" id='btn-menu'>
 			<h1> Dashboard </h1>
+			<img src="svg/about.svg" alt='INFO' id='btn-info'>
 			<div class="row" id="row">  
 				<button class="btn btn-default" id="Calendar"> Calendar </button>
 				<button class="btn btn-default" id="Goals"> Goals </button>
 				<button class="btn btn-default" id = "Favorites"> Favorites </button>
 			</div>
-			<ul class="list-group" id="Sessions">
-				<h3>On Going Sessions<h3>
-				<li class="list-group-item" id="Chem-6A"> Chem 6A Study </button>
-				<li class="list-group-item" id="Workout"> Workout </button>
-				<li class="list-group-item" id="Study"> Study </button>
-				<li class="list-group-item" id="Chores"> Chores </button>
-				<li class="list-group-item" id="Study2"> Study Math </button>
-			</ul>
-			<div class="new-session">
-			<a onclick="newSession()" id="button-deets" role="button"> + New Session </a>
+		</div>
+		
+		<div class="onGoingSessions">
+			<h1>ON GOING SESSION</h1>
+			<div class="onGoingSessions-box">
+				<div class="onGoingSessions-tabs">
+						<div class="col-xs-9">
+							<ul class="list-group" id="Sessions">
+								<li class="list-group-item" id="Chem-6A"> 
+									<button id="session-btn-deets">Chem 6A Study</button>
+								</li>
+								<!--
+								<li class="list-group-item" id="Workout"> Workout </button>
+								<li class="list-group-item" id="Study"> Study </button>
+								<li class="list-group-item" id="Chores"> Chores </button>
+								<li class="list-group-item" id="Study2"> Study Math </button>
+								-->
+							</ul>
+						</div>
+				</div>
 			</div>
 		</div>
+
+		<div class="container-footer">
+			<button onclick="newSession()" class="btn add-new" id="button-deets"> + New Session </button>
+		</div>
 	</div>
+
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (blelow), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/newSession.js"></script>
+
 </body>
 </html>

@@ -1,80 +1,6 @@
- button,
 
- .container {
- 	/* Dashboard1 */
-	position: relative;
-	width: 414px;
-	height: 736px;
 
-	background: #FFFFFF;
-	backdrop-filter: blur(4px);/* Note: backdrop-filter has minimal browser support */
- } 
- .container h1 {
- 	/* Dashboard Title Text*/
-
-	position: absolute;
-	width: 151px;
-	height: 25px;
-	left: 65px;
-	top: 45px;
-
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: 300;
-	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-
-	color: #000000;
- } 
-
- .container h2 {
- 	position: absolute;
-	width: 198px;
-	height: 22px;
-	left: 31px;
-	top: 185px;
-
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: bold;
-	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-
-	color: #000000;
- }
-.container-header h3 {
-	/* ON GOING SESSIONS */
-
-	position: absolute;
-	width: 198px;
-	height: 22px;
-	left: 31px;
-	top: 196px;
-
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: bold;
-	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-
-	color: #000000;
-}
-#Chem-6A {
-	position: absolute;
-	width: 358px;
-	height: 55px;
-	left: 28px;
-	top: 28px;
-
-	box-shadow: 0px 2px 4px 
-	rgba(0, 0, 0, 0.25);
-	background: #C4C4C4;
-border-radius: 5px;
-} 
-
+/*
 #Workout {
 	position: absolute;
 	width: 358px;
@@ -85,7 +11,7 @@ border-radius: 5px;
 	box-shadow: 0px 2px 4px 
 	rgba(0, 0, 0, 0.25); 
 	background: #C4C4C4;
-border-radius: 5px;
+	border-radius: 5px;
 }
 
 #Study {
@@ -98,7 +24,7 @@ border-radius: 5px;
 	box-shadow: 0px 2px 4px 
 	rgba(0, 0, 0, 0.25);
 	background: #C4C4C4;
-border-radius: 5px;
+	border-radius: 5px;
 }
 #Chores {
 	position: absolute;
@@ -110,8 +36,8 @@ border-radius: 5px;
 	box-shadow: 0px 2px 4px 
 	rgba(0, 0, 0, 0.25);
 	background: #C4C4C4;
-border-radius: 5px;
-font-family: 'Rubik', sans-serif;
+	border-radius: 5px;
+	font-family: 'Rubik', sans-serif;
 }
 #Study2 {
 	position: absolute;
@@ -123,100 +49,15 @@ font-family: 'Rubik', sans-serif;
 	box-shadow: 0px 2px 4px 
 	rgba(0, 0, 0, 0.25);
 	background: #C4C4C4;
-border-radius: 5px;
+	border-radius: 5px;
 }
- #Favorites {
- 	/* Favorites */
+*/
 
-			position: absolute;
-			width: 100px;
-			height: 72px;
-			left: 278px;
-			top: 95px;
-			font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 12px;
-text-align: center;
-letter-spacing: 0.08em;
-color: #FFFFFF;
-background: #6D6D6D;
 
- } 
 
- #Calendar {
- 	position: absolute;
-	width: 100px;
-	height: 72px;
-	left: 36px;
-	top: 95px;
-	
-	background: #6D6D6D;
-	border-radius: 14px;
-	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
+/* ------------[Container Start]------------ */
 
-	font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 12px;
-text-align: center;
-letter-spacing: 0.08em;
-color: #FFFFFF;
- }
- #Goals {
- 	position: absolute;
-	width: 100px;
-	height: 72px;
-	left: 157px;
-	top: 95px;
-	background: #6D6D6D;
-border-radius: 14px;
-font-family: Rubik;
-font-style: normal;
-font-weight: normal;
-line-height: normal;
-font-size: 12px;
-text-align: center;
-letter-spacing: 0.08em;
-
-color: #FFFFFF;
-
-	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
- }
-
- .new-session {
- 	/* + Button */
-
-	position: absolute;
-	width: 177px;
-	height: 43px;
-	left: 118px;
-	top: 662px; 
-	text-align: center;
-
-	background: #6D6D6D;
-	border-radius: 100px;
- }
-
- #button-deets{ 
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-
-	display: inline-block;
-	margin-top: 11px;
-
-	color: white;
- }
-
- /* ----------------** JOHNNYS EDITS **----------------- */
-
-.background {
+.screen-container {
 	position: absolute;
 	width: 414px;
 	height: 736px;
@@ -241,11 +82,11 @@ color: #FFFFFF;
 	width: 151px;
 	height: 25px;
 	left: 66px;
-	top: 12px;
+	top: 8px;
 
 	font-family: Rubik;
 	font-style: normal;
-	font-weight: 450;
+	font-weight: 500;
 	line-height: normal;
 	font-size: 18px;
 	letter-spacing: 0.05em;
@@ -274,6 +115,196 @@ color: #FFFFFF;
 	opacity: 0.4;
 }
 
+.container-footer {
+	position: absolute;
+	width: 414px;
+	height: 51px;
+	left: 0px;
+	top: 685px;
+
+	background-color: #AEAEAE;
+}
+
+.onGoingSessions {
+	position: absolute;
+	width: 414px;
+	height: 540px;
+	left: 0px;
+	top: 155px;
+}
+
+.onGoingSessions h1 {
+	/* ON GOING SESSIONS */
+
+	position: absolute;
+	width: 198px;
+	height: 22px;
+	left: 28px;
+	top: 0px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	color: #000000;
+}
+
+.onGoingSessions-tabs {
+	position: absolute;
+	width: 414px;
+	height: 500px;
+	left: 0px;
+	top: 18px;
+}
+
+.onGoingSessions-box {
+	position: absolute;
+	width: 414px;
+	height: 482px;
+	left: 0px;
+	top: 70px;
+
+	background: #DFDFDF;
+}
+
+/* ------------[Container End]------------ */
+
+
+
+/* ------------[Specific Box Styling Start]------------ */
+
+#Favorites {
+ 	/* Favorites */
+
+	position: absolute;
+	width: 100px;
+	height: 72px;
+	left: 278px;
+	top: 75px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 0.08em;
+	color: #FFFFFF;
+
+	background: #6D6D6D;
+	border-radius: 14px;
+	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
+
+ } 
+
+ #Calendar {
+ 	position: absolute;
+	width: 100px;
+	height: 72px;
+	left: 36px;
+	top: 75px;
+	
+	background: #6D6D6D;
+	border-radius: 14px;
+	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 0.08em;
+	color: #FFFFFF;
+ }
+
+ #Goals {
+ 	position: absolute;
+	width: 100px;
+	height: 72px;
+	left: 157px;
+	top: 75px;
+
+	background: #6D6D6D;
+	border-radius: 14px;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 0.08em;
+
+	color: #FFFFFF;
+
+	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
+ }
+
+ #Chem-6A {
+	position: absolute;
+	width: 358px;
+	height: 55px;
+	left: 28px;
+	top: 0px;
+
+	box-shadow: 0px 2px 4px 
+	rgba(0, 0, 0, 0.25);
+	background: #FFFFFF;
+	border-radius: 5px;
+}
+
+ .add-new {
+ 	/* + Button */
+
+	position: absolute;
+	width: 177px;
+	height: 43px;
+	left: 118px;
+	top: 0px; 
+	text-align: center;
+
+	background: #6D6D6D;
+	border-radius: 100px;
+ }
+
+ #button-deets{ 
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	display: inline-block;
+	margin-top: 11px;
+
+	color: white;
+ }
+
+ #session-btn-deets {
+ 	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+	color: #000000;
+
+	display: inline-block;
+	margin-top: 1.5px;
+ }
+
+#btn-menu {
+	position: absolute;
+	width: 25.05px;
+	height: 16.85px;
+	left: 21px;
+	top: 30px;
+}
+
 #btn-back {
 	/* Chevron Right */
 
@@ -281,7 +312,7 @@ color: #FFFFFF;
 	width: 11px;
 	height: 19px;
 	left: 28px;
-	top: 33px;
+	top: 29px;
 
 	mix-blend-mode: normal;
 	opacity: 0.54;
@@ -292,7 +323,7 @@ color: #FFFFFF;
 	width: 13px;
 	height: 13px;
 	left: 192px;
-	top: 37px;
+	top: 33px;
 
 	opacity: 0.7;
 }
@@ -402,3 +433,43 @@ color: #FFFFFF;
 
 	color: #000000;
  }
+
+ @import "compass/css3";
+
+* {box-sizing: border-box;}
+
+body {
+  padding: 20px;
+}
+
+#Sessions {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  
+  border: 2px solid #ccc;
+  
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  
+  -webkit-overflow-scrolling: touch;
+}
+
+li {
+  padding: 10px 20px;
+  
+  border-bottom: 1px solid #ccc;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:nth-child(even) {
+    background: #f8f8f8;
+  }
+}
