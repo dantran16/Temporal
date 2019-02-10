@@ -31,12 +31,23 @@
           box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
+/**---------------------------[Custom Classes]---------------------------- **/
+
+.btn-session {
+
+}
+
+
+
+/**---------------------------[End Custom Classes]---------------------------- **/
+
+
 .btn:active,
 .btn.active {
   background-image: none;
 }
 
-.btn-default {
+.btn-defa t {
   text-shadow: 0 1px 0 #fff;
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
   background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
