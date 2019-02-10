@@ -19,12 +19,22 @@
 			<h1> New Session </h1>
 			<img src="svg/about.svg" alt='INFO' id='btn-info'>
 			<h2>Edit Name...</h2>
-		</div>
+		
+</div>
 
-		<div class='btn-task-item'>
-			<a href="/newTask" id="task-item-text" role="button"> + New Task </a>
-		</div>
 
+<a id="task-item-text" role="button" onclick="openForm()"> + New Task </a>
+<div class="new-task-popup" id="newTask">
+
+	<form action="views/newTask.handlebars" class="newTaskContainer">
+		<h2> New Task </h2>
+		<label for="Enter Name"><b>Email</b></label>
+<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+	</form>
+</div>
+
+<!--end attemot-->
 		<div class='btn-check'>
 			<img src="svg/check.svg" alt="DONE" id='btn-check'>
 			<a href="/done" id="task-item-text" role="button"> </a>
@@ -34,6 +44,7 @@
 			<img src="svg/back-btn.svg" alt="BACK" id='btn-option-arrow'>
 			<a id='session-option-txt'> Session Options </a>
 		</div>
+
 	</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>

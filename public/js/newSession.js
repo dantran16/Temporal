@@ -16,4 +16,11 @@ function newSession(){
 
 function homePage(){
 	location.replace(location.href);
+} 
+function openForm() {
+  document.getElementById("newTask").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("newTask").style.display = "none";
 }

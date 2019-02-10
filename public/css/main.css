@@ -1,3 +1,18 @@
+/* The popup form - hidden by default */
+.new-task-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+} 
+/* Add styles to the form container */
+.newTaskContainer {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
 
 
 /*
