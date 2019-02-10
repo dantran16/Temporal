@@ -12,7 +12,7 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 var newSession = require('./routes/newSession');
-var chemSession = require('./routes/chemSession');
+var newTask = require('./routes/newTask');
 
 var app = express();
 
@@ -40,7 +40,7 @@ app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
 app.get('/newSession', newSession.view);
-app.get('/chemSession', chemSession.view);
+app.get('/newTask', newTask.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
