@@ -7,6 +7,8 @@ input[type=text] {
   background-color: #C4C4C4;
 }
 
+
+
 #edit-name {
 	position: absolute;
 	width: 100%;
@@ -38,15 +40,37 @@ input[type=text] {
   padding: 10px;
   background-color: white;
 }
-#task-item-box{
+
+/* Container for task list */
+.task-item-box{
 	position: absolute;
 	width: 108px;
 	height: 30px;
 	left: 39px;
-	top: 337px;
+	top: 148px;
 
 	background: #C4C4C4;
 	border-radius: 100px;
+}
+
+#task-item-text {
+	/* + Task Item */
+
+	position: center;
+	display: inline-block;
+	margin-top: 6px;
+	margin-left: 9px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 15px;
+	letter-spacing: 0.05em;
+
+	color: #000000;
+
+	opacity: 0.6;
 }
 
 /*
@@ -438,24 +462,6 @@ bottom: 15.21%;
 	border-radius: 100px;
 }
 
-#task-item-text {
-	/* + Task Item */
-
-	position: center;
-	display: inline-block;
-	margin-top: 6px;
-
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: normal;
-	line-height: normal;
-	font-size: 15px;
-	letter-spacing: 0.05em;
-
-	color: #000000;
-
-	opacity: 0.6;
-}
 
 .btn-check {
  	/* Finish/Check Button */
@@ -535,8 +541,8 @@ bottom: 15.21%;
 * {box-sizing: border-box;}
 
 body {
-  padding: 20px;
-  justify-content: center;
+	padding: 20px;
+	justify-content: center;
 }
 
 html {

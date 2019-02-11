@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<div class='main'>
+	<div class='screen-container'>
 		<div class="container-header">
 			<a href="../">
 				<img src="svg/back-btn.svg" alt="BACK" id='btn-back'>
@@ -25,27 +25,26 @@
 			</div>
 	</div>
 
-<!--new task pop up-->
-<div id="task-item-box">
-<a id="task-item-text" role="button" onclick="openForm()"> + New Task </a>
-</div>
-<div class="new-task-popup" id="newTask">
-	<form action="views/newTask.handlebars" class="newTaskContainer">
-		<h2> New Task </h2>
-		<label for="Enter Name"><b>Task Name</b></label>
-		<input type="text" placeholder="Enter Name" name="email" required>
+	<!--new task pop up-->
+	<div class="task-item-box">
+		<a id="task-item-text" role="button" onclick="openForm()"> + New Task </a>
+	</div>
 
-		<label for="time"><b>How long will it take?</b></label>
-    	<input type="time" placeholder="Enter Time" name="time" required>
+	<div class="new-task-popup" id="newTask">
+		<form action="views/newTask.handlebars" class="newTaskContainer">
+			<h2> New Task </h2>
+			<label for="Enter Name"><b>Task Name</b></label>
+			<input type="text" placeholder="Enter Name" name="email" required>
 
-    	<label for="date"><b> Finish By:</b></label>
-    	<input type="date" placeholder="Pick Date" name="date" required>
-		<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			<label for="time"><b>How long will it take?</b></label>
+	    	<input type="time" placeholder="Enter Time" name="time" required>
 
-
-	</form>
-</div>
-<!--end new task pop up-->
+	    	<label for="date"><b> Finish By:</b></label>
+	    	<input type="date" placeholder="Pick Date" name="date" required>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</div>
+	<!--end new task pop up-->
 
 		<div class='btn-check'>
 			<img src="svg/check.svg" alt="DONE" id='btn-check'>
