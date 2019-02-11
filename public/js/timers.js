@@ -2,6 +2,7 @@
 var timer = false;
 var time;
 var counter = 100;
+var timestring = "";
 
 
 function start(){
@@ -13,9 +14,12 @@ function start(){
 
 function countdown(){
 	document.getElementById("time").value = stringtimer(counter);
+	timestring = stringTimer(counter);
 	counter--;
 	time = setTimeout("countdown();", 1000);
-	
+	if(time==0){
+		stop();
+	}
 }
 
 function stop(){
