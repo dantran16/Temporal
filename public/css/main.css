@@ -1,3 +1,28 @@
+
+input[type=text] {
+  width: 75%;
+  margin: 8px 0;
+  box-sizing: border-box;
+  padding-left: 0%;
+  background-color: #C4C4C4;
+}
+
+#edit-name {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 63px;
+	top: 60px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 28px;
+	letter-spacing: 0.02em;
+}
+
+
 /* The popup form - hidden by default */
 .new-task-popup {
   display: none;
@@ -15,13 +40,13 @@
 }
 #task-item-box{
 	position: absolute;
-width: 108px;
-height: 30px;
-left: 39px;
-top: 337px;
+	width: 108px;
+	height: 30px;
+	left: 39px;
+	top: 337px;
 
-background: #C4C4C4;
-border-radius: 100px;
+	background: #C4C4C4;
+	border-radius: 100px;
 }
 
 /*
