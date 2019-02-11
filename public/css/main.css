@@ -13,7 +13,16 @@
   padding: 10px;
   background-color: white;
 }
+#task-item-box{
+	position: absolute;
+width: 108px;
+height: 30px;
+left: 39px;
+top: 337px;
 
+background: #C4C4C4;
+border-radius: 100px;
+}
 
 /*
 #Workout {
