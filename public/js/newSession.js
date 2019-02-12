@@ -25,3 +25,25 @@ function openForm() {
 function closeForm() {
   document.getElementById("newTask").style.display = "none";
 }
+
+function openOptions() {
+  document.getElementById("container-options-open").style.display = "block";
+}
+
+function closeOptions() {
+  document.getElementById("container-options-open").style.display = "none";
+}
+
+function openOptions_2() {
+  document.getElementById("container-options-open").style.top = "685px";
+}
+
+/*
+$('.container-options img').on('click', function() {
+    $(this).toggleClass('clicked');
+});
+
+function openOptions() {
+  document.getElementById("container-options").style.height = "75px";
+}
+*/
