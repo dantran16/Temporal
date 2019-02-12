@@ -1,0 +1,16 @@
+{
+	"tasks": [
+		{
+			"name": "Do Homework",
+			"time": "02:00:00"	
+		},
+		{
+			"name": "Do readings",
+			"time": "02:00:00"
+		},
+		{
+			"name": "Work on practice midterm",
+			"time": "02:00:00"
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"sessions": [
+		{
+			"name": "Chem 6A Study",
+			"time": "06:00:00"	
+		},
+		{
+			"name": "Workout",
+			"time": "01:00:00"
+		},
+		{
+			"name": "Study",
+			"time": "02:00:00"
+		},
+		{
+			"name": "Chores",
+			"time": "00:30:00"
+		},
+		{
+			"name": "Study Math",
+			"time": "03:00:00"
+		}
+	]
+}
