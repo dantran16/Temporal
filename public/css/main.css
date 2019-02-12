@@ -1,4 +1,54 @@
 
+
+/*START NEW TASK CARD CSS*/
+
+
+/* Add a red background color to the cancel button */
+.newTaskCard .btn-cancel {
+  background-color: red;
+  color: white;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  /*border: none;*/
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* When the inputs get focus, do something */
+.newTaskCard input[type=text]:focus, .newTaskCard input[type=time]:focus, .newTaskCard input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.newTaskCard .btn-save {
+  background-color: #6FCF97;
+  color: white;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  border-radius: 100px;
+  /*border: none;*/
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Full-width input fields */
+.newTaskCard input[type=text], .newTaskCard input[type=time], .newTaskCard input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #C4C4C4; 
+  box-sizing: border-box;
+
+  
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    border-bottom: transparent !important;
+}
+
 input[type=text] {
 	width: 75%;
 	margin: 8px 0;
@@ -28,16 +78,6 @@ input[type=text] {
 	letter-spacing: 0.02em;
 }
 
-
-/* The popup form - hidden by default */
-.new-task-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-} 
 /* Add styles to the form container */
 .newTaskContainer {
   max-width: 300px;
@@ -52,6 +92,7 @@ input[type=text] {
 	width: 414px; /* 386px */
 	height: 508px;
 	bottom: -20px;
+	border: 3px solid #f1f1f1;
 
 	background: #9C9C9C;
 	box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.25);
@@ -71,7 +112,7 @@ input[type=text] {
 .newTaskCard newTaskCard.clicked {
 	margin-top: 100px;
 }
-
+/*END NEW TASK CARD CSS*/
 
 /*
 #Workout {
