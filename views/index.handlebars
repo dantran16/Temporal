@@ -26,12 +26,10 @@
 			<div class="onGoingSessions-box">
 				<div class="onGoingSessions-tabs">
 						<ul class="list-group" id="Sessions">
-							<!-- template, you can style it later and make sure to use {each} to loop -->
-							<li class="list-group-item" >Chem 6A Study</li>
-							<li class="list-group-item" >Workout</li>
-							<li class="list-group-item" >Study</li>
-							<li class="list-group-item" >Chores</li>
-							<li class="list-group-item" >Study Math</li>
+							<!-- accesses sessions and access all the variables -->
+							{{#each sessions}}
+								<li class="friends" id="{{id}}"> {{name}} </li>
+							{{/each}}
 						</ul>
 				</div>
 			</div>
