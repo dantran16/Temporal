@@ -17,6 +17,7 @@ function newSession(){
 function homePage(){
 	location.replace(location.href);
 } 
+
 function openForm() {
   document.getElementById("newTask").style.display = "block";
 }
