@@ -9,33 +9,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
 </head>
-<body>
+<body> 
+	
 	<div class="screen-container">
 		<div class="container-header">
 		
 <!--HAMBURGER MENU--> 
-	<div class="topnav">
-			<!--<img src="svg/menu.svg" alt="BACK" id='btn-menu'>-->
-			<div id="myLinks">
-				<a href=#newSession>Session</a>
-				<a href=#Settings>Settings</a>
-			</div>
-			<a href="javascript:void(0);" class="icon" onclick="myMenu()">
-    	<i class="fa fa-bars"></i>
-  		</a>
-  	</div>
-  		<h1> Dashboard </h1>
-			<img src="svg/about.svg" alt='INFO' id='btn-info'>
-	</div>
-<!--HAMBURGER MENU END-->
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Settings</a>
+  <a href="#">Notifications</a>
+  <a href="#">Account</a>
+  <a href="#">About</a>
+</div>  
+<button onclick="openNav()">Open</button>
 
-	
-			<div class="row" id="row">  
+<!--HAMBURGER MENU END-->
+		</div>
+		<div class="row" id="row">  
 				<button class="btn btn-default" id="Calendar"> Calendar </button>
 				<button class="btn btn-default" id="Goals"> Goals </button>
 				<button class="btn btn-default" id = "Favorites"> Favorites </button>
 			</div>
-		</div>
 		
 		<div class="onGoingSessions">
 			<h1>ON GOING SESSION</h1>
@@ -55,6 +50,7 @@
 			<button onclick="newSession()" class="btn new-session" id="button-deets"> + New Session </button>
 		</div>
 	</div>
+
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (blelow), or include individual files as needed -->
