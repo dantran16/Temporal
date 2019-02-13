@@ -1,5 +1,4 @@
 
-
 /*
  * GET session page.
  */

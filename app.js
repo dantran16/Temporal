@@ -12,8 +12,10 @@ var index = require('./routes/index');
 // Example route
 // var user = require('./routes/user');
 var newSession = require('./routes/newSession');
-var newTask = require('./routes/newTask');
 var session = require('./routes/session');
+var calendar = require('./routes/calendar');
+var goals = require('./routes/goals');
+var favorites = require('./routes/favorites');
 
 var app = express();
 
@@ -41,8 +43,10 @@ app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
 app.get('/newSession', newSession.view);
-app.get('/newTask', newTask.view);
 app.get('/session/:name', session.view);
+app.get('/goals', goals.view);
+app.get('/favorites', favorites.view);
+app.get('/calendar', calendar.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

@@ -53,7 +53,15 @@ function openOptions() {
 function closeOptions() {
   document.getElementById("optionsOpen").style.display = "none";
 }
-
+function openCalendar(){
+	location.replace(location.href+"calendar");
+}
+function openGoals(){
+	location.replace(location.href+"goals");
+}
+function openFavorites(){
+	location.replace(location.href+"favorites");
+}
 
 /*
 $('.container-options img').on('click', function() {
