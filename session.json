@@ -6,17 +6,14 @@
 			"tasks": 
 				[
 					{
-						"id": 1,
 						"name": "Do Homework",
 						"time": "02:00:00"
 					},
 					{
-						"id": 2,
 						"name": "Do readings",
 						"time": "02:00:00"
 					},
 					{
-						"id": 3,
 						"name": "Work on practice midterm",
 						"time": "02:00:00"	
 					}
@@ -28,12 +25,10 @@
 			"tasks": 
 				[
 					{
-						"id": 1,
 						"name": "Weights",
 						"time": "00:30:00"
 					},
 					{
-						"id": 2,
 						"name": "Running",
 						"time": "00:30:00"
 					}
@@ -45,12 +40,10 @@
 			"tasks": 
 				[
 					{
-						"id": 1,
 						"name": "Do Homework",
 						"time": "01:00:00"
 					},
 					{
-						"id": 2,
 						"name": "Do readings",
 						"time": "01:00:00"
 					}
@@ -62,12 +55,10 @@
 			"tasks": 
 				[
 					{
-						"id": 1,
 						"name": "Do dishes",
 						"time": "00:15:00"
 					},
 					{
-						"id": 2,
 						"name": "Laundry",
 						"time": "00:15:00"
 					}
