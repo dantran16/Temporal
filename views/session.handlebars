@@ -25,12 +25,21 @@
 			</div>
 		</div>
 
-		<div class="add-task-text">
-			<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
 
-		</div>
+		<ul class="list-group" id="Sessions">
+			<!-- accesses sessions and access all the variables -->
+			{{#each tasks}}
+				<li class="sessions" id="{{id}}">{{name}} </li>
+			{{/each}}
+				<li>
+					<div class="add-task-text">
+					<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
+					</div>
+				</li>
+		</ul>
+		
 
-<!--new task pop up-->
+		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
 			<form action="views/newTask.handlebars">
 				<h2>New Task</h2>
