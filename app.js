@@ -42,7 +42,7 @@ app.get('/', index.view);
 // app.get('/users', user.list);
 app.get('/newSession', newSession.view);
 app.get('/newTask', newTask.view);
-app.get('/session', session.view);
+app.get('/session/:name', session.view);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
