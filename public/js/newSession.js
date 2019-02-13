@@ -6,6 +6,14 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
+ function myMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 function initializePage() {
 	console.log("Javascript connected!");
 }

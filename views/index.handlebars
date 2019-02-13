@@ -5,15 +5,31 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 	<link href="/css/main-theme.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
 </head>
 <body>
 	<div class="screen-container">
-		<div class="container-header"> 
-			<img src="svg/menu.svg" alt="BACK" id='btn-menu'>
-			<h1> Dashboard </h1>
+		<div class="container-header">
+		
+<!--HAMBURGER MENU--> 
+	<div class="topnav">
+			<!--<img src="svg/menu.svg" alt="BACK" id='btn-menu'>-->
+			<div id="myLinks">
+				<a href=#newSession>Session</a>
+				<a href=#Settings>Settings</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myMenu()">
+    	<i class="fa fa-bars"></i>
+  		</a>
+  	</div>
+  		<h1> Dashboard </h1>
 			<img src="svg/about.svg" alt='INFO' id='btn-info'>
+	</div>
+<!--HAMBURGER MENU END-->
+
+	
 			<div class="row" id="row">  
 				<button class="btn btn-default" id="Calendar"> Calendar </button>
 				<button class="btn btn-default" id="Goals"> Goals </button>
