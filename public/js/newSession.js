@@ -20,6 +20,14 @@ function closeNav() {
 }
 function initializePage() {
 	console.log("Javascript connected!");
+	
+	//function to make sessions click
+	$(".sessions").click(function(e){
+		e.preventDefault();
+		var string = $(this).text();
+		console.log(string);
+		location.replace(location.href+"session/"+string);
+	});
 }
 
 function newSession(){

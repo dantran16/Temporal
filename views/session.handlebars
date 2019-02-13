@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{name}}</title>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/main-theme.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
+
+</head>
+<body>
+	<div class='screen-container'>
+		<div class="container-header">
+			<a href="../">
+				<img src="svg/back-btn.svg" alt="BACK" id='btn-back'>
+			</a>
+			<h1> New Session </h1>
+			<img src="svg/about.svg" alt='INFO' id='btn-info'>
+
+			<div id="edit-name">
+				<form action="/action_page.php">
+    			<input type="text" id="fname" name="firstname" placeholder="EDIT NAME ...">
+			</div>
+		</div>
+
+		<div class="add-task-text">
+			<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
+
+		</div>
+
+<!--new task pop up-->
+		<div class="newTaskCard" id="newTask">
+			<form action="views/newTask.handlebars">
+				<h2>New Task</h2>
+				<label for="Enter Name"><b>Task Name</b></label>
+				<input type="text" placeholder="Enter Name" name="email" required>
+
+				<label for="time"><b>How long will it take?</b></label>
+		    	<input type="time" placeholder="Enter Time" name="time" required>
+
+		    	<label for="date"><b>Finish By: </b></label>
+		    	<input type="date" placeholder="Pick Date" name="date" required>
+
+		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
+				<button type="submit" class="btn-save" onclick="closeForm()">Save</button> 
+
+			</form>
+		</div>
+<!--end new task pop up-->
+
+		<button class="btn btn-check"> <img src="svg/check.svg"> <a href="/done" id="task-item-text" role="button"> </a> </button>
+
+<!--
+		<div class="container-options" onclick="openOptions()"> 
+			<img src="svg/back-btn.svg" alt="BACK" id='option-arrow-up'></img>
+			<a id="session-option-txt">Session Options</a>
+		</div>
+-->
+		<div class="container-options" id="container-options-open"> 
+			<div class="container-options-open-top" onclick="openOptions_2()">
+				<img src="svg/back-btn.svg" alt="BACK" id="option-arrow-down"></img>
+				<a id="session-option-txt">Session Options</a>
+			</div>
+			<div class="container-options-open-lower">
+				<h2>Push Notifications</h2>
+				<button></button>
+				<h2>Voice Commands</h2>
+				<button></button>
+			</div>
+		</div>
+
+	</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/newSession.js"></script>
+<script src="js/timer.js"></script>
+</body>
+</html>
