@@ -1,6 +1,9 @@
 
 /*SESSION TASK LIST*/
-.list-group-session{
+li.session{
+	list-style-image: url(/svg/Line.svg);
+}
+ul.list-group-session{
 	position: absolute;
 	width: 358px;
 
