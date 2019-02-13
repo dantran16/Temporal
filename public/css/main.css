@@ -1,5 +1,26 @@
 
+/*SESSION TASK LIST*/
+.list-group-session{
+	position: absolute;
+	width: 358px;
 
+	top: 168px;
+	list-style-type: none; 
+
+	padding: 10px 20px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: inherit;
+	font-size: 22px;
+	letter-spacing: 0.03em;
+
+	color: #000000;
+}
+.list-group-session .session{
+	padding: 8px;
+}
 /*HAMBURGER MENU*/
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -56,7 +77,7 @@ top: 30px;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
+/*HAMBURGER MENU END*/
 
 /*START NEW TASK CARD CSS*/
 
@@ -745,7 +766,7 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-li {
+.list-group li{
   padding: 10px 20px;
   
   border-bottom: 1px solid #ccc;

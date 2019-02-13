@@ -16,7 +16,7 @@
 			<a href="../../">
 				<img src="../svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
-			<h1> ONGOING </h1>
+			
 			<img src="../svg/about.svg" alt='INFO' id='btn-info'>
 
 			<div id="edit-name">
@@ -26,10 +26,11 @@
 		</div>
 
 
-		<ul class="list-group" id="Sessions">
+
+		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 			{{#each tasks}}
-				<li class="sessions" id="{{id}}">{{name}} </li>
+				<img src= "/svg/check.svg"/><li class="session" id="{{id}}">{{name}} </li>
 			{{/each}}
 				<li>
 					<div class="add-task-text">
