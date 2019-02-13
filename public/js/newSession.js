@@ -47,16 +47,13 @@ function closeForm() {
 }
 
 function openOptions() {
-  document.getElementById("container-options-open").style.display = "block";
+  document.getElementById("optionsOpen").style.display = "block";
 }
 
 function closeOptions() {
-  document.getElementById("container-options-open").style.display = "none";
+  document.getElementById("optionsOpen").style.display = "none";
 }
 
-function openOptions_2() {
-  document.getElementById("container-options-open").style.top = "685px";
-}
 
 /*
 $('.container-options img').on('click', function() {
