@@ -13,6 +13,13 @@
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
+#line-home{
+position: absolute;
+width: 25.05px;
+height: 16.85px;
+left: 21px;
+top: 30px;
+}
 
 /* The navigation menu links */
 .sidenav a {
@@ -424,6 +431,7 @@ input[type=text] {
 	background: #FFFFFF;
 	border-radius: 5px;
 }
+
 
  .new-session {
  	/* + Button */
