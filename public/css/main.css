@@ -4,10 +4,10 @@ li.session{
 	list-style-image: url(/svg/Line.svg);
 }
 ul.list-group-session{
-	position: absolute;
+	position: fixed;
 	display: block;
- 	margin-right: auto;
- 	margin-left: auto;
+ 	margin-right: inherit;
+ 	margin-left: inherit;
 	width: 358px;
 
 	top: 168px;
@@ -26,6 +26,15 @@ ul.list-group-session{
 }
 .list-group-session .session{
 	padding: 8px;
+}
+.sessionTask-box {
+	position: absolute;
+	width: 414px;
+	height: 511px;
+	left: 0px;
+	top: 70px;
+
+	background: #DFDFDF;
 }
 /*HAMBURGER MENU*/
 .sidenav {
