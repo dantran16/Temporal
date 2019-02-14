@@ -26,6 +26,7 @@
 	
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
+				<li class="time" id="time">{{time}}</li>
 			{{#each tasks}}
 				<li class="session" id="{{id}}">{{name}} </li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
@@ -102,6 +103,6 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/newSession.js"></script>
-<script src="../js/timer.js"></script>
+<script src="../js/timers.js"></script>
 </body>
 </html>
