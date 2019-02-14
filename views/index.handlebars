@@ -42,9 +42,9 @@
 
 		</div>
 		<div class="row" id="row">  
-				<button onclick="openCalendar()" class="btn btn-default" id="Calendar"><img src="svg/Calendar.svg"/> Calendar </button>
-				<button onclick="openGoals()" class="btn btn-default" id="Goals"><img src="svg/goal.svg"/> Goals </button>
-				<button onclick="openFavorites()" class="btn btn-default" id = "Favorites"><img src="svg/Group.svg"/> Favorites </button>
+				<button onclick="openCalendar()" class="btn btn-default" id="Calendar"><img src="svg/Calendar.svg"/>Calendar</button>
+				<button onclick="openGoals()" class="btn btn-default" id="Goals"><img src="svg/goal.svg"/>Goals</button>
+				<button onclick="openFavorites()" class="btn btn-default" id="Favorites"><img src="svg/Group.svg"/>Favorites</button>
 			</div>
 		
 		<div class="onGoingSessions">
@@ -54,7 +54,7 @@
 						<ul class="list-group" id="Sessions">
 							<!-- accesses sessions and access all the variables -->
 							{{#each sessions}}
-								<li class="sessions" id="{{id}}">{{name}} </li>
+								<li class="sessions" id="{{id}}">{{name}}</li>
 							{{/each}}
 						</ul>
 				</div>
