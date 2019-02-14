@@ -48,10 +48,14 @@ function closeForm() {
 
 function openOptions() {
   document.getElementById("optionsOpen").style.display = "block";
+  document.getElementById("finishSession").style.bottom = "195px";
+
 }
 
 function closeOptions() {
   document.getElementById("optionsOpen").style.display = "none";
+  document.getElementById("finishSession").style.bottom = "75px";
+
 }
 function openCalendar(){
 	location.replace(location.href+"calendar");
