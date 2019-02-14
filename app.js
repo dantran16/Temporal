@@ -55,7 +55,6 @@ app.get('/calendar', calendar.view);
 app.get('/newSession/addtask', addtask.addtask);
 app.get('/session/:name/addtask', addtask.addtask);
 app.get('/login', login.view);
-app.get('/session/:name/addtask', addtask.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
