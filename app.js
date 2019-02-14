@@ -16,11 +16,11 @@ var session = require('./routes/session');
 var calendar = require('./routes/calendar');
 var goals = require('./routes/goals');
 var favorites = require('./routes/favorites');
-<<<<<<< HEAD
+
 var login = require('./routes/login');
-=======
+
 var addtask = require('./routes/addtask');
->>>>>>> 72eb4c0ffd69adf2b1c2d254b2dafaf1d80fc596
+
 
 var app = express();
 
