@@ -26,7 +26,7 @@ function initializePage() {
 		e.preventDefault();
 		var string = $(this).text();
 		console.log(string);
-		location.replace(location.href+"session/"+string);
+		location.replace("session/"+string);
 	});
 }
 
@@ -35,7 +35,7 @@ function newSession(){
 }
 
 function homePage(){
-	location.replace(location.href);
+	location.replace(location.href+"index");
 } 
 
 function openForm() {
