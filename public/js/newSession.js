@@ -31,7 +31,7 @@ function initializePage() {
 }
 
 function newSession(){
-	location.replace(location.href+"newSession");
+	location.replace("newSession");
 }
 
 function homePage(){
@@ -58,16 +58,16 @@ function closeOptions() {
 
 }
 function openCalendar(){
-	location.replace(location.href+"calendar");
+	location.replace("calendar");
 }
 function openGoals(){
-	location.replace(location.href+"goals");
+	location.replace("goals");
 }
 function openFavorites(){
-	location.replace(location.href+"favorites");
+	location.replace("favorites");
 }
 function goHome(){
-	location.replace(location.href+"../..")
+	location.replace("index")
 }
 
 /*

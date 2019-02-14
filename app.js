@@ -44,7 +44,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', login.view);
 // Example route
 // app.get('/users', user.list);
 app.get('/newSession', newSession.view);
@@ -54,7 +54,7 @@ app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/newSession/addtask', addtask.addtask);
 app.get('/session/:name/addtask', addtask.addtask);
-app.get('/login', login.view);
+app.get('/index', index.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
