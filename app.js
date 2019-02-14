@@ -20,6 +20,10 @@ var favorites = require('./routes/favorites');
 var login = require('./routes/login');
 
 var addtask = require('./routes/addtask');
+var settings = require('./routes/settings');
+var notifications = require('./routes/notifications');
+var account = require('./routes/account');
+var about = require('./routes/about');
 
 
 var app = express();
@@ -55,6 +59,11 @@ app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/newSession/addtask', addtask.addtask);
 app.get('/session/:name/addtask', addtask.addtask);
+
+app.get('/settings', settings.view); 
+app.get('/notifications', notifications.view);
+app.get('/account', account.view);
+app.get('/about', about.view);
 
 
 

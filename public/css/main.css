@@ -1,3 +1,27 @@
+/*favorite css*/
+#btn-star{
+	position: absolute;
+	width: 700px;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+}
+.bottom-screen{
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 22px;
+	letter-spacing: 0.03em;
+	
+	position: absolute;
+	left: 6.76%;
+	right: 21.5%;
+	top: 14.67%;
+	bottom: 81.66%;
+	color: #000000;
+}
+
 /*login css*/
 .btn-login{
 	position: absolute;
@@ -1020,7 +1044,7 @@ html {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
-	font-size: 18px;
+	font-size: 20px;
 	letter-spacing: 0.05em;
 
 	color: #000000;
