@@ -3,9 +3,40 @@
 	position: absolute;
 	width: 177px;
 	height: 43px;
+	top:75px;
+	right: 85px; 
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	color: #FFFFFF;
+
 	
 
 	background: #6D6D6D;
+}
+.login-container h5{
+	position: absolute;
+	width: 76px;
+	height: 27px;
+	left: 130px;
+	top: 325px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 15px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-decoration-line: underline;
+
+	color: #000000;
+
 }
 .login-container p{
 	position: absolute;

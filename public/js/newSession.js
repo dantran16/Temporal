@@ -66,6 +66,9 @@ function openGoals(){
 function openFavorites(){
 	location.replace(location.href+"favorites");
 }
+function goHome(){
+	location.replace(location.href+"../..")
+}
 
 /*
 $('.container-options img').on('click', function() {
