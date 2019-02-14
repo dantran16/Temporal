@@ -42,13 +42,13 @@
 			<form action="views/newTask.handlebars">
 				<h2>New Task</h2>
 				<label for="Enter Name"><b>Task Name</b></label>
-				<input type="text" placeholder="Enter Name" name="email" required>
+				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input type="time" placeholder="Enter Time" name="time" required>
+		    	<input id="tasktime" type="time" placeholder="Enter Time" name="tasktime" required>
 
 		    	<label for="date"><b>Finish By: </b></label>
-		    	<input type="date" placeholder="Pick Date" name="date" required>
+		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
 
 		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
 
@@ -66,11 +66,19 @@
 			<a id="session-option-txt">Session Options</a>
 		</div>
 -->
-		<div class="container-options" id="container-options-open"> 
-			<div class="container-options-open-top" onclick="openOptions_2()">
+		<div class="container-options">
+				<div class="clickTarget" onclick="openOptions()">				
+					<img src="../svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
+					<a id="session-option-txt">Session Options</a>
+				</div>
+		</div>
+
+		<div class="container-options-open" id="optionsOpen">
+			<div class="clickTarget" onclick="closeOptions()">				
 				<img src="../svg/back-btn.svg" alt="BACK" id="option-arrow-down"></img>
 				<a id="session-option-txt">Session Options</a>
 			</div>
+
 			<div class="container-options-open-lower">
 				<p>Push Notifications</p>
 					<div class="toggleContainer_01">
@@ -87,8 +95,8 @@
 	</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/newSession.js"></script>
-<script src="js/timer.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/newSession.js"></script>
+<script src="../js/timer.js"></script>
 </body>
 </html>
