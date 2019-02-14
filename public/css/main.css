@@ -661,6 +661,17 @@ bottom: 15.21%;
 	background-color: #AEAEAE;
 }
 
+.container-options-open .clickTarget {
+	position: center;
+	width: 175px;
+	height: 24px;
+	top: 11px;
+
+ 	display: block;
+ 	margin-right: auto;
+ 	margin-left: auto;
+}
+
 .container-options-open .clickTarget{
 	position: center;
 	width: 175px;
@@ -682,12 +693,11 @@ bottom: 15.21%;
 	background: #C4C4C4;
 }
 
-.container-options-open-lower h2 {
+.container-options-open-lower p {
 	position: absolute;
-	width: 80%;
+	width: 70%;
 	left: 28px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 35px;
 
 	font-family: Rubik;
 	font-style: normal;
@@ -746,6 +756,71 @@ bottom: 15.21%;
 
 	color: #000000;
 }
+
+/* TOGGLE SWITCH */
+.toggleContainer_01 {
+	position: absolute;
+	margin-top: 7px;
+	right: 25px;
+}
+
+.toggleContainer_02 {
+	position: absolute;
+	margin-top: 10px;
+	right: 25px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 40px;
+	height: 21px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 25px;
+}
+
+// centering
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* END TOGGLE SWITCH */
 
 @import "compass/css3";
 
