@@ -22,20 +22,25 @@
 			</div>
 		</div>
 
-
-
+<!--ongoing session-->
+	
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 			{{#each tasks}}
 				<li class="session" id="{{id}}">{{name}} </li>
+				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
+
 				<li>
+
 					<div class="add-task-text">
 					<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
 					</div>
 				</li>
 		</ul>
+	
 		
+<!---ongoing session end-->
 
 		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
