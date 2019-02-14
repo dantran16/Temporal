@@ -1,7 +1,7 @@
-
 /*
- * GET session page.
+ * Implementing new task
  */
+
 var session = require('../session.json');
 var key;
 var i;
@@ -15,6 +15,13 @@ exports.view = function(req, res){
 			break;
 		}
   }
+  
+  var newTask = {
+	  "name": document.getElementById("name"),
+	  "time": document.getElementById("time")
+  };
+  
+  session.sessions[key].tasks.push(newTask);
   
   res.render('session',{
 	  "sessionname": session.sessions[key].name,
