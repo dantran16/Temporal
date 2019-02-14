@@ -17,8 +17,8 @@
 				<img src="../svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
 			<div id="edit-name">
-				<form action="/action_page.php">
-    			<input type="text" id="fname" name="firstname" placeholder="{{sessionname}}">
+				<form action="addtask">
+    			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
 			</div>
 		</div>
 
@@ -44,7 +44,7 @@
 
 		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
-			<form action="views/newTask.handlebars">
+			<form method="get" role="form" action="/addtask">
 				<h2>New Task</h2>
 				<label for="Enter Name"><b>Task Name</b></label>
 				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
