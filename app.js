@@ -16,7 +16,11 @@ var session = require('./routes/session');
 var calendar = require('./routes/calendar');
 var goals = require('./routes/goals');
 var favorites = require('./routes/favorites');
+
+var login = require('./routes/login');
+
 var addtask = require('./routes/addtask');
+
 
 var app = express();
 
@@ -50,6 +54,9 @@ app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/newSession/addtask', addtask.addtask);
 app.get('/session/:name/addtask', addtask.addtask);
+app.get('/login', login.view);
+app.get('/session/:name/addtask', addtask.view);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
