@@ -668,6 +668,13 @@ bottom: 15.21%;
 	background-color: #AEAEAE;
 }
 
+.container-options-open .clickTarget{
+	position: center;
+	width: 175px;
+	height: 24px;
+	top: 11px;
+}
+
 .container-options-open-lower {
 	position: absolute;
 	width: 100%;
