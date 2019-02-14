@@ -52,11 +52,10 @@ app.get('/session/:name', session.view);
 app.get('/goals', goals.view);
 app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
-<<<<<<< HEAD
+app.get('/newSession/addtask', addtask.addtask);
+app.get('/session/:name/addtask', addtask.addtask);
 app.get('/login', login.view);
-=======
-app.get('/session/:name/addtask', addtask.view);
->>>>>>> 72eb4c0ffd69adf2b1c2d254b2dafaf1d80fc596
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
