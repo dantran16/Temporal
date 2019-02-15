@@ -1,18 +1,27 @@
 //global variables
 var counter = 0;
 var timeleft;
+var intervalID = null;
+var alarmduration = 2;
+
 $(document).ready(function() {
 	start();
 })
 function start(){
 	//timeleft = document.getElementById("time");
 	var timestring = $("#time").text();
-	console.log(typeof timestring);
-	var hr = parseInt(timestring.substring(0,2));
+	console.log(timestring);
+	var hrstring = timestring.substring(0,2);
+	console.log(hrstring + " is string of hrs");
+	var hr = parseInt(hrstring);
 	console.log(hr + " hrs");
-	var minutes = parseInt(timestring.substring(4,6));
+	var minstring = timestring.substring(3,5);
+	console.log(minstring + " is string of minutes");
+	var minutes = parseInt(minstring);
 	console.log(minutes + " minutes");
-	var seconds = parseInt(timestring.substring(7,9));
+	var secstring = timestring.substring(6,8);
+	console.log(secstring + " is string of seconds");
+	var seconds = parseInt(secstring);
 	console.log(seconds + " seconds");
 	timeleft = hr * 3600 + minutes * 60 + seconds;
 	console.log(timeleft);
@@ -20,7 +29,18 @@ function start(){
 	
 	function timer(){
       if(timeleft==0){
-		timeleft = 0
+		timeleft = 0;
+		var audio = document.getElementById("audio");
+		if(counter < alarmduration){
+		  audio.play();
+		  counter++;
+		  console.log(counter);
+		}
+		else{
+	      audio.pause();
+		  counter=0;
+		  clearInterval(intervalID);
+		}
 	  }
 	  else{
 		timeleft--;
@@ -28,7 +48,7 @@ function start(){
 	  $("#time").html(convertSeconds(timeleft));
 	}
 	
-	setInterval(timer, 1000);
+	intervalID = setInterval(timer, 1000);
 }
 
 function convertSeconds(seconds){
@@ -51,3 +71,5 @@ function convertSeconds(seconds){
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
 }
+
+
