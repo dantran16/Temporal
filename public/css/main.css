@@ -88,7 +88,7 @@
 	top: 96px;
 
 	background: #9C9C9C;
-	border-radius: 64px;
+	border-radius: 25px;
 
 }
 h4{
@@ -622,9 +622,8 @@ input[type=text] {
 	display: block;
 	width: 177px;
 	height: 43px;
-	bottom: 30px;
-	left: auto;
-	right: auto;
+	bottom: 25px;
+	left: 120px;
 	text-align: center;
 
 	background: #6D6D6D;
@@ -736,8 +735,8 @@ bottom: 15.21%;
 	position: absolute;
 	width: 108px;
 	height: 30px;
-	left: 39px;
-	top: 148px;
+	left: 26px;
+	margin-top: 14px;
 
 	background: #C4C4C4;
 	border-radius: 100px;
@@ -780,6 +779,7 @@ bottom: 15.21%;
  	-webkit-transition: 1s;
  }
 
+
 #btn-check {
 	/* Check Vector */
 
@@ -791,6 +791,27 @@ bottom: 15.21%;
 	margin: 0 auto;
 	margin-top: 13px;
 }
+
+.btn-start {
+ 	/* Finish/Check Button */
+
+	position: absolute;
+	width: 80px;
+	height: 45px;
+	/*left: 337px;
+	top: 613px;*/
+	right: 29px;
+	bottom: 75px;
+
+	background: #6FCF97;
+	border-radius: 100px;
+
+	/* Button Drop */
+	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.237602), 0px 0px 14px rgba(0, 0, 0, 0.12);
+ 	-webkit-transition: 1s;
+
+
+ }
 
 .container-options {
 	 /* Rectangle */
@@ -824,18 +845,10 @@ bottom: 15.21%;
  	display: block;
  	margin-right: auto;
  	margin-left: auto;
+ 	justify-content: center;
+
 }
 
-.container-options-open .clickTarget{
-	position: center;
-	width: 175px;
-	height: 24px;
-	top: 11px;
-
- 	display: block;
- 	margin-right: auto;
- 	margin-left: auto;
-}
 
 .container-options-open .container-options-open-lower {
 	position: absolute;
@@ -990,24 +1003,24 @@ html {
 
 #Sessions {
   position: absolute;
-  top: 20px;
+  top: 10px;
   bottom: 20px;
   left: 20px;
   right: 20px;
   overflow: scroll;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-family: Rubik;
   
   -webkit-overflow-scrolling: touch;
 }
 
 .list-group li{
-  padding: 10px 20px;
+  padding: 15px 20px;
   
   border-bottom: 1px solid #ccc;
   
