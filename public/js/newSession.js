@@ -2,38 +2,7 @@
 $(document).ready(function() {
 	initializePage();
 })
-/*Calendar*/
-$(document).ready(function () {
-02
-$('#calendar').eCalendar({
-03
-weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-04
-months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-05
-textArrows: {previous: '<', next: '>'},
-06
-eventTitle: 'Events',
-07
-url: '',
-08
-firstDayOfWeek: 0,
-09
-events: [
-10
-  {title: 'Event 1', description: 'Description 1', <a href="https://www.jqueryscript.net/time-clock/">date</a>time: new Date(2014, 7, 15, 17)},
-11
-  {title: 'Event 2', description: 'Description 2', datetime: new Date(2014, 7, 14, 16)},
-12
-  {title: 'Event 3', description: 'jQueryScript.Net', datetime: new Date(2014, 7, 10, 16)}
-13
-]});
-14
-});
 
-
-
-/*calendar end*/
 /*
  * Function that is called when the document is ready.
  */

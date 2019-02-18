@@ -6,6 +6,17 @@
 
 
 /*favorite css*/
+#about{
+	position: absolute;
+	left: 13.57%;
+	right: 78.28%;
+	top: 35.19%;
+	bottom: 62.36%;
+	color: #818181;
+
+	opacity: 0.8;
+
+}
 #btn-star{
 	position: absolute;
 	width: 700px;
