@@ -26,15 +26,16 @@
 	
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
-				<li class="time" id="time">{{time}}</li>
-				<div style="display: none;">
-					<audio id ="audio" src="../sounds/alarm1.wav"> </audio>
-				</div>
+				
+				
 			{{#each tasks}}
 				<li class="session" id="{{id}}">{{name}} </li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
-
+	<li class="time" id="time">{{time}}</li>
+	<div style="display: none;">
+					<audio id ="audio" src="../sounds/alarm1.wav"> </audio>
+				</div>
 			<li>
 				<div class="add-task-text">
 					<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
@@ -66,7 +67,7 @@
 		</div>
 <!--end new task pop up-->
 
-		<button class="btn btn-start" id="button-deets"><a href="/start" id="task-item-text" role="button"> </a>Start</button>
+		<button class="btn-start" id="button-deets" onclick = "start()" >Start</button>
 
 <!--
 		<div class="container-options" onclick="openOptions()"> 

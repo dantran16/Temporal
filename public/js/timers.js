@@ -3,10 +3,11 @@ var counter = 0;
 var timeleft;
 var intervalID = null;
 var alarmduration = 2;
+var interval;
 
-$(document).ready(function() {
-	start();
-})
+// $(document).ready(function() {
+// 	start();
+// })
 function start(){
 	//timeleft = document.getElementById("time");
 	var timestring = $("#time").text();
@@ -39,7 +40,7 @@ function start(){
 		else{
 	      audio.pause();
 		  counter=0;
-		  clearInterval(intervalID);
+		  clearInterval(interval);
 		}
 	  }
 	  else{
@@ -48,8 +49,9 @@ function start(){
 	  $("#time").html(convertSeconds(timeleft));
 	}
 	
-	intervalID = setInterval(timer, 1000);
+	interval = setInterval(timer, 1000);
 }
+
 
 function convertSeconds(seconds){
 	var hrs = Math.floor(seconds/3600);
@@ -71,5 +73,8 @@ function convertSeconds(seconds){
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
 }
+
+
+
 
 
