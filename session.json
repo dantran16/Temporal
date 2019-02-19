@@ -3,64 +3,77 @@
 		{
 			"name": "Chem 6A Study",
 			"time": "06:00:00",
+			"duedate": "02/06/2018",
 			"tasks": 
 				[
 					{
 						"name": "Do Homework",
-						"time": "02:00:00"
+						"time": "02:00:00",
+						"duedate": "02/06/2018"
 					},
 					{
 						"name": "Do readings",
-						"time": "02:00:00"
+						"time": "02:00:00",
+						"duedate": "02/06/2018"
 					},
 					{
 						"name": "Work on practice midterm",
-						"time": "02:00:00"	
+						"time": "02:00:00",
+						"duedate": "02/02/2018"
 					}
 				]
 		},
 		{
 			"name": "Workout",
 			"time": "01:00:00",
+			"duedate": "02/06/2018",
 			"tasks": 
 				[
 					{
 						"name": "Weights",
-						"time": "00:30:00"
+						"time": "00:30:00",
+						"duedate": "02/06/2018"
 					},
 					{
 						"name": "Running",
-						"time": "00:30:00"
+						"time": "00:30:00",
+						"duedate": "02/06/2018"
 					}
 				]
 		},
 		{
 			"name": "Study",
 			"time": "02:00:00",
+			"duedate": "02/10/2018",
 			"tasks": 
 				[
 					{
 						"name": "Do Homework",
-						"time": "01:00:00"
+						"time": "01:00:00",
+						"duedate": "02/06/2018"
 					},
 					{
 						"name": "Do readings",
-						"time": "01:00:00"
+						"time": "01:00:00",
+						"duedate": "02/10/2018"
 					}
 				]
 		},
 		{
 			"name": "Chores",
 			"time": "00:00:10",
+			"duedate": "02/06/2018",
 			"tasks": 
 				[
 					{
 						"name": "Do dishes",
-						"time": "00:15:00"
+						"time": "00:15:00",
+						"duedate": "02/06/2018"
 					},
 					{
 						"name": "Laundry",
-						"time": "00:15:00"
+						"time": "00:15:00",
+						"duedate": "02/06/2018"
 					}
 				]
 		}
