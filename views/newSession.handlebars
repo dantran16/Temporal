@@ -14,7 +14,7 @@
 	<div class="screen-container">
 		<div class="container-header">
 			
-				<img onclick="goHome()" src="svg/back-btn.svg" alt="BACK" id='btn-back'></img>
+			<img onclick="goHome()" src="svg/back-btn.svg" alt="BACK" id='btn-back'></img>
 			
 			<a href="/index">
 				<img src="svg/back-btn.svg" alt="BACK" id='btn-back'></img>
@@ -23,7 +23,6 @@
 			<img src="svg/about.svg" alt='INFO' id='btn-info'></img>
 
 			<div id="edit-name">
-				<form action="/addtask">
     			<input type="text" id="sName" name="sessionname" placeholder="EDIT NAME ...">
 			</div>
 		</div>
@@ -47,13 +46,13 @@
 
 		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
 
-				<button type="submit" class="btn-save" onclick="closeForm()">Save</button> 
+				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
 
 			</form>
 		</div>
 <!--end new task pop up-->
 
-		<button class="btn btn-check" id="finishSession"> <img src="svg/check.svg"> <a href="../.." id="task-item-text" role="button"> </a> </button>
+		<button onclick="addSession()" class="btn btn-check" id="finishSession"> <img src="svg/check.svg"> <a id="task-item-text" role="button"> </a> </button>
 
 <!--
 		<div class="container-options" onclick="openOptions()"> 

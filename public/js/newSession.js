@@ -67,7 +67,29 @@ function openFavorites(){
 	location.replace("favorites");
 }
 function goHome(){
-	location.replace("index")
+	location.replace("index");
+}
+function addSession(){
+	//grab data
+	var sname = document.getElementById("sName").value;
+	console.log(sname);
+	var time = document.getElementById("time").value;
+	console.log(time);
+	var date = document.getElementById("date").value;
+	console.log(date);
+	
+	//file reader
+	
+	//make a if statement to make sure session has a name
+	//make a if statement to check the the time works
+	//make a if statement to check the date works
+	//then goHome() 
+	//goHome();
+}
+
+function addTask() {
+  document.getElementById("newTask").style.display = "none";
+  location.replace(location.href);
 }
 
 /*
