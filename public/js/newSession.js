@@ -89,7 +89,8 @@ function addSession(){
 
 function addTask() {
   document.getElementById("newTask").style.display = "none";
-  location.replace(location.href);
+  
+  //location.replace(location.href);
 }
 
 /*
