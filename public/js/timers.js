@@ -1,3 +1,7 @@
+$(document).ready(function() {
+	initializePage();
+})
+
 //global variables
 var counter = 0;
 var timeleft;
@@ -76,5 +80,7 @@ function convertSeconds(seconds){
 
 
 
-
-
+function startNextPage() {
+	location.replace("startSession");
+	//start();
+}

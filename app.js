@@ -24,6 +24,7 @@ var settings = require('./routes/settings');
 var notifications = require('./routes/notifications');
 var account = require('./routes/account');
 var about = require('./routes/about');
+var startSession = require('./routes/startSession');
 
 
 var app = express();
@@ -64,6 +65,7 @@ app.get('/settings', settings.view);
 app.get('/notifications', notifications.view);
 app.get('/account', account.view);
 app.get('/about', about.view);
+app.get('/startSession', startSession.view);
 
 
 
