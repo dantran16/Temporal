@@ -5,7 +5,6 @@ $(document).ready(function() {
 //global variables
 var counter = 0;
 var timeleft;
-var intervalID = null;
 var alarmduration = 2;
 var interval;
 
@@ -56,6 +55,9 @@ function start(){
 	interval = setInterval(timer, 1000);
 }
 
+function pause(){
+	clearInterval(interval);
+}
 
 function convertSeconds(seconds){
 	var hrs = Math.floor(seconds/3600);

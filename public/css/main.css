@@ -40,6 +40,15 @@
 	color: #000000;
 }
 /* end favorite css*/
+
+
+
+
+/*Checkmarkcss*/
+
+.goals-checklist p{
+	margin-bottom: 12px;
+}
 .goal.checklist{
 	display: block;
   position: relative;
@@ -66,7 +75,7 @@
   height: 25px;
   width: 25px;
   top:100px;
-  background-color: black;
+  background-color: #C4C4C4;
 } 
 /*mouseover color*/
 .goal.checklist:hover input ~ .checkmark {

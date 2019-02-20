@@ -19,6 +19,7 @@ exports.view = function(req, res){
   res.render('session',{
 	  "sessionname": session.sessions[key].name,
 	  "time": session.sessions[key].time,
-	  "tasks": session.sessions[key].tasks
+	  "tasks": session.sessions[key].tasks,
+	  "duedate": session.sessions[key].duedate,
   });
 };
