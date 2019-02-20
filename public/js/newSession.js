@@ -105,17 +105,9 @@ function addSession(){
 
 function addTask() {
   document.getElementById("newTask").style.display = "none";
-  
-  //filereader
-  var fs = require("fs");
-  fs.readFile('../sessions.json','utf-8', function(err, data){
-		if(err){
-			throw err;
-		}
-		var sessions = JSON.parse(data);
-  });
-  console.log(sessions);
-  //location.replace(location.href);
+  var url = location.href;
+  location.replace(url + "/addtask");
+  location.replace(url);
 }
 
 /*

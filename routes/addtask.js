@@ -7,7 +7,7 @@ var key;
 var i;
  
 exports.addtask = function(req, res){
-  var name = req.query.sessionname;
+  var name = req.query.name;
   console.log("The session name is " + name);
   for (i = 0; i < session.sessions.length; i++){
 		if(name == session.sessions[i].name){
@@ -15,11 +15,17 @@ exports.addtask = function(req, res){
 			break;
 		}
   }
-  
-  var newTask = {
-	  "name": req.query.taskname,
-	  "time": req.query.tasktime
-  };
+  if(key==null){
+	var newSession = {
+		"name": req.query.sessionname,
+	}
+	session.sessions.push();
+  }
+	var newTask = {
+		"name": req.query.taskname,
+		"time": req.query.tasktime,
+		"duedate": req.query.taskdate,
+	};
   
   session.sessions[key].tasks.push(newTask);
   

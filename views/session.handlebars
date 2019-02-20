@@ -14,10 +14,9 @@
 	<div class='screen-container'>
 		<div class="container-header">
 			<a href="/index">
-				<img src="../svg/back-btn.svg" alt="BACK" id='btn-back'>
+				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
 			<div id="session-name">
-				<form action="addtask">
     			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
 			</div>
 		</div>
@@ -36,7 +35,7 @@
 			{{/each}}
 
 			<div style="display: none;">
-				<audio id ="audio" src="../sounds/alarm1.wav"> </audio>
+				<audio id ="audio" src="/sounds/alarm1.wav"> </audio>
 			</div>
 			<li>
 				<div class="add-task-text">
@@ -50,26 +49,26 @@
 
 		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
-			<form method="get" role="form" action="/addtask">
+			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
 				<h2>New Task</h2>
 				<label for="Enter Name"><b>Task Name</b></label>
 				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input id="tasktime" type="time" placeholder="Enter Time" name="tasktime" required>
+		    	<input id="tasktime" placeholder="--:--:--" name="tasktime" required>
 
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
 
 		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
 
-				<button type="submit" class="btn-save" onclick="closeForm()">Save</button> 
+				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
 
 			</form>
 		</div>
 <!--end new task pop up-->
 
-		<button class="btn-start" id="button-deets" onclick="startNextPage()">Start</button>
+		<button class="btn-start" id="button-deets" onclick="start()">Start</button>
 
 <!--
 		<div class="container-options" onclick="openOptions()"> 
@@ -79,14 +78,14 @@
 -->
 		<div class="container-options">
 				<div class="clickTarget" onclick="openOptions()">				
-					<img src="../svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
+					<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 					<a id="session-option-txt">Session Options</a>
 				</div>
 		</div>
 
 		<div class="container-options-open" id="optionsOpen">
 			<div class="clickTarget" onclick="closeOptions()">				
-				<img src="../svg/back-btn.svg" alt="BACK" id="option-arrow-down"></img>
+				<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-down"></img>
 				<a id="session-option-txt">Session Options</a>
 			</div>
 
@@ -106,8 +105,8 @@
 	</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/newSession.js"></script>
-<script src="../js/timers.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/newSession.js"></script>
+<script src="/js/timers.js"></script>
 </body>
 </html>

@@ -58,8 +58,9 @@ app.get('/session/:name', session.view);
 app.get('/goals', goals.view);
 app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
-app.get('/newSession/addtask', addtask.addtask);
-app.get('/session/:name/addtask', addtask.addtask);
+app.get('/session/:sessionname/addtask', session.addtask);
+app.get('/newSession/addtask',newSession.addtask);
+
 
 app.get('/settings', settings.view); 
 app.get('/notifications', notifications.view);
