@@ -4,5 +4,7 @@
  */
 
 exports.view = function(req, res){
-  res.render('startSession');
+  res.render('startSession'
+
+  	);
 };
