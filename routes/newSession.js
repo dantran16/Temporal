@@ -16,11 +16,10 @@ exports.addtask = function(req,res){
 		"name": req.query.sessionname,
 		"duedate": req.query.duedate,
 		"time": req.query.time,
-		"tasks": {[
+		"tasks": {
 			"name": "new task",
 			"time": "00:00:00",
 			"duedate": "02/19/2019"
-			]
 		}
 	};
 	

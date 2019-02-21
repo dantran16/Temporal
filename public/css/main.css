@@ -245,6 +245,27 @@ ul.list-group-session{
 .list-group-session .session{
 	padding: 8px;
 }
+
+#headerTime {
+	width: 100%;
+	height: 50px;
+	top: 48px;
+	left: 47px;
+}
+
+#time {
+	font-size: 20pt;
+	opacity: 0.8;
+
+}
+
+#duedate {
+	left: 80px;
+	font-size: 12pt;
+	opacity: 0.6;
+}
+
+
 .sessionTask-box {
 	position: absolute;
 	width: 414px;
@@ -325,6 +346,7 @@ top: 30px;
   /*border: none;*/
   cursor: pointer;
   margin-bottom:10px;
+  margin-top: 50px;
   opacity: 0.8;
 }
 /* When the inputs get focus, do something */
@@ -360,6 +382,15 @@ top: 30px;
     border-left: transparent !important;
     border-right: transparent !important;
     border-bottom: transparent !important;
+}
+
+.newTaskCard h2 {
+	font-size: 18pt;
+	margin-bottom: 15px;
+}
+
+.newTaskCard label {
+	font-size: 12pt;
 }
 
 input[type=text] {

@@ -19,6 +19,11 @@
 			<div id="session-name">
     			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
 			</div>
+
+			<ul class="list-group-session" id="headerTime">
+				<li class="time" id="time">Time left: {{time}}</li>
+				<li class="duedate" id="duedate">Due by: {{duedate}}</li>
+			</ul>
 		</div>
 
 <!--ongoing session-->
@@ -26,11 +31,8 @@
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 		
-			<li class="time" id="time">{{time}}</li>
-			<li class="duedate" id="duedate">Due by: {{duedate}}</li>
-	
 			{{#each tasks}}
-				<li class="session" id="{{id}}">{{name}} </li>
+				<li class="session" id="{{id}}">{{name}}</li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
 
@@ -108,5 +110,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>
 <script src="/js/timers.js"></script>
+<script src="/js/startSession.js"></script>
+
 </body>
 </html>
