@@ -21,12 +21,12 @@ var i;
 exports.view = function(req, res){
   res.render('newSession');
 };
+
 exports.savename = function(req, res){
   name = req.query.sessionname;
   res.render('newSession');
 }
 exports.addtask = function(req,res){
-	
 	newSession.name = name;
 	newSession.duedate = req.query.duedate;
 	newSession.time = req.query.time;
@@ -62,4 +62,17 @@ exports.addtask = function(req,res){
 	  "tasks": session.sessions[key].tasks,
 	  "duedate": session.sessions[key].duedate,
 	});
+	key = null;
+	name = null;
+	newSession = {
+		"name": null,
+		"duedate": null,
+		"time": null,
+		"tasks": [{
+			"name": null,
+			"time": null,
+			"duedate": null
+	}
+	]
+};
 };

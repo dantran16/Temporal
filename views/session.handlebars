@@ -17,12 +17,12 @@
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
 			<div id="session-name">
-    			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
+    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
 
 			<ul class="list-group-session" id="headerTime">
 				<li class="time" id="time">{{time}}</li>
-				<li class="duedate" id="duedate">Due by: {{duedate}}</li>
+				
 			</ul>
 		</div>
 
@@ -30,7 +30,7 @@
 	
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
-		
+			<li class="duedate" id="duedate">Due by: {{duedate}}</li>
 			{{#each tasks}}
 				<li class="session" id="{{id}}">{{name}}</li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
