@@ -106,7 +106,7 @@ function addSession(){
 function addTask() {
   document.getElementById("newTask").style.display = "none";
   var url = location.href;
-  location.replace(url + "/addtask");
+  location.replace(url + "/index");
   location.replace(url);
 }
 
