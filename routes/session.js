@@ -6,6 +6,14 @@ var session = require('../session.json');
 var key;
 var i;
 var name;
+
+/* -- save to JSON -- 
+var fs = require('fs');
+var data = fs.readFileSync('session.JSON');
+var sessions = JSON.parse(data);
+console.log(sessions);
+/* -- END save to JSON -- */
+
  
 exports.view = function(req, res){
   name = req.params.name;
@@ -32,6 +40,7 @@ exports.addtask = function(req,res){
 		"time": req.query.tasktime,
 		"duedate": req.query.taskdate,
 	};
+
     console.log(newTask);
 	session.sessions[key].tasks.push(newTask);
   
@@ -41,4 +50,10 @@ exports.addtask = function(req,res){
 	  "tasks": session.sessions[key].tasks,
 	  "duedate": session.sessions[key].duedate,
 	});
+
+/* THIS IS SAVE TO JSON FILE STUFF (WIP)
+
+	var data = JSON.stringify(sessions, null, 2);
+	fs.writeFileSync('sessions.JSON', sessionname, );
+*/
 };
