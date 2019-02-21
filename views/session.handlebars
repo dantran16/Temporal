@@ -19,6 +19,11 @@
 			<div id="session-name">
     			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
 			</div>
+
+			<ul class="list-group-session" id="headerTime">
+				<li class="time" id="time">{{time}}</li>
+				<li class="duedate" id="duedate">Due by: {{duedate}}</li>
+			</ul>
 		</div>
 
 <!--ongoing session-->
@@ -26,11 +31,8 @@
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 		
-			<li class="time" id="time">{{time}}</li>
-			<li class="duedate" id="duedate">Due by: {{duedate}}</li>
-	
 			{{#each tasks}}
-				<li class="session" id="{{id}}">{{name}} </li>
+				<li class="session" id="{{id}}">{{name}}</li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
 
@@ -50,12 +52,12 @@
 		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
 			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
-				<h2>New Task</h2>
+				<h2>Add a New Task</h2>
 				<label for="Enter Name"><b>Task Name</b></label>
 				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input id="tasktime" placeholder="--:--:--" name="tasktime" required>
+		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" required>
 
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
@@ -108,5 +110,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>
 <script src="/js/timers.js"></script>
+<script src="/js/startSession.js"></script>
+
 </body>
 </html>

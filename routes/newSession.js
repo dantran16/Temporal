@@ -22,6 +22,13 @@ exports.addtask = function(req,res){
 			"duedate": "02/19/2019"
 			}
 			]
+
+		"tasks": {
+			"name": "new task",
+			"time": "00:00:00",
+			"duedate": "02/19/2019"
+		}
+
 	};
 	if(newSession.tasks[0].name == null){
 		newSession.tasks[0].name = req.query.taskname;

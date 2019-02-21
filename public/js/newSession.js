@@ -110,6 +110,12 @@ function addTask() {
   location.replace(url);
 }
 
+function startSession() {
+	var url = location.href;
+	location.replace(url + "/startSession");
+	start();
+}
+
 /*
 $('.container-options img').on('click', function() {
     $(this).toggleClass('clicked');
