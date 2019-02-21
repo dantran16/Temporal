@@ -26,7 +26,7 @@ function initializePage() {
 		e.preventDefault();
 		var string = $(this).text();
 		console.log(string);
-		location.replace("session/"+string);
+		location.replace("/session/"+string);
 	});
 	
 	//function to initialize due date
@@ -84,23 +84,6 @@ function openFavorites(){
 }
 function goHome(){
 	location.replace("index");
-}
-function addSession(){
-	//grab data
-	var sname = document.getElementById("sName").value;
-	console.log(sname);
-	var time = document.getElementById("time").value;
-	console.log(time);
-	var date = document.getElementById("date").value;
-	console.log(date);
-	
-	//file reader
-	
-	//make a if statement to make sure session has a name
-	//make a if statement to check the the time works
-	//make a if statement to check the date works
-	//then goHome() 
-	//goHome();
 }
 
 function addTask() {
