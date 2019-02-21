@@ -61,6 +61,7 @@ app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/session/:sessionname/addtask', session.addtask);
 app.get('/newSession/addtask',newSession.addtask);
+app.get('/newSession/savename', newSession.savename);
 
 app.get('/settings', settings.view); 
 app.get('/notifications', notifications.view);
