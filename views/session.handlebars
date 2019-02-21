@@ -21,7 +21,7 @@
 			</div>
 
 			<ul class="list-group-session" id="headerTime">
-				<li class="time" id="time">Time left: {{time}}</li>
+				<li class="time" id="time">{{time}}</li>
 				<li class="duedate" id="duedate">Due by: {{duedate}}</li>
 			</ul>
 		</div>
@@ -52,12 +52,12 @@
 		<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
 			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
-				<h2>New Task</h2>
+				<h2>Add a New Task</h2>
 				<label for="Enter Name"><b>Task Name</b></label>
 				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input id="tasktime" placeholder="--:--:--" name="tasktime" required>
+		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" required>
 
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>

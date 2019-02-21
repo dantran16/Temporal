@@ -221,6 +221,7 @@ border-radius: 3px;
 li.session{
 	list-style-image: url(/svg/Line.svg);
 }
+
 ul.list-group-session{
 	position: fixed;
 	display: block;
@@ -241,6 +242,10 @@ ul.list-group-session{
 	letter-spacing: 0.03em;
 
 	color: #000000;
+
+	height:480px; width:85%;
+	overflow:hidden; overflow-y:scroll;
+
 }
 .list-group-session .session{
 	padding: 8px;
@@ -345,8 +350,7 @@ top: 30px;
   border-radius: 100px;
   /*border: none;*/
   cursor: pointer;
-  margin-bottom:10px;
-  margin-top: 50px;
+  margin-bottom: 20px;
   opacity: 0.8;
 }
 /* When the inputs get focus, do something */
@@ -364,7 +368,7 @@ top: 30px;
   border-radius: 100px;
   /*border: none;*/
   cursor: pointer;
-  margin-bottom:10px;
+  margin-bottom: 20px;
   opacity: 0.8;
 }
 /* Full-width input fields */
@@ -415,7 +419,11 @@ input[type=text] {
     border-right: transparent !important;
     border-bottom: transparent !important;
 }
-
+/*
+.without::-webkit-datetime-edit-ampm-field {
+   display: none;
+ }
+*/
 #edit-name {
 	position: absolute;
 	width: 100%;
@@ -458,13 +466,13 @@ input[type=text] {
 	display: none;
 	position: absolute;
 	width: 414px; /* 386px */
-	height: 508px;
-	bottom: -20px;
-	border: 3px solid #f1f1f1;
+	height: 500px;
+	bottom: 0px;
+	/*border: 3px solid #f1f1f1;*/
 
 	background: #9C9C9C;
 	box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.25);
-	border-radius: 18px;
+	border-radius: 18px 18px 0 0;
 	z-index: 9;
 
 	text-align: center;

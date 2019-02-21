@@ -79,10 +79,3 @@ function convertSeconds(seconds){
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
 }
-
-
-
-function startNextPage() {
-	location.replace("startSession");
-	//start();
-}

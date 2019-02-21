@@ -25,7 +25,7 @@ var notifications = require('./routes/notifications');
 var account = require('./routes/account');
 var about = require('./routes/about');
 
-var startSession = require('./routes/startSession');
+//var startSession = require('./routes/startSession');
 
 
 var app = express();
@@ -67,11 +67,13 @@ app.get('/notifications', notifications.view);
 app.get('/account', account.view);
 app.get('/about', about.view);
 
+/*
 //app.get('session/:sessionname/startSession', startSession.view);
 
 app.get('session/:sessionname/startSession', function(req, res){
   res.render('startSession.view');
 });
+*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
