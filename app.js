@@ -54,14 +54,11 @@ app.get('/', login.view);
 // Example route
 // app.get('/users', user.list);
 app.get('/index', index.view);
-//app.get('/newSession', newSession.view);
 app.get('/session/:name', session.view);
 app.get('/goals', goals.view);
 app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/session/:sessionname/addtask', session.addtask);
-//app.get('/newSession/addtask',newSession.addtask);
-//app.get('/newSession/savename', newSession.savename);
 app.get('/index/newSession', index.newSession);
 
 app.get('/settings', settings.view); 
