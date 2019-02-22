@@ -666,24 +666,22 @@ input[type=text] {
 	width: 414px;
 	height: 540px;
 	left: 0px;
-	top: 155px;
+	top: 60px;
 }
 
 .onGoingSessions h1 {
 	/* ON GOING SESSIONS */
-
 	position: absolute;
-	width: 198px;
-	height: 22px;
-	left: 28px;
+	width: 100%;
 	top: 0px;
 
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
-	font-size: 18px;
+	font-size: 22px;
 	letter-spacing: 0.05em;
+	text-align: center;
 
 	color: #000000;
 }
@@ -691,16 +689,16 @@ input[type=text] {
 .onGoingSessions-tabs {
 	position: absolute;
 	width: 100%;
-	top: 18px;
+	top: 55px;
 	bottom: 0;
 }
 
 .onGoingSessions-box {
 	position: absolute;
-	width: 414px;
-	height: 511px;
+	width: 100%;
+	height: 615px;
 	left: 0px;
-	top: 70px;
+	top: 60px;
 
 	background: #DFDFDF;
 }
@@ -718,10 +716,12 @@ input[type=text] {
 	width: 50px;
 	height: 50px;
 	right: 15px;
-	top: 10px;
+	top: 12px;
 
 	color: #C4C4C4;
 	opacity: 0.9;
+	border-radius: 7px;
+	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
  } 
 
 
