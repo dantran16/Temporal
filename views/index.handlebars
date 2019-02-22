@@ -11,30 +11,32 @@
 </head>
 <body> 
 	<div class="screen-container" id="taskCardBackground">
+
+<!-- BEGIN header -->
 		<div class="container-header">
 		
 <!--HAMBURGER MENU--> 
-<img src="/svg/line.svg" id= "line-home" onclick="openNav()">
-
-	<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="/settings">Settings</a>
-  <a href="/notifications">Notifications</a>
-  <a href="/account">Account</a>
-  <img src="svg/about.svg" id="about">
-  <a href="/about">About</a>
-</div>  
-<img src="/svg/line.svg" id= "line-home" onclick="openNav()">
-
-
+	<img src="/svg/line.svg" id= "line-home" onclick="openNav()">
 
 		<div id="mySidenav" class="sidenav">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			<a href="/settings">Settings</a>
-			<a href="/notifications">Notifications</a>
-			<a href="/account">Account</a>
-			<a href="/about">About</a>
-		</div>  
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="/settings">Settings</a>
+	  <a href="/notifications">Notifications</a>
+	  <a href="/account">Account</a>
+	  <img src="svg/about.svg" id="about">
+	  <a href="/about">About</a>
+	</div>  
+	<img src="/svg/line.svg" id= "line-home" onclick="openNav()">
+
+
+
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="/settings">Settings</a>
+				<a href="/notifications">Notifications</a>
+				<a href="/account">Account</a>
+				<a href="/about">About</a>
+			</div>  
 <!--HAMBURGER MENU END-->
 
 		
@@ -46,7 +48,10 @@
 				<button onclick="openGoals()" class="btn btn-default" id="Goals"><img src="/svg/goal.svg"/>Goals</button>
 				<button onclick="openFavorites()" class="btn btn-default" id="Favorites"><img src="/svg/Group.svg"/>Favorites</button>
 			</div>
-		
+<!-- END header -->
+
+
+<!-- BEGIN onGoing Sessions -->
 		<div class="onGoingSessions">
 			<h1>ON GOING SESSION</h1>
 			<div class="onGoingSessions-box">
@@ -60,15 +65,17 @@
 				</div>
 			</div>
 		</div>
+<!-- END onGoing Sessions -->
+
 
 		<div class="container-footer">
-			<button onclick="openForm()" class="btn new-session" id="button-deets"> + New Session </button>
+			<button onclick="openNewSession()" class="btn new-session" id="button-deets"> + New Session </button>
 		</div>
 		
-	</div>
+	</div> <!--- END OF SCREEN CONTAINER -->
 
 <!--new task pop up-->
-		<div class="newTaskCard" id="newTask">
+		<div class="newTaskCard" id="newSession">
 			<form method="get" role="form" action="/index/newSession/">
 				<h2>Create a New Session</h2>
 				<input id="sessionname" type="text" placeholder="Enter Session Name" name="sessionname" required>
@@ -80,7 +87,7 @@
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
 
-		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+		    	<button type="button" class="btn-cancel" onclick="closeNewSession()">Close</button>
 
 				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
 			</form>
