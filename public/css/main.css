@@ -5,11 +5,38 @@
 /*CALENDAR END*/
 
 /* ACCOUNT */
+.otherBox{
+	position: absolute;
+	width: 263px;
+	height: 33px;
+	left: 75px;
+	top: 400px;
+
+	background: #C4C4C4;
+	border-radius: 3px;
+}
+.accountName{
+	width: 263px;
+	height: 33px;
+	left: 75px;
+	top: 329px;
+	background: #C4C4C4;
+	border-radius: 3px;
+}
+#human{
+	position: absolute;
+width: 88px;
+height: 102px;
+left: 163px;
+top: 152px;
+}
 #logout-btn {
 	position: absolute;
+
 	width: 177px;
-	height: 43px;
-left:120px;
+	height: 52px;
+	left: 118px;
+	top: 530px;
 	background: #6D6D6D; 
 	
 
