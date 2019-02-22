@@ -106,6 +106,9 @@ function openFavorites(){
 function goHome(){
 	location.replace("index");
 }
+function logout(){
+	location.replace("../..")
+}
 
 function addTask() {
   document.getElementById("newTask").style.display = "none";
