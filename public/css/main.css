@@ -3,6 +3,32 @@
 
 
 /*CALENDAR END*/
+
+/* ACCOUNT */
+#logout-btn {
+	position: absolute;
+	width: 177px;
+	height: 43px;
+left:120px;
+	background: #6D6D6D; 
+	
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	color: #FFFFFF;
+}
+
+.facebookLogout{
+	padding-top: 200px;
+	margin-right: 20px;
+}
+
+/*ACCOUNT END*/
 /*ABOUT CSS*/
 .about-container{
 	position: absolute;

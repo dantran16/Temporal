@@ -12,6 +12,8 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=766003327108039&autoLogAppEvents=1"></script>
 	<div class="screen-container">
 		<div class="other-header">
 
@@ -24,7 +26,18 @@
 			</a>
 
 			<h1>Account</h1>
-		</div>
+		</div> 
+	
+
+	<fb:logout-button  onclick="facebookLogout()">
+		</fb:logout-button> 
+
+
+		<button onclick = "logout()" id = "logout-btn" >Logout</button>
+
+	
+
+	</div>
 		
 
 	</div>
@@ -36,6 +49,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/newSession.js"></script>
 <script src="js/timers.js"></script>
-
+{{>facebook}}
+<script src="js/facebook.js"></script>
 </body>
 </html>

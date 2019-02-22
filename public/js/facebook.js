@@ -24,3 +24,12 @@ function changeUser(response){
 	$('h1').text(response.name);
 	$('#photo').attr("src",response.picture.data.url);
 }
+
+$(document).ready($(function () {
+    $("#fblogout").click(facebooklogout);
+}));
+function facebookLogout{
+FB.logout(function(response) {
+  // user is now logged out
+});
+}
