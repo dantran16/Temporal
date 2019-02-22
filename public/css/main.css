@@ -3,8 +3,71 @@
 
 
 /*CALENDAR END*/
+/*ABOUT CSS*/
+.about-container{
+	position: absolute;
+	width: 244px;
+	height: 66px;
+	left: 85px;
+	top: 5px;
+	background: #9C9C9C;
+	border-radius: 20px;
+} 
+
+.other-container .about-container h1{
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 0.02em; 
 
 
+	color: #000000; 
+
+	width: 244px;
+	height: 60px;
+	left: 85px;
+	top: 9px;
+
+} 
+
+.body-container{
+	position: absolute;
+	width: 360px;
+	height: 612px;
+	left: 27px;
+	top: 104px;
+
+	background: #9C9C9C;
+	border-radius: 20px;
+} 
+
+.body-container p{
+	position: absolute;
+	width: 331px;
+	height: 383px;
+	left: 20px;
+	top: 122px;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 26px;
+	text-align: center;
+	letter-spacing: 0.02em;
+}
+
+
+
+/*ABOUT END*/
+
+.facebookLogin{
+	padding-top: 200px;
+	margin-right: 20px;
+}
 /*favorite css*/
 #about{
 	position: absolute;
