@@ -12,6 +12,8 @@
 </head>
 <body>
 	<div class="screen-container" id="taskCardBackground">
+
+<!-- BEGIN header -->
 		<div class="container-header">
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
@@ -25,9 +27,9 @@
 				<li class="time" id="time">{{time}}</li>
 			</ul>
 		</div>
+<!-- END header -->
 
-<!--ongoing session-->
-	
+<!-- BEGIN ongoing session-->
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 			<li class="duedate" id="duedate">Due by: {{duedate}}</li>
@@ -41,30 +43,24 @@
 			</div>
 			<li>
 				<div class="add-task-text">
-					<button onclick="openForm()" class="btn add-task" id="add-task-text">+ Add Task</button>
+					<button onclick="openNewTask()" class="btn add-task" id="add-task-text">+ Add Task</button>
 				</div>
 			</li>
 		</ul>
-	
-		
-<!---ongoing session end-->
+<!--- END ongoing session --->
 
-		
 
 		<button class="btn-start" id="button-deets" onclick="start()">Start</button>
 
-<!--
-		<div class="container-options" onclick="openOptions()"> 
-			<img src="svg/back-btn.svg" alt="BACK" id='option-arrow-up'></img>
-			<a id="session-option-txt">Session Options</a>
-		</div>
--->
+
 		<div class="container-options">
 				<div class="clickTarget" onclick="openOptions()">				
 					<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 					<a id="session-option-txt">Session Options</a>
 				</div>
 		</div>
+
+<!--- BEGIN SESSION OPTIONS -->
 
 		<div class="container-options-open" id="optionsOpen">
 			<div class="clickTarget" onclick="closeOptions()">				
@@ -78,29 +74,31 @@
 						<input type="checkbox" id="switch" /><label for="switch">Toggle01</label>
 					</div>
 				<br></br>
-				<p>Voice Commands</p>
+				<p>Voice Notifications</p>
 					<div class="toggleContainer_02">
 						<input type="checkbox" id="switch02" /><label for="switch02">Toggle02</label>
 					</div>
-					<div class="selectSound">
+
+					<div class="select-sound">
 						<select name="sounds" size="1">
 						  <option value="default">Default Sound</option>
-						  <option value="saab">Saab</option>
-						  <option value="fiat">Fiat</option>
-						  <option value="audi">Audi</option>
+						  <option value="saab">Classic Alarm</option>
+						  <option value="fiat">Sirens</option>
+						  <option value="audi">Dreamy</option>
 						</select>
 					</div>
 			</div>
 		</div>
+<!--- END SESSION OPTIONS -->
 
-	</div>
-	
+	</div> <!--- END OF SCREEN CONTAINER -->
+
+
 <!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
 			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
 				<h2>Add a New Task</h2>
-				<label for="Enter Name"><b>Task Name</b></label>
-				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
+				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
 		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" required>
@@ -108,7 +106,7 @@
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
 
-		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">Close</button>
 
 				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
 			</form>

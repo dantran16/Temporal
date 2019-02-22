@@ -54,16 +54,31 @@ function homePage(){
 	location.replace(location.href+"index");
 } 
 
-function openForm() {
+/* ---- New Task Card ---- */
+function openNewTask() {
   document.getElementById("newTask").style.display = "block";
   document.getElementById("taskCardBackground").style.filter = "blur(4px) grayscale(20%)";
-
+  document.getElementById("optionsOpen").style.display = "none";
 }
 
-function closeForm() {
+function closeNewTask() {
   document.getElementById("newTask").style.display = "none";
   document.getElementById("taskCardBackground").style.filter = "none";
 }
+/* ---- END New Task Card ---- */
+
+/* ---- New Session Card ---- */
+function openNewSession() {
+  document.getElementById("newSession").style.display = "block";
+  document.getElementById("taskCardBackground").style.filter = "blur(4px) grayscale(20%)";
+  document.getElementById("optionsOpen").style.display = "none";
+}
+
+function closeNewSession() {
+  document.getElementById("newSession").style.display = "none";
+  document.getElementById("taskCardBackground").style.filter = "none";
+}
+/* ---- END New Session Card ---- */
 
 function openOptions() {
   document.getElementById("optionsOpen").style.display = "block";
