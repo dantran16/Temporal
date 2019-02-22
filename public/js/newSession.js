@@ -56,32 +56,37 @@ function homePage(){
 
 function openForm() {
   document.getElementById("newTask").style.display = "block";
+  document.getElementById("taskCardBackground").style.filter = "blur(4px) grayscale(20%)";
+
 }
 
 function closeForm() {
   document.getElementById("newTask").style.display = "none";
+  document.getElementById("taskCardBackground").style.filter = "none";
 }
 
 function openOptions() {
   document.getElementById("optionsOpen").style.display = "block";
   document.getElementById("finishSession").style.bottom = "195px";
-
 }
 
 function closeOptions() {
   document.getElementById("optionsOpen").style.display = "none";
   document.getElementById("finishSession").style.bottom = "75px";
-
 }
+
 function openCalendar(){
 	location.replace("calendar");
 }
+
 function openGoals(){
 	location.replace("goals");
 }
+
 function openFavorites(){
 	location.replace("favorites");
 }
+
 function goHome(){
 	location.replace("index");
 }
@@ -93,11 +98,6 @@ function addTask() {
   location.replace(url);
 }
 
-function startSession() {
-	var url = location.href;
-	location.replace(url + "/startSession");
-	start();
-}
 
 /*
 $('.container-options img').on('click', function() {

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<div class='screen-container'>
+	<div class="screen-container" id="taskCardBackground">
 		<div class="container-header">
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
@@ -49,26 +49,7 @@
 		
 <!---ongoing session end-->
 
-		<!--new task pop up-->
-		<div class="newTaskCard" id="newTask">
-			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
-				<h2>Add a New Task</h2>
-				<label for="Enter Name"><b>Task Name</b></label>
-				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
-
-				<label for="time"><b>How long will it take?</b></label>
-		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" required>
-
-		    	<label for="date"><b>Finish By: </b></label>
-		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
-
-		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
-
-				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
-
-			</form>
-		</div>
-<!--end new task pop up-->
+		
 
 		<button class="btn-start" id="button-deets" onclick="start()">Start</button>
 
@@ -113,6 +94,26 @@
 		</div>
 
 	</div>
+	
+<!--new task pop up-->
+		<div class="newTaskCard" id="newTask">
+			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
+				<h2>Add a New Task</h2>
+				<label for="Enter Name"><b>Task Name</b></label>
+				<input id="taskname" type="text" placeholder="Enter Name" name="taskname" required>
+
+				<label for="time"><b>How long will it take?</b></label>
+		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" required>
+
+		    	<label for="date"><b>Finish By: </b></label>
+		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
+
+		    	<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+
+				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
+			</form>
+		</div>
+<!--end new task pop up-->
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
