@@ -10,7 +10,7 @@
 	<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
 </head>
 <body> 
-	<div class="screen-container">
+	<div class="screen-container" id="taskCardBackground">
 		<div class="container-header">
 		
 <!--HAMBURGER MENU--> 
@@ -65,10 +65,12 @@
 			<button onclick="openForm()" class="btn new-session" id="button-deets"> + New Session </button>
 		</div>
 		
-		<!--new task pop up-->
+	</div>
+
+<!--new task pop up-->
 		<div class="newTaskCard" id="newTask">
 			<form method="get" role="form" action="/index/newSession/">
-				<h2>Add a New Session</h2>
+				<h2>Create a New Session</h2>
 				<input id="sessionname" type="text" placeholder="Enter Session Name" name="sessionname" required>
 				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
 
@@ -84,8 +86,6 @@
 			</form>
 		</div>
 <!--end new task pop up-->
-	</div>
-
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (blelow), or include individual files as needed -->
