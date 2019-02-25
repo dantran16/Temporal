@@ -110,7 +110,10 @@
 				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input class="without" step="1" type="time" id="tasktime" name="tasktime" min="00:00:01" onclick= "timePicker()" required>
+		    	<input type="number" name="hour" min="0" max="12" required>
+		    	<label for="hour"><p>hr</p></label>
+		    	<input type="number" name="minute" min="5" max="59" required>
+		    	<label for="min"><p>min</p></label> <br>
 
 		    	<label for="date"><b>Finish By: </b></label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>

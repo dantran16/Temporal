@@ -28,7 +28,7 @@ function changeUser(response){
 $(document).ready($(function () {
     $("#fblogout").click(facebooklogout);
 }));
-function facebookLogout{
+function facebookLogout(){
 FB.logout(function(response) {
   // user is now logged out
 });
