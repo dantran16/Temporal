@@ -14,7 +14,7 @@
 	<div class="screen-container" id="taskCardBackground">
 
 <!-- BEGIN header -->
-		<div class="container-header">
+		<div class="other-header">
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
@@ -22,17 +22,18 @@
     			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
 
-			<ul class="list-group-session" id="headerTime">
+			<div class="headerTime" id="timeBox">
 				<p>Remaining Time:</p>
-				<li class="time" id="time">{{time}}</li>
-			</ul>
+				<div class="time" id="time">{{time}}</div>
+				<div class="duedate" id="duedate">Due by: {{duedate}}</div>
+			</div>
 		</div>
 <!-- END header -->
 
 <!-- BEGIN ongoing session-->
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
-			<li class="duedate" id="duedate">Due by: {{duedate}}</li>
+			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
 				<li class="session" id="{{id}}">{{name}}</li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
@@ -49,9 +50,9 @@
 		</ul>
 <!--- END ongoing session --->
 
+		<button class="btn-timer" id="startTimer" onclick="start()">START</button>
 
-		<button class="btn-start" id="button-deets" onclick="start()">Start</button>
-
+		<button class="btn-timer" id="stopTimer" onclick="pause()">STOP</button>
 
 		<div class="container-options">
 				<div class="clickTarget" onclick="openOptions()">				
@@ -71,12 +72,14 @@
 			<div class="container-options-open-lower">
 				<p>Push Notifications</p>
 					<div class="toggleContainer_01">
-						<input type="checkbox" id="switch" /><label for="switch">Toggle01</label>
+						<input type="checkbox" id="switch" onclick="pushToggle()"/>
+						<label for="switch">Toggle01</label>
 					</div>
 				<br></br>
 				<p>Voice Notifications</p>
 					<div class="toggleContainer_02">
-						<input type="checkbox" id="switch02" /><label for="switch02">Toggle02</label>
+						<input type="checkbox" id="switch02"/>
+						<label for="switch02">Toggle02</label>
 					</div>
 
 					<div class="select-sound">

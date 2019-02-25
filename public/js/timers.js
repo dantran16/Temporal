@@ -12,6 +12,10 @@ var interval;
 // 	start();
 // })
 function start(){
+	//swap button for pause
+	document.getElementById("startTimer").style.display = "none";
+	document.getElementById("stopTimer").style.display = "block";
+
 	//timeleft = document.getElementById("time");
 	var timestring = $("#time").text();
 	console.log(timestring);
@@ -57,6 +61,10 @@ function start(){
 
 function pause(){
 	clearInterval(interval);
+
+	//swap pause with START on click
+	document.getElementById("startTimer").style.display = "block";
+	document.getElementById("stopTimer").style.display = "none";
 }
 
 function convertSeconds(seconds){

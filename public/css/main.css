@@ -343,9 +343,9 @@ ul.list-group-session{
 	display: block;
  	margin-right: inherit;
  	margin-left: inherit;
-	width: 358px;
 
-	top: 140px;
+	height:460px; width:85%;
+	top: 190px;
 	list-style-type: none; 
 
 	padding: 10px 20px;
@@ -359,7 +359,6 @@ ul.list-group-session{
 
 	color: #000000;
 
-	height:480px; width:85%;
 	overflow:hidden; overflow-y:scroll;
 
 }
@@ -373,17 +372,31 @@ ul.list-group-session{
 	opacity: 0.8;
 }
 
-#headerTime {
-	width: 300px;
-	height: 80px;
-	top: 55px;
-	margin-left: 47px;
+.headerTime {
+	display: inline-block;
+	justify-content: center;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 95px;
+	text-align: center;
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	line-height: inherit;
+}
+
+.headerTime p {
+	font-size: 14px;
+	letter-spacing: 0.07em;
+	opacity: 0.6;
+	margin-bottom: 0.0em;
 }
 
 #time {
-	font-size: 20pt;
-	opacity: 0.8;
-
+	font-size: 25pt;
+	color: lightgreen;
 }
 
 #duedate {
@@ -996,27 +1009,67 @@ bottom: 15.21%;
 	margin-top: 13px;
 }
 
-.btn-start {
- 	/* Finish/Check Button */
-
+.btn-timer {
 	position: absolute;
 	width: 80px;
 	height: 45px;
-	/*left: 337px;
-	top: 613px;*/
+
 	right: 29px;
 	bottom: 75px;
-
-	background: #6FCF97;
+	cursor: pointer;
 	border-radius: 100px;
 
 	/* Button Drop */
 	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.237602), 0px 0px 14px rgba(0, 0, 0, 0.12);
  	-webkit-transition: 1s;
 
+ 	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	color: white;
+	text-align: center;
+	z-index: 0;
+}
 
-
+#startTimer {
+ 	display: block;
+	position: absolute;
+	background-color: #6FCF97;
  }
+
+ #stopTimer {
+ 	display: none;
+	position: absolute;
+	background-color: red;
+ }
+/*
+.btn-pause {
+ 	display: none;
+	position: absolute;
+	width: 80px;
+	height: 45px;
+
+	right: 29px;
+	bottom: 75px;
+	cursor: pointer;
+
+	background: lightyellow;
+	border-radius: 100px;
+
+	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.237602), 0px 0px 14px rgba(0, 0, 0, 0.12);
+ 	-webkit-transition: 1s;
+
+ 	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+	color: white;
+ } */
 
 .container-options {
 	 /* Rectangle */
@@ -1255,7 +1308,6 @@ html {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  overflow: scroll;
   margin: 0px;
   padding: 0px;
   
@@ -1263,7 +1315,8 @@ html {
   
   font-size: 20px;
   font-family: Rubik;
-  
+
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
