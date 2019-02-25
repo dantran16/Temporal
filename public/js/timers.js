@@ -16,6 +16,8 @@ function start(){
 	document.getElementById("startTimer").style.display = "none";
 	document.getElementById("stopTimer").style.display = "block";
 
+	document.getElementById("time").style.color = "red";
+
 	//timeleft = document.getElementById("time");
 	var timestring = $("#time").text();
 	console.log(timestring);
@@ -65,6 +67,12 @@ function pause(){
 	//swap pause with START on click
 	document.getElementById("startTimer").style.display = "block";
 	document.getElementById("stopTimer").style.display = "none";
+
+	document.getElementById("time").style.color = "lightgreen";
+}
+
+function updateTime() {
+
 }
 
 function convertSeconds(seconds){
@@ -86,4 +94,8 @@ function convertSeconds(seconds){
 	}
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
+}
+
+function runningTime() {
+	
 }
