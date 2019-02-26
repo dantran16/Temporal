@@ -106,11 +106,25 @@ exports.addtask = function(req,res){
 	
 	session.sessions[key].time = convertSeconds(sessiontimeinseconds + tasktimeinseconds);
 	
+	//updating session date if date is earlier
+	var sessiondate = session.sessions[key].date;
+	
+	var month = req.query.month;
+	if(month < 10){
+		month = "0" + req.query.month;
+	}
+	var day = req.query.day;
+	if(day < 10){
+		day = "0" + req.query.day;
+	}
+	var year = req.query.year;
+	var datestring = month + "/" + day + "/" + year;
+	console.log(datestring);
 	
 	var newTask = {
 		"name": req.query.taskname,
 		"time": tasktimestring,
-		"duedate": req.query.taskdate,
+		"duedate": datestring,
 	};
 
 	console.log(newTask);

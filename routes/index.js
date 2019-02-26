@@ -28,14 +28,27 @@ exports.newSession = function(req, res){
 	var timestring = hrs + ':' + min + ':' + sec;
 	console.log(timestring);
 	
+	//date
+	var month = req.query.month;
+	if(month < 10){
+		month = "0" + req.query.month;
+	}
+	var day = req.query.day;
+	if(day < 10){
+		day = "0" + req.query.day;
+	}
+	var year = req.query.year;
+	var datestring = month + "/" + day + "/" + year;
+	console.log(datestring);
+	
 	var newSession = {
 	"name": req.query.sessionname,
-	"duedate": req.query.taskdate,
+	"duedate": datestring,
 	"time": timestring,
 	"tasks": [{
 		"name": req.query.taskname,
 		"time": req.query.tasktime,
-		"duedate": req.query.taskdate
+		"duedate": datestring
 	}
 	]
 	};

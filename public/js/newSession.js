@@ -30,21 +30,6 @@ function initializePage() {
 		location.replace("/session/"+string);
 	});
 	
-	//function to initialize due date
-	var date = new Date();
-	var day = date.getDate();
-	if(day<10){
-		day = "0"+year;
-	}
-	var month = date.getMonth() + 1;
-	if(month<10){
-		month = "0" + month;
-	}
-	var year = date.getFullYear();
-	var datestring = month + "/" + day + "/" + year;
-	if(document.getElementById("duedate").innerHTML == "Due by: "){
-		document.getElementById("duedate").innerHTML = "Due by: " + datestring;
-	}
 }
 
 function newSession(){
