@@ -73,7 +73,7 @@ exports.addtask = function(req,res){
 	}
 	
 	
-	//converting time from task time to a string
+	//converting time from new task time to a string
 	var hrs = req.query.hour;
 	if(hrs < 10){
 		var seconddigit = hrs;
@@ -92,14 +92,18 @@ exports.addtask = function(req,res){
 	hrs = req.query.hour;
 	min = req.query.minute;
 	var tasktimeinseconds = hrs * 3600 + min * 60;
-	var timestring = session.sessions[key].time;
-	var hrstring = timestring.substring(0,2);
-	var hr = parseInt(hrstring);
-	var minstring = timestring.substring(3,5);
-	var minutes = parseInt(minstring);
-	var secstring = timestring.substring(6,8);
-	var seconds = parseInt(secstring);
-	var sessiontimeinseconds = hr * 3600 + minutes * 60 + seconds;
+	var sessiontimeinseconds = 0;
+	for(var k = 0; k < session.sessions[key].tasks.length; k++){
+		var timestring = session.sessions[key].tasks[k].time;
+		var hrstring = timestring.substring(0,2);
+		var hr = parseInt(hrstring);
+		var minstring = timestring.substring(3,5);
+		var minutes = parseInt(minstring);
+		var secstring = timestring.substring(6,8);
+		var seconds = parseInt(secstring);
+		sessiontimeinseconds += hr * 3600 + minutes * 60 + seconds;
+	}
+	
 	session.sessions[key].time = convertSeconds(sessiontimeinseconds + tasktimeinseconds);
 	
 	
