@@ -50,9 +50,8 @@ exports.view = function(req, res){
 exports.addtask = function(req,res){
 	console.log("The session name is " + name);
 	
-	
-	//converting time from task time to a string
-	var seconds = req.query.hour*3600 + req.query.minute*60;
+	//function for converting seconds into a xx:xx:xx string
+	function convertSeconds(seconds){
 	var hrs = Math.floor(seconds/3600);
 	if(hrs < 10){
 		var seconddigit = hrs;
@@ -69,11 +68,44 @@ exports.addtask = function(req,res){
 		var seconddigit = sec;
 		sec = '0'+ seconddigit;
 	}
-	var timestring = hrs + ':' + min + ':' + sec;
+	var string = hrs + ':' + min + ':' + sec;
+	return string;
+	}
+	
+	
+	//converting time from task time to a string
+	var hrs = req.query.hour;
+	if(hrs < 10){
+		var seconddigit = hrs;
+		hrs = '0' + seconddigit;
+	}
+	var min = req.query.minute;
+	if(min < 10){
+		var seconddigit = min;
+		min = '0' + seconddigit;
+	}
+	var sec = "00";
+	var tasktimestring = hrs + ':' + min + ':' + sec;
+	console.log(tasktimestring);
+	
+	//adding time from overall time
+	hrs = req.query.hour;
+	min = req.query.minute;
+	var tasktimeinseconds = hrs * 3600 + min * 60;
+	var timestring = session.sessions[key].time;
+	var hrstring = timestring.substring(0,2);
+	var hr = parseInt(hrstring);
+	var minstring = timestring.substring(3,5);
+	var minutes = parseInt(minstring);
+	var secstring = timestring.substring(6,8);
+	var seconds = parseInt(secstring);
+	var sessiontimeinseconds = hr * 3600 + minutes * 60 + seconds;
+	session.sessions[key].time = convertSeconds(sessiontimeinseconds + tasktimeinseconds);
+	
 	
 	var newTask = {
 		"name": req.query.taskname,
-		"time": timestring,
+		"time": tasktimestring,
 		"duedate": req.query.taskdate,
 	};
 
