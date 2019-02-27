@@ -101,6 +101,12 @@ function addTask() {
   location.replace(url + "/index");
   location.replace(url);
 }
+function deleteRow(r) {
+  var i = document.getElementById("{{id}}");
+  System.out.println(i);
+
+  document.getElementById("{{id}}").remove(i);
+}
 
 
 
