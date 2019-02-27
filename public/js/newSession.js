@@ -108,25 +108,10 @@ function logout(){
 }
 
 function addTask() {
-  document.getElementById("newTask").style.display = "none";
-  var url = location.href;
-  location.replace(url + "/index");
-  location.replace(url);
-}
-function deleteRow() {
-var i = document.getElementById("Session");
-i.remove(i.selectedIndex);
-}
-
-function delteTask(){
-  JSONArray array = new JSONArray();
-  int aLength = this.length();
-
-  for (int i=0; i<aLength.length; i++){
-    
-
-
-  }
+	document.getElementById("newTask").style.display = "none";
+	var url = location.href;
+	location.replace(url + "/index");
+	location.replace(url);
 }
 
 

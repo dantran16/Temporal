@@ -8,9 +8,6 @@ var timeleft;
 var alarmduration = 2;
 var interval;
 
-// $(document).ready(function() {
-// 	start();
-// })
 function start(){
 	//swap button for pause
 	document.getElementById("startTimer").style.display = "none";
