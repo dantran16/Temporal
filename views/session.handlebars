@@ -128,13 +128,9 @@
 		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>
 		    	<label for="min"><p>min</p></label> <br>
 
-		    	<label for="date"><b>Finish By (month/day/year): </b></label>
-				<br />
-		    	<input id="timeInputBox" type="number" name="month" min="1" max="12" required> /
-				<input id="timeInputBox" type="number" name="day" min="0" max="31" required> /
-				<input id="timeInputBox" style="width: 48px" type="number" name="year" value="2019" min="2019" max="2020" required>
-				<br />
-				<br />
+		    	<label for="date"><b>Finish By: </b></label>
+		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
+				
 		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">Close</button>
 				<button type="submit" class="btn-save">Save</button> 
 				<!-- <button type="submit" class="btn-save" onclick="addTask()">Save</button> -->

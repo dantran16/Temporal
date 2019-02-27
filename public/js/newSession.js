@@ -30,6 +30,19 @@ function initializePage() {
 		location.replace("/session/"+string);
 	});
 	
+	//set the min for the date to be current date
+	var today = new Date();
+	var ddtoday = today.getDate();
+	if(ddtoday < 10){
+		ddtoday = '0' + ddtoday;
+	}
+	var mmtoday = today.getMonth() + 1;
+	if(mmtoday < 10){
+		mmtoday = '0' + mmtoday;
+	}
+	var yytoday = today.getFullYear();
+	today = yytoday + '-' + mmtoday + '-' + ddtoday;
+	document.getElementById("taskdate").setAttribute("min", today);
 }
 
 function newSession(){
