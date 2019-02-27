@@ -477,32 +477,41 @@ top: 30px;
 .newTaskCard .btn-cancel {
   background-color: red;
   color: white;
-  padding: 16px 20px;
+
+  padding: 10px 16px;
   box-sizing: border-box;
   border-radius: 100px;
-  /*border: none;*/
   cursor: pointer;
-  margin-bottom: 14px;
+  font-size: 14pt;
+
+  position: absolute;
+  margin-top: 100px;
+  left: 8%;
   opacity: 0.8;
-}
-/* When the inputs get focus, do something */
-.newTaskCard input[type=text]:focus, .newTaskCard input[type=time]:focus, .newTaskCard input[type=date]:focus {
-  background-color: #ddd;
-  outline: none;
 }
 
 /* Set a style for the submit/login button */
 .newTaskCard .btn-save {
   background-color: #6FCF97;
   color: white;
+
   padding: 16px 20px;
   box-sizing: border-box;
   border-radius: 100px;
-  /*border: none;*/
   cursor: pointer;
-  margin-bottom: 14px;
+
+  position: absolute;
+  margin-top: 100px;
+  right: 8%;
   opacity: 0.8;
 }
+
+/* When the inputs get focus, do something */
+.newTaskCard input[type=text]:focus, .newTaskCard input[type=time]:focus, .newTaskCard input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
 
 /* Full-width input fields */
 .newTaskCard input[type=text], .newTaskCard input[type=time], .newTaskCard input[type=date] {

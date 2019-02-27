@@ -63,6 +63,8 @@ function openNewSession() {
 function closeNewSession() {
   document.getElementById("newSession").style.display = "none";
   document.getElementById("taskCardBackground").style.filter = "none";
+  document.getElementById("sessionname").value = "";
+  document.getElementById("taskname").value = "";
 }
 /* ---- END New Session Card ---- */
 
