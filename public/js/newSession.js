@@ -116,14 +116,21 @@ function addTask() {
 }
 /*
 function deleteRow() {
-  var i = document.getElementById("Session");
-  i.remove(i.selectedIndex);
-}
-function delteTask(){
-  JSONArray array = new JSONArray();
-  int aLength = this.length();
-  for (int i=0; i<aLength.length; i++){
+  JSONOject jObject = new JSONOject( {{sessions}} );
+  JSONArray array = jObject.getJSONArray(this);
+  int length = array.length();
+  JSONArray newOne = new JSONArray();
+  
+
+  for(int j=0; j<length.length; j++){
+    JSONOject aObj = array.getJSONObject(j);
+    newOne[j] = aObj.remove(aObj.selectedIndex)
     
   }
 }
 */
+
+function deleteTask(){
+    var i = document.getElementById("Session");
+  i.remove(i.selectedIndex);
+}
