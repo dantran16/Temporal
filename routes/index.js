@@ -45,12 +45,12 @@ exports.newSession = function(req, res){
 	"name": req.query.sessionname,
 	"duedate": datestring,
 	"time": timestring,
-	"tasks": [{
+	"tasks": {
 		"name": req.query.taskname,
 		"time": req.query.tasktime,
 		"duedate": datestring
 	}
-	]
+	
 	};
 	session.sessions.push(newSession);
 	res.render('index',{

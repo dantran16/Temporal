@@ -36,7 +36,11 @@
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
-				<li class="session" id="{{id}}">{{name}}</li>
+				<li class="session" id="{{id}}">{{name}}
+					<img src="/svg/Clock-8-512.svg">{{time}}
+					<button onclick="deleteRow()">Delete</button>
+				</li>
+
 				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
 
@@ -142,7 +146,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>
 <script src="/js/timers.js"></script>
-<script src="/js/startSession.js"></script>
+
 
 </body>
 </html>
