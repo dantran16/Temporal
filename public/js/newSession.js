@@ -63,6 +63,9 @@ function openNewTask() {
 function closeNewTask() {
   document.getElementById("newTask").style.display = "none";
   document.getElementById("taskCardBackground").style.filter = "none";
+  document.getElementById("taskname").value = "";
+  document.getElementById("timeInputBox").value = "";
+  document.getElementById("taskdate").value = "";
 }
 /* ---- END New Task Card ---- */
 
@@ -78,6 +81,8 @@ function closeNewSession() {
   document.getElementById("taskCardBackground").style.filter = "none";
   document.getElementById("sessionname").value = "";
   document.getElementById("taskname").value = "";
+  document.getElementById("timeInputBox").value = "";
+  document.getElementById("taskdate").value = "";
 }
 /* ---- END New Session Card ---- */
 

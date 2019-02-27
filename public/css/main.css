@@ -485,7 +485,7 @@ top: 30px;
   font-size: 14pt;
 
   position: absolute;
-  margin-top: 100px;
+  bottom: 20px;
   left: 8%;
   opacity: 0.8;
 }
@@ -501,7 +501,7 @@ top: 30px;
   cursor: pointer;
 
   position: absolute;
-  margin-top: 100px;
+  bottom: 20px;
   right: 8%;
   opacity: 0.8;
 }
