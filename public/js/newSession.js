@@ -118,24 +118,15 @@ function addTask() {
 // save toggle states
 function toggleNoti() {
     var pushBox = document.getElementById('pushNoti');
-    var voiceBox = document.getElementById('voiceNoti');
-
     localStorage.setItem('pushNoti', pushBox.checked);
-/*
-    if(pushBox == checked) {
-    	localStorage.setItem('pushNoti', pushBox.checked);
-    } else {
-        localStorage.setItem('voiceNoti', voiceBox.checked);
-    } */
 }
 
 function toggleVoice() {
     var voiceBox = document.getElementById('voiceNoti');
-
     localStorage.setItem('voiceNoti', voiceBox.checked);
 }
 
-
+//load toggle states
 function loadNotiOptions() {    
     var pushBox = JSON.parse(localStorage.getItem('pushNoti'));
     var voiceBox = JSON.parse(localStorage.getItem('voiceNoti'));
