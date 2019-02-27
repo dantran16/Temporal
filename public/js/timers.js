@@ -40,7 +40,7 @@ function start(){
 	function timer(){
       if(timeleft==0){
 		timeleft = 0;
-		var audio = document.getElementById("audio");
+		var audio = toggleSound();//toggleSound() uses selected sound option from drop down//document.getElementById("sirenTest"); //original b4 chang "audio"
 		if(counter < alarmduration){
 		  audio.play();
 		  counter++;
@@ -71,9 +71,6 @@ function pause(){
 	document.getElementById("time").style.color = "lightgreen";
 }
 
-function updateTime() {
-
-}
 
 function convertSeconds(seconds){
 	var hrs = Math.floor(seconds/3600);
@@ -96,6 +93,61 @@ function convertSeconds(seconds){
 	return string;
 }
 
-function runningTime() {
-	
+function toggleSound() {
+
+	var audioFiles = document.getElementById("audioFiles");
+
+    if (audioFiles.options[audioFiles.selectedIndex].id == "default") {
+        var audioPath = document.getElementById("defaultSound");
+        audioPath.play();
+    }
+    else if(audioFiles.options[audioFiles.selectedIndex].id == "classicAlarm")
+    {
+        var audioPath = document.getElementById("classicSound");
+        audioPath.play();
+    }
+    else if(audioFiles.options[audioFiles.selectedIndex].id == "siren")
+    {
+        var audioPath = document.getElementById("sirenSound");
+        audioPath.play();
+    }
+    else if(audioFiles.options[audioFiles.selectedIndex].id == "ambiance")
+    {
+        var audioPath = document.getElementById("ambianceSound");
+        audioPath.play();
+    }
+    else if(audioFiles.options[audioFiles.selectedIndex].id == "alien")
+    {
+        var audioPath = document.getElementById("alienSound");
+        audioPath.play();
+    }
+    document.getElementById("pauseSound-btn").style.opacity = "0.8";
+    return audioPath;
 }
+
+$(function() {
+    $('#audioFiles').change(function() {
+        localStorage.setItem('soundOption', this.value);
+    });
+    if(localStorage.getItem('soundOption')){
+        $('#audioFiles').val(localStorage.getItem('soundOption'));
+    }
+});
+
+function pauseTestSound() {
+	toggleSound().pause();
+	document.getElementById("pauseSound-btn").style.opacity = "0.2";
+}
+
+/*
+$(document).addEventListener('DOMContentLoaded', function () {
+   var input = document.getElementById('audioFiles');
+   if (localStorage['audioFiles']) { // if audioFile is set
+       input.value = localStorage['audioFiles']; // set the value
+   }
+   input.onchange = function () {
+        localStorage['audioFiles'] = this.value; // change localStorage on change
+    }
+});
+*/
+
