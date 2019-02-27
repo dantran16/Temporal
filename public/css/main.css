@@ -592,6 +592,27 @@ input[type=text] {
 	height: 530px;
 }
 
+.newTaskCard #timeInputBox {
+	width: 30px;
+	height: 25px;
+	border-radius: 5px;
+	text-align: center;
+
+	font-family: Rubik;
+	font-style: bold;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+
+	background: lightgrey;
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    border-bottom: transparent !important;
+
+}
+
 /*END NEW TASK CARD CSS*/
 
 
@@ -1069,40 +1090,37 @@ bottom: 15.21%;
 	color: white;
  } */
 
-.container-options {
+#optionsOpen {
 	 /* Rectangle */
 	position: fixed;
 	width: 100%;
 	height: 51px;
 	bottom: 0;
 	background-color: #AEAEAE;
-	/*
-	overflow: hidden;
-	-webkit-transition: 1s;
-	*/
 }
 
 .container-options-open {
 	/* Rectangle */
-	display: none;
 	position: fixed;
 	width: 100%;
-	height: 200px;
-	bottom: 0;
+	height: 0px;
+	bottom: 51px;
 	background-color: #AEAEAE;
+
+	-webkit-transition: .5s;
+	transition-timing-function: ease;
 }
 
 .container-options-open .clickTarget {
 	position: center;
 	width: 175px;
-	height: 24px;
+	height: 51px;
 	top: 11px;
 
  	display: block;
  	margin-right: auto;
  	margin-left: auto;
  	justify-content: center;
-
 }
 
 
@@ -1116,18 +1134,20 @@ bottom: 15.21%;
 }
 
 .container-options-open-lower p {
+	display: block;
 	position: absolute;
 	width: 70%;
-	left: 28px;
-	margin-top: 35px;
+	left: 5%;
+
+	margin-top: 1.2em;
 
 	font-family: Rubik;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-	line-height: 15px;
+	font-size: 14pt;
+	letter-spacing: 0.08em;
+	line-height: 2.3em;
 
 	color: #000000;
 }
@@ -1136,8 +1156,8 @@ bottom: 15.21%;
 	position: relative;
 	height: 25px;
 	width: 155px;
-	left: 45px;
-	margin-top: 63px;
+	left: 8%;
+	margin-top: 105px;
 
 	font-size: 12pt;
 	font-family: Rubik;
@@ -1148,6 +1168,27 @@ bottom: 15.21%;
 	background-color: lightgrey;
 	border-radius: 3px;
 }
+
+.container-options-open-lower .container-soundOption {
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	left: 170px;
+	bottom: 3px;
+}
+
+#pauseSound-btn {
+	top: 3px;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	opacity: 0.2;
+
+	font-size: 12pt;
+
+	 -webkit-transition: 1s;
+}
+
 
 /* Style the arrow inside the select element: */
 .select-sound:after {
@@ -1193,6 +1234,8 @@ bottom: 15.21%;
 	transform: rotate(-90deg);
 	mix-blend-mode: normal;
 	opacity: 0.54;
+
+	-webkit-transition: 1s;
 }
 
 #session-option-txt {
@@ -1218,13 +1261,7 @@ bottom: 15.21%;
 .toggleContainer_01 {
 	position: absolute;
 	margin-top: 7px;
-	right: 25px;
-}
-
-.toggleContainer_02 {
-	position: absolute;
-	margin-top: 10px;
-	right: 25px;
+	right: 5%;
 }
 
 input[type=checkbox]{
@@ -1275,6 +1312,7 @@ input[type=checkbox]{
 	align-items: center;
 	height: 100vh;
 }
+
 
 /* -- Settings Toggles -- */
 

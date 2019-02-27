@@ -66,14 +66,25 @@ function closeNewSession() {
 }
 /* ---- END New Session Card ---- */
 
-function openOptions() {
-  document.getElementById("optionsOpen").style.display = "block";
-  document.getElementById("finishSession").style.bottom = "195px";
+function togOptions() {
+	var options = document.getElementById("optionsOpen");
+
+	var chevron = document.getElementById("option-arrow-up");
+	var openStatus = options.style.height = "200px";
+
+	if (openStatus=true) {
+		chevron.style.transform = "rotate(-90deg)";
+	}
+
+	if (options.style.height = "0px") {
+		options.style.height = "200px";
+	} else {
+		option.style.height = "0px";
+	}
 }
 
 function closeOptions() {
-  document.getElementById("optionsOpen").style.display = "none";
-  document.getElementById("finishSession").style.bottom = "75px";
+	document.getElementById("optionsOpen").style.height = "0px";
 }
 
 function openCalendar(){
@@ -91,6 +102,7 @@ function openFavorites(){
 function goHome(){
 	location.replace("index");
 }
+
 function logout(){
 	location.replace("../..")
 }
@@ -109,13 +121,33 @@ function deleteRow(r) {
 }
 
 
+// save toggle states
+function toggleNoti() {
+    var pushBox = document.getElementById('pushNoti');
+    var voiceBox = document.getElementById('voiceNoti');
 
+    localStorage.setItem('pushNoti', pushBox.checked);
 /*
-$('.container-options img').on('click', function() {
-    $(this).toggleClass('clicked');
-});
-
-function openOptions() {
-  document.getElementById("container-options").style.height = "75px";
+    if(pushBox == checked) {
+    	localStorage.setItem('pushNoti', pushBox.checked);
+    } else {
+        localStorage.setItem('voiceNoti', voiceBox.checked);
+    } */
 }
-*/
+
+function toggleVoice() {
+    var voiceBox = document.getElementById('voiceNoti');
+
+    localStorage.setItem('voiceNoti', voiceBox.checked);
+}
+
+
+function loadNotiOptions() {    
+    var pushBox = JSON.parse(localStorage.getItem('pushNoti'));
+    var voiceBox = JSON.parse(localStorage.getItem('voiceNoti'));
+
+    document.getElementById("pushNoti").checked = pushBox;
+    document.getElementById("voiceNoti").checked = voiceBox;
+}
+
+

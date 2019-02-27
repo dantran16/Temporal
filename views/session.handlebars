@@ -7,10 +7,11 @@
 		<link href="/css/main.css" rel="stylesheet">
 		<link href="/css/main-theme.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="ISO-8859-1"> <!-- UNICODE -->
 		<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
 
 </head>
-<body>
+<body onload="loadNotiOptions()">
 	<div class="screen-container" id="taskCardBackground">
 
 <!-- BEGIN header -->
@@ -44,7 +45,12 @@
 			{{/each}}
 
 			<div style="display: none;">
-				<audio id ="audio" src="/sounds/alarm1.wav"> </audio>
+				<audio id ="defaultSound" src="/sounds/default.wav"> </audio>
+				<audio id ="classicSound" src="/sounds/classic.wav"> </audio>
+				<audio id ="sirenSound" src="/sounds/siren.wav"> </audio>
+				<audio id ="ambianceSound" src="/sounds/ambiance.wav"> </audio>
+				<audio id ="alienSound" src="/sounds/alien.wav"> </audio>
+
 			</div>
 			<li>
 				<div class="add-task-text">
@@ -58,44 +64,47 @@
 
 		<button class="btn-timer" id="stopTimer" onclick="pause()">STOP</button>
 
+<!--
 		<div class="container-options">
 				<div class="clickTarget" onclick="openOptions()">				
 					<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 					<a id="session-option-txt">Session Options</a>
 				</div>
 		</div>
-
+-->
 <!--- BEGIN SESSION OPTIONS -->
 
 		<div class="container-options-open" id="optionsOpen">
-			<div class="clickTarget" onclick="closeOptions()">				
-				<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-down"></img>
+			<div class="clickTarget" onclick="togOptions()">				
+				<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 				<a id="session-option-txt">Session Options</a>
 			</div>
 
 			<div class="container-options-open-lower">
-				<p>Push Notifications</p>
-					<div class="toggleContainer_01">
-						<input type="checkbox" id="switch" onclick="pushToggle()"/>
-						<label for="switch">Toggle01</label>
-					</div>
-				<br></br>
-				<p>Voice Notifications</p>
-					<div class="toggleContainer_02">
-						<input type="checkbox" id="switch02"/>
-						<label for="switch02">Toggle02</label>
+				<p>Push Notifications <br/>
+				Voice Notifications</p>
+					<div class="toggleContainer_01" id="optionToggle">
+						<input type="checkbox" id="pushNoti" onclick="toggleNoti()"/>
+						<label for="pushNoti">Toggle01</label>
+
+						<input type="checkbox" id="voiceNoti" onclick="toggleVoice()"/>
+						<label for="voiceNoti">Toggle02</label>
 					</div>
 
 					<div class="select-sound">
-						<select name="sounds" size="1">
-							<option value="default">Default Sound</option>
-							<option value="siri">Siri</option>
-						  	<option value="alexa">Alexa</option>
-							<option value="classic">Classic Alarm</option>
-							<option value="sirens">Sirens</option>
-							<option value="dreamy">Dreamy</option>
+						<select id="audioFiles" name="sounds" size="1" onchange="toggleSound()">
+							<option id="default" value="default.wav">Default Sound</option>
+							<option id="classicAlarm" value="classic.wav">Classic Alarm</option>
+							<option id="siren" value="siren.wav">Sirens</option>
+							<option id="ambiance" value="ambiance.wav">Dreamy</option>
+							<option id="alien" value="alien.wav">Alien</option>
 						</select>
+						<div class="container-soundOption">
+							<img id="pauseSound-btn" src="/svg/pause-button.svg" onclick="pauseTestSound()"></img>
+						</div>
 					</div>
+
+					
 			</div>
 
 		</div>
@@ -114,16 +123,16 @@
 				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<input type="number" name="hour" min="0" max="30" required>
+		    	<input id="timeInputBox" type="number" name="hour" min="0" max="30" required>
 		    	<label for="hour"><p>hr</p></label>
-		    	<input type="number" name="minute" min="0" max="59" required>
+		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>
 		    	<label for="min"><p>min</p></label> <br>
 
 		    	<label for="date"><b>Finish By (month/day/year): </b></label>
 				<br />
-		    	<input type="number" name="month" min="1" max="12" required>/
-				<input type="number" name="day" min="0" max="31" required>/
-				<input type="number" name="year" value="2019" min="2019" max="2020" required>
+		    	<input id="timeInputBox" type="number" name="month" min="1" max="12" required> /
+				<input id="timeInputBox" type="number" name="day" min="0" max="31" required> /
+				<input id="timeInputBox" style="width: 48px" type="number" name="year" value="2019" min="2019" max="2020" required>
 				<br />
 				<br />
 		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">Close</button>
