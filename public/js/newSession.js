@@ -57,7 +57,7 @@ function homePage(){
 function openNewTask() {
   document.getElementById("newTask").style.display = "block";
   document.getElementById("taskCardBackground").style.filter = "blur(4px) grayscale(20%)";
-  document.getElementById("optionsOpen").style.display = "none";
+  closeOptions();
 }
 
 function closeNewTask() {
@@ -86,26 +86,7 @@ function closeNewSession() {
 }
 /* ---- END New Session Card ---- */
 
-function togOptions() {
-	var options = document.getElementById("optionsOpen");
 
-	var chevron = document.getElementById("option-arrow-up");
-	var openStatus = options.style.height = "200px";
-
-	if (openStatus=true) {
-		chevron.style.transform = "rotate(-90deg)";
-	}
-
-	if (options.style.height = "0px") {
-		options.style.height = "200px";
-	} else {
-		option.style.height = "0px";
-	}
-}
-
-function closeOptions() {
-	document.getElementById("optionsOpen").style.height = "0px";
-}
 
 function openCalendar(){
 	location.replace("calendar");
@@ -150,25 +131,5 @@ function delteTask(){
   }
 }
 */
-
-// save toggle states
-function toggleNoti() {
-    var pushBox = document.getElementById('pushNoti');
-    localStorage.setItem('pushNoti', pushBox.checked);
-}
-
-function toggleVoice() {
-    var voiceBox = document.getElementById('voiceNoti');
-    localStorage.setItem('voiceNoti', voiceBox.checked);
-}
-
-//load toggle states
-function loadNotiOptions() {    
-    var pushBox = JSON.parse(localStorage.getItem('pushNoti'));
-    var voiceBox = JSON.parse(localStorage.getItem('voiceNoti'));
-
-    document.getElementById("pushNoti").checked = pushBox;
-    document.getElementById("voiceNoti").checked = voiceBox;
-}
 
 
