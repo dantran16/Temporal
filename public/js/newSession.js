@@ -113,11 +113,20 @@ function addTask() {
   location.replace(url + "/index");
   location.replace(url);
 }
-function deleteRow(r) {
-  var i = document.getElementById("{{id}}");
-  System.out.println(i);
+function deleteRow() {
+var i = document.getElementById("Session");
+i.remove(i.selectedIndex);
+}
 
-  document.getElementById("{{id}}").remove(i);
+function delteTask(){
+  JSONArray array = new JSONArray();
+  int aLength = this.length();
+
+  for (int i=0; i<aLength.length; i++){
+    
+
+
+  }
 }
 
 
