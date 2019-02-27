@@ -1,6 +1,6 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
+  initializePage();
 })
 
 /*
@@ -20,36 +20,52 @@ function closeNav() {
 }
 
 function initializePage() {
-	console.log("Javascript connected!");
-	
-	//function to make sessions click
-	$(".sessions").click(function(e){
-		e.preventDefault();
-		var string = $(this).text();
-		console.log(string);
-		location.replace("/session/"+string);
-	});
-	
+  console.log("Javascript connected!");
+  
+  //function to make sessions click
+  $(".sessions").click(function(e){
+    e.preventDefault();
+    var string = $(this).text();
+    console.log(string);
+    location.replace("/session/"+string);
+  });
+  
+  //set the min for the date to be current date
+  var today = new Date();
+  var ddtoday = today.getDate();
+  if(ddtoday < 10){
+    ddtoday = '0' + ddtoday;
+  }
+  var mmtoday = today.getMonth() + 1;
+  if(mmtoday < 10){
+    mmtoday = '0' + mmtoday;
+  }
+  var yytoday = today.getFullYear();
+  today = yytoday + '-' + mmtoday + '-' + ddtoday;
+  document.getElementById("taskdate").setAttribute("min", today);
 }
 
 function newSession(){
-	location.replace("newSession");
+  location.replace("newSession");
 }
 
 function homePage(){
-	location.replace(location.href+"index");
+  location.replace(location.href+"index");
 } 
 
 /* ---- New Task Card ---- */
 function openNewTask() {
   document.getElementById("newTask").style.display = "block";
   document.getElementById("taskCardBackground").style.filter = "blur(4px) grayscale(20%)";
-  document.getElementById("optionsOpen").style.display = "none";
+  closeOptions();
 }
 
 function closeNewTask() {
   document.getElementById("newTask").style.display = "none";
   document.getElementById("taskCardBackground").style.filter = "none";
+  document.getElementById("taskname").value = "";
+  document.getElementById("timeInputBox").value = "";
+  document.getElementById("taskdate").value = "";
 }
 /* ---- END New Task Card ---- */
 
@@ -63,48 +79,33 @@ function openNewSession() {
 function closeNewSession() {
   document.getElementById("newSession").style.display = "none";
   document.getElementById("taskCardBackground").style.filter = "none";
+  document.getElementById("sessionname").value = "";
+  document.getElementById("taskname").value = "";
+  document.getElementById("timeInputBox").value = "";
+  document.getElementById("taskdate").value = "";
 }
 /* ---- END New Session Card ---- */
 
-function togOptions() {
-	var options = document.getElementById("optionsOpen");
 
-	var chevron = document.getElementById("option-arrow-up");
-	var openStatus = options.style.height = "200px";
-
-	if (openStatus=true) {
-		chevron.style.transform = "rotate(-90deg)";
-	}
-
-	if (options.style.height = "0px") {
-		options.style.height = "200px";
-	} else {
-		option.style.height = "0px";
-	}
-}
-
-function closeOptions() {
-	document.getElementById("optionsOpen").style.height = "0px";
-}
 
 function openCalendar(){
-	location.replace("calendar");
+  location.replace("calendar");
 }
 
 function openGoals(){
-	location.replace("goals");
+  location.replace("goals");
 }
 
 function openFavorites(){
-	location.replace("favorites");
+  location.replace("favorites");
 }
 
 function goHome(){
-	location.replace("index");
+  location.replace("index");
 }
 
 function logout(){
-	location.replace("../..")
+  location.replace("../..")
 }
 
 function addTask() {
@@ -113,50 +114,16 @@ function addTask() {
   location.replace(url + "/index");
   location.replace(url);
 }
-function deleteRow() {
-var i = document.getElementById("Session");
-i.remove(i.selectedIndex);
-}
-// function delteTask(){
-//   JSONArray array = new JSONArray();
-//   int aLength = this.length();
-
-//   for (int i=0; i<aLength.length; i++){
-    
-
-
-//   }
-// }
-
-
-
-// save toggle states
-function toggleNoti() {
-    var pushBox = document.getElementById('pushNoti');
-    var voiceBox = document.getElementById('voiceNoti');
-
-    localStorage.setItem('pushNoti', pushBox.checked);
 /*
-    if(pushBox == checked) {
-    	localStorage.setItem('pushNoti', pushBox.checked);
-    } else {
-        localStorage.setItem('voiceNoti', voiceBox.checked);
-    } */
+function deleteRow() {
+  var i = document.getElementById("Session");
+  i.remove(i.selectedIndex);
 }
-
-function toggleVoice() {
-    var voiceBox = document.getElementById('voiceNoti');
-
-    localStorage.setItem('voiceNoti', voiceBox.checked);
+function delteTask(){
+  JSONArray array = new JSONArray();
+  int aLength = this.length();
+  for (int i=0; i<aLength.length; i++){
+    
+  }
 }
-
-
-function loadNotiOptions() {    
-    var pushBox = JSON.parse(localStorage.getItem('pushNoti'));
-    var voiceBox = JSON.parse(localStorage.getItem('voiceNoti'));
-
-    document.getElementById("pushNoti").checked = pushBox;
-    document.getElementById("voiceNoti").checked = voiceBox;
-}
-
-
+*/

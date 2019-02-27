@@ -75,7 +75,7 @@
 <!--- BEGIN SESSION OPTIONS -->
 
 		<div class="container-options-open" id="optionsOpen">
-			<div class="clickTarget" onclick="togOptions()">				
+			<div class="clickTarget" onclick="toggleOpt()">				
 				<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 				<a id="session-option-txt">Session Options</a>
 			</div>
@@ -123,19 +123,16 @@
 				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
+				<div></div>
 		    	<input id="timeInputBox" type="number" name="hour" min="0" max="30" required>
 		    	<label for="hour"><p>hr</p></label>
 		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>
 		    	<label for="min"><p>min</p></label> <br>
 
-		    	<label for="date"><b>Finish By (month/day/year): </b></label>
-				<br />
-		    	<input id="timeInputBox" type="number" name="month" min="1" max="12" required> /
-				<input id="timeInputBox" type="number" name="day" min="0" max="31" required> /
-				<input id="timeInputBox" style="width: 48px" type="number" name="year" value="2019" min="2019" max="2020" required>
-				<br />
-				<br />
-		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">Close</button>
+		    	<label for="date"><b>Finish By:</b></label>
+		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
+				
+		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">✕</button>
 				<button type="submit" class="btn-save">Save</button> 
 				<!-- <button type="submit" class="btn-save" onclick="addTask()">Save</button> -->
 			</form>
@@ -146,6 +143,7 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>
 <script src="/js/timers.js"></script>
+<script src="/js/options.js"></script>
 
 
 </body>
