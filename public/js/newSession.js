@@ -117,17 +117,17 @@ function deleteRow() {
 var i = document.getElementById("Session");
 i.remove(i.selectedIndex);
 }
+// function delteTask(){
+//   JSONArray array = new JSONArray();
+//   int aLength = this.length();
 
-function delteTask(){
-  JSONArray array = new JSONArray();
-  int aLength = this.length();
-
-  for (int i=0; i<aLength.length; i++){
+//   for (int i=0; i<aLength.length; i++){
     
 
 
-  }
-}
+//   }
+// }
+
 
 
 // save toggle states
