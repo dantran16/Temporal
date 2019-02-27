@@ -20,16 +20,18 @@ function statusChangeCallback(response) {
 }
 
 function changeUser(response){
-	$('.facebookLogin').hide();
-	$('h1').text(response.name);
+	$('.facebookLogin.p').hide();
+	$('h1 #name').text(response.name);
 	$('#photo').attr("src",response.picture.data.url);
 }
 
 $(document).ready($(function () {
     $("#fblogout").click(facebooklogout);
 }));
-function facebookLogout(){
-FB.logout(function(response) {
-  // user is now logged out
-});
-}
+
+function fbLogout() {
+        FB.logout(function (response) {
+            //Do what ever you want here when logged out like reloading the page
+            window.location.reload();
+        });
+    }
