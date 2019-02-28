@@ -25,7 +25,7 @@ function initializePage() {
   //function to make sessions click
   $(".sessions").click(function(e){
     e.preventDefault();
-    var string = $(this).text();
+    var string = $(".sessionname", this).text();
     console.log(string);
     location.replace("/session/"+string);
   });
