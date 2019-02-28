@@ -38,7 +38,7 @@ top: 152px;
 	background: #6D6D6D; 
 	
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -66,7 +66,7 @@ top: 152px;
 } 
 
 .other-container .about-container h1{
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -102,7 +102,7 @@ top: 152px;
 	left: 20px;
 	top: 122px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -139,7 +139,7 @@ top: 152px;
 	top: 0px;
 }
 .bottom-screen{
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -227,7 +227,7 @@ top: 152px;
 	top:75px;
 	right: 85px; 
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -247,7 +247,7 @@ top: 152px;
 	left: 130px;
 	top: 375px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -266,7 +266,7 @@ top: 152px;
 	left: 200px;
 	top: 260px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -289,7 +289,7 @@ top: 152px;
 
 }
 h4{
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -348,7 +348,7 @@ ul.list-group-session{
 
 	padding: 10px 20px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: inherit;
@@ -379,9 +379,9 @@ ul.list-group-session{
 	margin-top: 95px;
 	text-align: center;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: inherit;
 }
 
@@ -395,6 +395,11 @@ ul.list-group-session{
 #time {
 	font-size: 25pt;
 	color: lightgreen;
+
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	line-height: inherit;
 }
 
 #duedate {
@@ -543,9 +548,9 @@ input[type=text] {
 	margin: 8px 0;
 	box-sizing: border-box;
 	padding-left: 0%;
-	background-color: #C4C4C4; 
+	background-color: #000000; 
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -580,7 +585,7 @@ input[type=text] {
 	background: #9C9C9C;
 	box-shadow: 0px -2px 15px rgba(0, 0, 0, 0.25);
 	border-radius: 18px 18px 0 0;
-	z-index: 9;
+	z-index: 1;
 
 	text-align: center;
 
@@ -606,7 +611,7 @@ input[type=text] {
 	border-radius: 5px;
 	text-align: center;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: bold;
 	font-weight: 500;
 	line-height: normal;
@@ -633,7 +638,7 @@ input[type=text] {
 	left: 0px;
 	top: 0px;
 
-	background: rgba(196, 196, 196, 0.4);
+	background: #EDEDED;
 
 	align-items: center;
 	display: flex;
@@ -660,7 +665,7 @@ input[type=text] {
 	left: 66px;
 	top: 8px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -679,9 +684,9 @@ input[type=text] {
 	left: 66px;
 	top: 60px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 500;
 	line-height: normal;
 	font-size: 28px;
 	letter-spacing: 0.02em;
@@ -698,7 +703,7 @@ input[type=text] {
 	left: 65px;
 	top: 65px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	line-height: normal;
@@ -712,13 +717,6 @@ input[type=text] {
 	height: 90%;
 	margin-left: 65px;
 	margin-top: 14px;
-
-	font-family: Rubik;
-	font-style: normal;
-	font-weight: bold;
-	line-height: normal;
-	font-size: 28px;
-	letter-spacing: 0.02em;
 }
 
 .container-footer {
@@ -733,9 +731,8 @@ input[type=text] {
 .onGoingSessions {
 	position: absolute;
 	width: 100%;
-	height: 540px;
+	height: 100%;
 	left: 0px;
-	top: 64px;
 }
 
 .onGoingSessions h1 {
@@ -744,13 +741,14 @@ input[type=text] {
 	width: 100%;
 	top: 0px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: normal;
 	font-size: 22px;
 	letter-spacing: 0.05em;
 	text-align: center;
+	opacity: 0.80;
 
 	color: #000000;
 }
@@ -759,17 +757,17 @@ input[type=text] {
 	position: absolute;
 	width: 100%;
 	top: 55px;
-	bottom: 0;
+	bottom: 0px;
 }
 
 .onGoingSessions-box {
 	position: absolute;
 	width: 100%;
-	height: 612px;
-	left: 0px;
-	top: 60px;
+	height: 658px;
+	top: 77px;
+	bottom: 0px;
 
-	background: #DFDFDF;
+	background: #EDEDED;
 }
 
 /* ------------[Container End]------------ */
@@ -805,7 +803,7 @@ input[type=text] {
 	border-radius: 14px;
 	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -824,7 +822,7 @@ input[type=text] {
 
 	background: #6D6D6D;
 	border-radius: 14px;
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -857,7 +855,7 @@ input[type=text] {
 	display: flex;
 	width: 177px;
 	height: 43px;
-	bottom: 35px;
+	bottom: 25px;
 	/*left: 120px;*/
 	text-align: center;
 
@@ -869,9 +867,9 @@ input[type=text] {
  }
 
  #button-deets{ 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: normal;
 	font-size: 18px;
 	letter-spacing: 0.05em;
@@ -886,7 +884,7 @@ right: 49.72%;
 top: 0%;
 bottom: 0%;
 
-font-family: Rubik;
+font-family: 'Rubik', sans-serif;
 font-style: normal;
 font-weight: normal;
 line-height: normal;
@@ -925,7 +923,7 @@ bottom: 15.21%;
 
 
  #session-btn-deets {
- 	font-family: Rubik;
+ 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -991,7 +989,7 @@ bottom: 15.21%;
 	position: center;
 	display: inline-block;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -1050,7 +1048,7 @@ bottom: 15.21%;
 	box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.237602), 0px 0px 14px rgba(0, 0, 0, 0.12);
  	-webkit-transition: 1s;
 
- 	font-family: Rubik;
+ 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
@@ -1148,7 +1146,7 @@ bottom: 15.21%;
 	margin-top: 105px;
 
 	font-size: 12pt;
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 100;
 	line-height: normal;
@@ -1235,7 +1233,7 @@ bottom: 15.21%;
 	left: 155px;
 	top: 15px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -1309,7 +1307,7 @@ input[type=checkbox]{
 
 	margin-top: .9em;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 100;
 	line-height: normal;
@@ -1356,7 +1354,7 @@ html {
   border: 1px solid #ccc;
   
   font-size: 20px;
-  font-family: Rubik;
+  font-family: 'Rubik', sans-serif;
 
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
@@ -1384,8 +1382,14 @@ html {
 	width: 100%;
 	height: 76px;
 	top: 0px;
+	z-index: 1; /* keeps header on top */
+	/* background: #C4C4C4; */
+	background: linear-gradient(286.67deg, #283E51 0%, #4B79A1 100%);
+}
 
-	background: #C4C4C4;
+#headerDropShadow {
+	/*box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.237602);*/
+
 }
 
 .other-header h1 {
@@ -1395,9 +1399,9 @@ html {
 	left: 66px;
 	top: 8px;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: normal;
 	font-size: 20px;
 	letter-spacing: 0.05em;
@@ -1447,7 +1451,7 @@ html {
 
 	margin-top: 0.5em;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 22px;
@@ -1465,7 +1469,7 @@ html {
 
 	margin-top: 2.8em;
 
-	font-family: Rubik;
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 300;
 	line-height: normal;

@@ -14,24 +14,23 @@
 <body onload="loadNotiOptions()">
 	<div class="screen-container" id="taskCardBackground">
 
-<!-- BEGIN header -->
+		<!-- BEGIN header -->
 		<div class="other-header">
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
 			<div id="session-name">
-    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
+    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}" onchange="">
 			</div>
-
 			<div class="headerTime" id="timeBox">
 				<p>Remaining Time:</p>
 				<div class="time" id="time">{{time}}</div>
 				<div class="duedate" id="duedate">Due by: {{duedate}}</div>
 			</div>
 		</div>
-<!-- END header -->
+		<!-- END header -->
 
-<!-- BEGIN ongoing session-->
+		<!-- BEGIN ongoing session-->
 		<ul class="list-group-session" id="Session">
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
@@ -58,22 +57,21 @@
 				</div>
 			</li>
 		</ul>
-<!--- END ongoing session --->
+		<!--- END ongoing session --->
 
 		<button class="btn-timer" id="startTimer" onclick="start()">START</button>
 
 		<button class="btn-timer" id="stopTimer" onclick="pause()">STOP</button>
 
-<!--
+		<!--
 		<div class="container-options">
 				<div class="clickTarget" onclick="openOptions()">				
 					<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
 					<a id="session-option-txt">Session Options</a>
 				</div>
 		</div>
--->
-<!--- BEGIN SESSION OPTIONS -->
-
+		-->
+		<!--- BEGIN SESSION OPTIONS -->
 		<div class="container-options-open" id="optionsOpen">
 			<div class="clickTarget" onclick="toggleOpt()">				
 				<img src="/svg/back-btn.svg" alt="BACK" id="option-arrow-up"></img>
@@ -103,15 +101,11 @@
 							<img id="pauseSound-btn" src="/svg/pause-button.svg" onclick="pauseTestSound()"></img>
 						</div>
 					</div>
-
-					
 			</div>
-
 		</div>
+		<!--- END SESSION OPTIONS -->
 	</div>
 </div>
-
-<!--- END SESSION OPTIONS -->
 
 	</div> <!--- END OF SCREEN CONTAINER -->
 
