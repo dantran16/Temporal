@@ -1,6 +1,6 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
+  initializePage();
 })
 
 /*
@@ -20,37 +20,37 @@ function closeNav() {
 }
 
 function initializePage() {
-	console.log("Javascript connected!");
-	
-	//function to make sessions click
-	$(".sessions").click(function(e){
-		e.preventDefault();
-		var string = $(this).text();
-		console.log(string);
-		location.replace("/session/"+string);
-	});
-	
-	//set the min for the date to be current date
-	var today = new Date();
-	var ddtoday = today.getDate();
-	if(ddtoday < 10){
-		ddtoday = '0' + ddtoday;
-	}
-	var mmtoday = today.getMonth() + 1;
-	if(mmtoday < 10){
-		mmtoday = '0' + mmtoday;
-	}
-	var yytoday = today.getFullYear();
-	today = yytoday + '-' + mmtoday + '-' + ddtoday;
-	document.getElementById("taskdate").setAttribute("min", today);
+  console.log("Javascript connected!");
+  
+  //function to make sessions click
+  $(".sessions").click(function(e){
+    e.preventDefault();
+    var string = $(this).text();
+    console.log(string);
+    location.replace("/session/"+string);
+  });
+  
+  //set the min for the date to be current date
+  var today = new Date();
+  var ddtoday = today.getDate();
+  if(ddtoday < 10){
+    ddtoday = '0' + ddtoday;
+  }
+  var mmtoday = today.getMonth() + 1;
+  if(mmtoday < 10){
+    mmtoday = '0' + mmtoday;
+  }
+  var yytoday = today.getFullYear();
+  today = yytoday + '-' + mmtoday + '-' + ddtoday;
+  document.getElementById("taskdate").setAttribute("min", today);
 }
 
 function newSession(){
-	location.replace("newSession");
+  location.replace("newSession");
 }
 
 function homePage(){
-	location.replace(location.href+"index");
+  location.replace(location.href+"index");
 } 
 
 /* ---- New Task Card ---- */
@@ -89,47 +89,48 @@ function closeNewSession() {
 
 
 function openCalendar(){
-	location.replace("calendar");
+  location.replace("calendar");
 }
 
 function openGoals(){
-	location.replace("goals");
+  location.replace("goals");
 }
 
 function openFavorites(){
-	location.replace("favorites");
+  location.replace("favorites");
 }
 
 function goHome(){
-	location.replace("index");
+  location.replace("index");
 }
 
 function logout(){
-	location.replace("../..")
+  location.replace("../..")
 }
 
 function addTask() {
-	document.getElementById("newTask").style.display = "none";
-	var url = location.href;
-	location.replace(url + "/index");
-	location.replace(url);
+  document.getElementById("newTask").style.display = "none";
+  var url = location.href;
+  location.replace(url + "/index");
+  location.replace(url);
 }
 /*
 function deleteRow() {
-	var i = document.getElementById("Session");
-	i.remove(i.selectedIndex);
-}
+  JSONOject jObject = new JSONOject( {{sessions}} );
+  JSONArray array = jObject.getJSONArray(this);
+  int length = array.length();
+  JSONArray newOne = new JSONArray();
+  
 
-function delteTask(){
-  JSONArray array = new JSONArray();
-  int aLength = this.length();
-
-  for (int i=0; i<aLength.length; i++){
+  for(int j=0; j<length.length; j++){
+    JSONOject aObj = array.getJSONObject(j);
+    newOne[j] = aObj.remove(aObj.selectedIndex)
     
-
-
   }
 }
 */
 
-
+function deleteTask(){
+    var i = document.getElementById("Session");
+  i.remove(i.selectedIndex);
+}

@@ -1,5 +1,21 @@
 .sessions p{
 	margin-left: 210px;
+} 
+.facebookLogout{
+
+
+
+	background: #6D6D6D; 
+	
+
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	font-size: 18px;
+	letter-spacing: 0.05em;
+
+	color: #FFFFFF;
 }
 
 /* ACCOUNT */
@@ -48,10 +64,7 @@ top: 152px;
 	color: #FFFFFF;
 }
 
-.facebookLogout{
-	padding-top: 200px;
-	margin-right: 20px;
-}
+
 
 /*ACCOUNT END*/
 /*ABOUT CSS*/
