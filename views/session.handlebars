@@ -20,7 +20,7 @@
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
 			<div id="session-name">
-    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}" onchange="">
+    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
 			<div class="headerTime" id="timeBox">
 				<p>Remaining Time:</p>
@@ -35,8 +35,8 @@
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
-				<li class="session" id="{{id}}">{{name}}
-					<img src="/svg/Clock-8-512.svg">{{time}}
+				<li class="task" id="{{id}}">{{name}}
+					<img id="clockIcon" src="/svg/clock.svg">{{time}}
 					<button onclick="deleteTask()">Delete</button>
 				</li>
 
