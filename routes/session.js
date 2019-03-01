@@ -53,29 +53,45 @@ function convertSeconds(seconds){
 }
 
 exports.view = function(req, res){
-  name = req.params.name;
-  console.log("The session name is " + name);
-  for (i = 0; i < session.sessions.length; i++){
+  
+	name = req.params.name;
+	console.log("The session name is " + name);
+	for (i = 0; i < session.sessions.length; i++){
 		if(name == session.sessions[i].name){
 			key = i;
 			break;
 		}
-  }
+	}
   
-  res.render('session',{
+	//time
+	var timestring = session.sessions[key].time;
+	console.log(timestring);
+	var hrstring = timestring.substring(0,2);
+	console.log(hrstring + " is string of hrs");
+	var hr = parseInt(hrstring);
+	console.log(hr + " hrs");
+	var minstring = timestring.substring(3,5);
+	console.log(minstring + " is string of minutes");
+	var minutes = parseInt(minstring);
+	console.log(minutes + " minutes");
+	var secstring = timestring.substring(6,8);
+	console.log(secstring + " is string of seconds");
+	var seconds = parseInt(secstring);
+	console.log(seconds + " seconds");
+	timeleft = hr * 3600 + minutes * 60 + seconds;
+	console.log(timeleft);
+	
+	res.render('session',{
 	  "sessionname": session.sessions[key].name,
 	  "time": session.sessions[key].time,
 	  "tasks": session.sessions[key].tasks,
 	  "duedate": session.sessions[key].duedate,
-  });
+	});
 };
 
 exports.addtask = function(req,res){
+	
 	console.log("The session name is " + name);
-	
-	
-	
-	
 	//converting time from new task time to a string
 	var hrs = req.query.hour;
 	if(hrs < 10){
