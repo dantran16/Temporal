@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	initializePage();
+	
 })
 
 //global variables
@@ -7,6 +8,8 @@ var counter = 0;
 var timeleft;
 var alarmduration = 3;
 var interval;
+var url = null;
+var pausestyle = true;
 
 function start(){
 	//swap button for pause
@@ -61,11 +64,7 @@ function start(){
 function pause(){
 	clearInterval(interval);
 
-	//swap pause with START on click
-	document.getElementById("startTimer").style.display = "block";
-	document.getElementById("stopTimer").style.display = "none";
 
-	document.getElementById("time").style.color = "lightgreen";
 }
 
 
@@ -88,4 +87,21 @@ function convertSeconds(seconds){
 	}
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
+}
+
+function starttime(){
+	if(url == null){
+		url = location.href;
+	}
+	location.replace(url+"/starttime");
+	setTimeout(function(){
+		location.replace(url)
+	}, 500);
+}
+
+function pausetime(){
+	location.replace(url+"/pausetime");
+	setTimeout(function(){
+		location.replace(url)
+	}, 500);
 }
