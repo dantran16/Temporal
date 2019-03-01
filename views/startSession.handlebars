@@ -7,22 +7,24 @@
 		<link href="/css/main.css" rel="stylesheet">
 		<link href="/css/main-theme.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="ISO-8859-1"> <!-- UNICODE -->
 		<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
-
 </head>
 <body>
 	<div class='screen-container'>
-		<div class="container-header">
-			<a href="/index">
-				<img src="../svg/back-btn.svg" alt="BACK" id='btn-back'>
+		<div class="other-header">
+			<a href="javascript:history.back()">
+				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
-			<p>TEST</p>
 			<div id="session-name">
-				<form action="addtask">
-    			<input type="text" id="{{sessionname}}" name="sessionname" placeholder="{{sessionname}}">
+    			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
+			</div>
+			<div class="headerTime" id="timeBox">
+				<p>Remaining Time:</p>
+				<div class="time" id="time">{{time}}</div>
+				<div class="duedate" id="duedate">Due by: {{duedate}}</div>
 			</div>
 		</div>
-
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>

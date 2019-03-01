@@ -89,3 +89,9 @@ function convertSeconds(seconds){
 	var string = hrs + ':' + min + ':' + sec;
 	return string;
 }
+
+function otherStart() {
+	location.replace(location.href+"/startSession");
+	//start();
+	//document.getElementById("time").style.color = "red";
+}

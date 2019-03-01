@@ -25,7 +25,7 @@ var notifications = require('./routes/notifications');
 var account = require('./routes/account');
 var about = require('./routes/about');
 
-//var startSession = require('./routes/startSession');
+var startSession = require('./routes/startSession');
 
 
 var app = express();
@@ -60,6 +60,8 @@ app.get('/favorites', favorites.view);
 app.get('/calendar', calendar.view);
 app.get('/session/:sessionname/addtask', session.addtask);
 app.get('/index/newSession', index.newSession);
+
+app.get('/session/:sessionname/startSession', startSession.view);
 
 app.get('/settings', settings.view); 
 app.get('/notifications', notifications.view);
