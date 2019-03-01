@@ -67,7 +67,8 @@ app.get('/settings', settings.view);
 app.get('/notifications', notifications.view);
 app.get('/account', account.view);
 app.get('/about', about.view);
-
+app.get('/session/:sessionname/starttime', session.starttime);
+app.get('/session/:sessionname/pausetime', session.pausetime);
 /*
 //app.get('session/:sessionname/startSession', startSession.view);
 
