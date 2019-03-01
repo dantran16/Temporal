@@ -1,3 +1,5 @@
+var url;
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
   initializePage();
@@ -43,7 +45,15 @@ function initializePage() {
   var yytoday = today.getFullYear();
   today = yytoday + '-' + mmtoday + '-' + ddtoday;
   document.getElementById("taskdate").setAttribute("min", today);
+  
+  //refresh
+    url = location.href;
+	setInterval( function(){
+		$('#time').load(document.URL + ' #time');
+	}, 1000);
 }
+
+
 
 function newSession(){
   location.replace("newSession");
@@ -136,3 +146,4 @@ function deleteTask(){
     var i = document.getElementById("Session");
   i.remove(i.selectedIndex);
 }
+

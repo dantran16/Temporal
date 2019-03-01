@@ -32,8 +32,6 @@
 	
 
 <!--HAMBURGER MENU END-->
-
-		
 		<h1>Dashboard</h1>
 		</div>
 <!--
@@ -46,26 +44,20 @@
 
 <!-- BEGIN onGoing Sessions -->
 		<div class="onGoingSessions">
-			<div class="onGoingSessions-box">
+			<div class="onGoingSessions-container">
 				<h1>CURRENT SESSIONS</h1>
-
-				<div class="onGoingSessions-tabs">
-						<ul class="list-group" id="Sessions">
-							<!-- accesses sessions and access all the variables -->
-							{{#each sessions}}
-								<li class="sessions" id="{{id}}"> <p class="sessionname">{{name}} </p>
-									<p> <img src="/svg/Clock-8-512.svg">{{time}} </p>
-								</li>
-								
-
-							{{/each}}
-
-						</ul>
-				</div>
+					<ul class="list-group" id="Sessions">
+						<!-- accesses sessions and access all the variables -->
+						{{#each sessions}}
+							<li class="sessions" id="{{id}}"> 
+								<p class="sessionname">{{name}} </p>
+								<p> <img id="clockIcon" src="/svg/clock.svg">{{time}}</p>
+							</li>
+						{{/each}}
+					</ul>
 			</div>
 		</div>
 <!-- END onGoing Sessions -->
-
 
 		<div class="container-footer">
 			<button onclick="openNewSession()" class="btn new-session" id="button-deets"> + New Session </button>
