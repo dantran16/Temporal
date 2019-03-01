@@ -85,35 +85,17 @@
 			</div>
 		</div>
 <!-- END onGoing Sessions -->
-
+{{#if viewAlt}}
+		<div class="container-footer">
+			<button onclick="openNewSession()" class="btn new-session" id="button-deets" style="width: 100px; background-color: red;"> + ADD </button>
+		</div>
+{{else}}
 		<div class="container-footer">
 			<button onclick="openNewSession()" class="btn new-session" id="button-deets"> + New Session </button>
 		</div>
+{{/if}}
 		
 	</div> <!--- END OF SCREEN CONTAINER -->
-{{#if viewAlt}}
-		<div class="newTaskCard" id="newSession">
-			<form method="get" role="form" action="/index/newSession/">
-				<h2>GOOG TEST ANA Create a New Session</h2>
-				<input id="sessionname" type="text" placeholder="Enter Session Name" name="sessionname" required>
-				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
-
-				<label for="time"><b>How long will it take?</b></label>
-		    	<div></div>
-		    	<input id="timeInputBox" type="number" name="hour" min="0" max="30" required>
-		    	<label for="hour"><p>hr</p></label>
-		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>
-		    	<label for="min"><p>min</p></label> <br>
-
-		    	<label for="date"><b>Finish By:</b></label>
-				<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
-
-		    	<button type="button" class="btn-cancel" onclick="closeNewSession()">✕</button>
-
-				<button type="submit" class="btn-save" onclick="addTask()">Save</button> 
-			</form>
-		</div>
-{{else}}
 <!--new task pop up-->
 		<div class="newTaskCard" id="newSession">
 			<form method="get" role="form" action="/index/newSession/">
@@ -137,7 +119,6 @@
 			</form>
 		</div>
 <!--end new task pop up-->
-{{/if}}
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (blelow), or include individual files as needed -->

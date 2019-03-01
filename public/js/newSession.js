@@ -5,7 +5,7 @@ $(document).ready(function() {
   initializePage();
   
   // GOOGLE ANALYTICS 
-  $("btn .new-session").click(function(){
+  $(".new-session").click(function(){
     ga("send", "event", "newsession", "click");
   }); 
 })
