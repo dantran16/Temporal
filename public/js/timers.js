@@ -103,13 +103,11 @@ function convertSeconds(seconds){
 	return string;
 }
 
-<<<<<<< HEAD
 function otherStart() {
 	location.replace(location.href+"/startSession");
 	//start();
 	//document.getElementById("time").style.color = "red";
 }
-=======
 function starttime(){
 	//swap button for pause
 	if(url == null){
@@ -131,4 +129,3 @@ function pausetime(){
 	}, 500);
 	
 }
->>>>>>> f3f6c5310ccd951c07ffca455ddeaa959c212f6f
