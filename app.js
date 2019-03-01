@@ -24,7 +24,7 @@ var settings = require('./routes/settings');
 var notifications = require('./routes/notifications');
 var account = require('./routes/account');
 var about = require('./routes/about'); 
-var start = require('./routes/start');
+
 
 var startSession = require('./routes/startSession');
 
@@ -68,14 +68,12 @@ app.get('/settings', settings.view);
 app.get('/notifications', notifications.view);
 app.get('/account', account.view);
 app.get('/about', about.view);
-<<<<<<< HEAD
-app.get('/start', start.view);
+
 //app.get('/start', session.start);
 
-=======
 app.get('/session/:sessionname/starttime', session.starttime);
 app.get('/session/:sessionname/pausetime', session.pausetime);
->>>>>>> 199d0882613cb6a17bb25d3392c1f2635f71df75
+
 /*
 //app.get('session/:sessionname/startSession', startSession.view);
 
