@@ -107,7 +107,9 @@ function goHome(){
 function logout(){
   location.replace("../..")
 }
-
+function next(){
+  location.replace("/start")
+}
 function addTask() {
   document.getElementById("newTask").style.display = "none";
   var url = location.href;

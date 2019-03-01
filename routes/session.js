@@ -1,4 +1,10 @@
-
+/*
+/*
+/* GET start page.
+*/
+// exports.start = function(request, response){
+// 	response.render('start')
+// }
 /*
  * GET session page.
  */
