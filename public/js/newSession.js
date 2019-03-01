@@ -47,10 +47,12 @@ function initializePage() {
   document.getElementById("taskdate").setAttribute("min", today);
   
   //refresh
+  /*
     url = location.href;
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
+	*/
 }
 
 
