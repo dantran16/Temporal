@@ -3,6 +3,12 @@ var url;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
   initializePage();
+  
+  // GOOGLE ANALYTICS 
+  
+  $("btn .new-session").click(function(){
+    ga("send", "event", "newsession", "click");
+  }); 
 })
 
 /*
@@ -23,7 +29,7 @@ function closeNav() {
 
 function initializePage() {
   console.log("Javascript connected!");
-  
+
   //function to make sessions click
   $(".sessions").click(function(e){
     e.preventDefault();
