@@ -173,6 +173,7 @@ exports.starttime = function(req,res){
 			"time": session.sessions[key].time,
 			"tasks": session.sessions[key].tasks,
 			"duedate": session.sessions[key].duedate,
+			"paused": null,
 		});
 	}
 	interval = setInterval(timer, 1000);
@@ -180,4 +181,11 @@ exports.starttime = function(req,res){
 
 exports.pausetime = function(req, res){
 	clearInterval(interval);
+	res.render('session',{
+		"sessionname": session.sessions[key].name,
+		"time": session.sessions[key].time,
+		"tasks": session.sessions[key].tasks,
+		"duedate": session.sessions[key].duedate,
+		"paused": "true",
+	});
 }
