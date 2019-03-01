@@ -137,7 +137,7 @@ exports.addtask = function(req,res){
 	var newTask = {
 		"name": req.query.taskname,
 		"time": tasktimestring,
-		"duedate": datestring,
+		"duedate": req.query.taskdate,
 	};
 
 	console.log(newTask);

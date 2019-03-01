@@ -4,7 +4,6 @@ $(document).ready(function() {
 		document.getElementById("startTimer").style.display = "block";
 		document.getElementById("stopTimer").style.display = "none";
 		document.getElementById("time").style.color = "lightgreen";
-		
 	}
 	else{
 		document.getElementById("startTimer").style.display = "none";
@@ -25,7 +24,6 @@ function start(){
 	//swap button for pause
 	document.getElementById("startTimer").style.display = "none";
 	document.getElementById("stopTimer").style.display = "block";
-
 	document.getElementById("time").style.color = "red";
 
 	//timeleft = document.getElementById("time");
@@ -77,7 +75,6 @@ function pause(){
 	//swap pause with START on click
 	document.getElementById("startTimer").style.display = "block";
 	document.getElementById("stopTimer").style.display = "none";
-
 	document.getElementById("time").style.color = "lightgreen";
 }
 
@@ -104,16 +101,17 @@ function convertSeconds(seconds){
 }
 
 function otherStart() {
-	location.replace(location.href+"/startSession");
+	location.replace(location.href+"/start");
 	//start();
 	//document.getElementById("time").style.color = "red";
 }
+
 function starttime(){
 	//swap button for pause
 	if(url == null){
 		url = location.href;
 	}
-	location.replace(url+"/starttime");
+	location.replace(url + "/starttime");
 	setTimeout(function(){
 		paused = false;
 		location.replace(url);
@@ -122,7 +120,7 @@ function starttime(){
 }
 
 function pausetime(){
-	location.replace(url+"/pausetime");
+	location.replace(url + "/pausetime");
 	setTimeout(function(){
 		paused = true;
 		location.replace(url);
