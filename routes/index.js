@@ -1,18 +1,28 @@
 var session = require('../session.json'); 
-
+/*
 exports.view = function(req, res){
   res.render('index',{
 	  "sessions": session.sessions,
   });
   session['viewAlt'] = false;
-};
-
+}; //this DOES NOT
+*/
+exports.view = function(req, res){
+  res.render('index', session);
+  session['viewAlt'] = false;
+}; //this works
+/*
 exports.viewAlt = function(req, res){
   res.render('index',{
 	  "sessions": session.sessions,
   });
   session['viewAlt'] = true;
 };
+*/
+exports.viewAlt = function(req, res){
+  res.render('index', session);
+  session['viewAlt'] = true;
+}; //this works
 
 exports.newSession = function(req, res){
 	

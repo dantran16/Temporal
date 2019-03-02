@@ -1121,8 +1121,9 @@ bottom: 15.21%;
 	width: 100%;
 	height: 51px;
 	bottom: 0;
-	background-color: #4B79A1; /*#AEAEAE;
-	background: linear-gradient(-286.67deg, #283E51 0%, #4B79A1 100%);*/
+	background-color: #4B79A1; /*#AEAEAE;*/
+
+	background: linear-gradient(286.67deg, #283E51 0%, #4B79A1 100%);
 	box-shadow: 0px -3px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -1366,7 +1367,7 @@ html {
 #Sessions {
   position: absolute;
   top: 60px;
-  bottom: 20px;
+  bottom: 10px;
   left: 20px;
   right: 20px;
   margin: 0px;
@@ -1383,7 +1384,6 @@ html {
 
 .list-group li{
   padding: 15px 0px;
-  
   border-bottom: 1px solid #ccc;
   
   &:last-child {
@@ -1393,6 +1393,35 @@ html {
   &:nth-child(even) {
     background: #f8f8f8;
   }
+}
+
+.ABTEST li{
+  padding: 10px 0px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 6px;
+
+  background: #4B79A1;
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+	border-bottom: 0px solid #ccc;
+}
+
+#ABSessions {
+  position: absolute;
+  top: 60px;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  margin: 0px;
+  padding: 0px;
+  
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 
