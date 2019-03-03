@@ -1,14 +1,17 @@
+var session = require('../session.json'); 
 
-/*
- * GET home page.
- */
-
-var session = require('../session.json');
- 
 exports.view = function(req, res){
   res.render('index',{
 	  "sessions": session.sessions,
   });
+  session['viewAlt'] = false;
+};
+
+exports.viewAlt = function(req, res){
+  res.render('index',{
+	  "sessions": session.sessions,
+  });
+  session['viewAlt'] = true;
 };
 
 exports.newSession = function(req, res){

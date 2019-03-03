@@ -73,6 +73,7 @@ app.get('/about', about.view);
 
 app.get('/session/:sessionname/starttime', session.starttime);
 app.get('/session/:sessionname/pausetime', session.pausetime);
+app.get('/index/viewAlt', index.viewAlt);
 
 /*
 //app.get('session/:sessionname/startSession', startSession.view);

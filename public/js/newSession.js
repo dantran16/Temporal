@@ -3,6 +3,11 @@ var url;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
   initializePage();
+  
+  // GOOGLE ANALYTICS 
+  $(".new-session").click(function(){
+    ga("send", "event", "newsession", "click");
+  }); 
 })
 
 /*
@@ -23,7 +28,7 @@ function closeNav() {
 
 function initializePage() {
   console.log("Javascript connected!");
-  
+
   //function to make sessions click
   $(".sessions").click(function(e){
     e.preventDefault();
@@ -47,10 +52,12 @@ function initializePage() {
   document.getElementById("taskdate").setAttribute("min", today);
   
   //refresh
+  /*
     url = location.href;
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
+	*/
 }
 
 
