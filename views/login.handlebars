@@ -14,27 +14,25 @@
 <body>
 	<div id="fb-root"></div>
 	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=766003327108039&autoLogAppEvents=1"></script>
-	<div class="screen-container">
-		<div class ="login-container">
-		<h4>Welcome<h4>
-			
+	<div class="screen-container" id="loginBackground">
+		<div class="appTitle"> <h1>Task App</h1> </div>
+		<div class ="login-container">		
 			<div id="username-box">
-				
     			<input type="text" id="fname" name="username" placeholder="username">
 			</div>
+
 			<div id="password-box">
-			
     			<input type="text" id="fname" name="password" placeholder="password">
-    		
 			</div>
-			<p>Forgot Password?<p>
+			<p>Forgot Password?</p>
+
 			<button onclick ="goHome()" class="btn-login" id="login-btn">Login</button>
 			
 			<div class="facebookLogin">
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 				</fb:login-button>
 			</div>
-			<h5> Sign Up <h5>
+			<h5> Sign Up </h5>
 			
 		</div>
 	</div>
