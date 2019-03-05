@@ -10,11 +10,11 @@ $(document).ready(function() {
   }); 
 
   $("#Sessions").click(function(){
-    ga("send", "event", "viewOLDsession", "click");
+    ga("send", "event", "viewsessionA", "click");
   });
 
   $("#ABSessions").click(function(){
-    ga("send", "event", "viewNEWsession", "click");
+    ga("send", "event", "viewsessionB", "click");
   });
 
 })
