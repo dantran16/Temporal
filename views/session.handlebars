@@ -36,10 +36,10 @@
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
 				<li class="task" id="{{id}}">{{name}}
-					<img id="clockIcon" src="/svg/clock.svg">{{time}}
-					<button onclick="deleteTask()">Delete</button>
-				</li>g
-
+				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask2()">
+				</br>
+				<p><img id="clockIcon-session" src="/svg/clock.svg">{{time}}</p>
+				</li>
 				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
 

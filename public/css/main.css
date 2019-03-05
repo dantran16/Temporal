@@ -312,7 +312,7 @@ top: 152px;
 	color: #000000;
 	margin-top: 100px;
 	color: white;
-	opacity: 0.7;
+	opacity: 0.8;
 }
 
 h4 {
@@ -386,22 +386,23 @@ ul.list-group-session{
 	font-style: normal;
 	font-weight: normal;
 	line-height: inherit;
-	font-size: 22px;
+	font-size: 21px;
 	letter-spacing: 0.03em;
 
 	color: #000000;
 
 	overflow:hidden; overflow-y:scroll;
-
 }
+
+
 .list-group-session .task{
 	padding: 8px;
 }
 
 .list-group-session p{
-	font-size: 10pt;
+	font-size: 12pt;
 	margin-bottom: 0px;
-	opacity: 0.8;
+	opacity: 0.6;
 }
 
 .headerTime {
@@ -802,10 +803,27 @@ input::placeholder {
 #clockIcon {
 	width: 18px;
 	height: 18px;
-	margin-bottom: 1px;
-	margin-left: 25px;
+	margin-bottom: 3px;
+	margin-left: 63%;
 	margin-right: 4px;
 	opacity: 0.4;
+}
+
+#clockIcon-session {
+	width: 13px;
+	height: 13px;
+	margin-bottom: 3px;
+	margin-right: 4px;
+	opacity: 0.6;
+}
+
+#deleteTaskIcon {
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	opacity: 0.18;
+	cursor: pointer;
 }
 
 .onGoingSessions-container {
@@ -1423,20 +1441,26 @@ html {
 }
 
 .ABTEST li{
-  padding: 10px 0px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 15px;
-  background-color: white;
-  border-radius: 6px;
+	padding: 10px 0px 2px;
+	margin-bottom: 18px;
+	border-radius: 6px;
+	margin-right: 6px;
+	margin-left: 3px;
 
-  background: #4B79A1;
+	color: rgba(255, 255, 255, 0.85);
+	background-color: #4B79A1;
 	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
 	border-bottom: 0px solid #ccc;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 #ABSessions {
   position: absolute;
-  top: 60px;
+  top: 65px;
   bottom: 0px;
   left: 20px;
   right: 20px;
@@ -1445,6 +1469,7 @@ html {
   
   font-size: 20px;
   font-family: 'Rubik', sans-serif;
+  line-height: 1.2;
   box-shadow: none;
   -webkit-box-shadow: none;
   overflow: scroll;

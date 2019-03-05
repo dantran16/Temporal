@@ -149,8 +149,24 @@ function deleteRow() {
 }
 */
 
-function deleteTask(){
+function deleteTask(i){
     var i = document.getElementById("Session");
   i.remove(i.selectedIndex);
 }
 
+function deleteTask2(key){
+  session.sessions[key].name.remove(key)
+}
+
+
+/*
+Array.prototype.removeValue = function(name, value){
+   var array = $.map(this, function(v,i){
+      return v[name] === value ? null : v;
+   });
+   this.length = 0; //clear original array
+   this.push.apply(this, array); //push all elements except the one we want to delete
+}
+
+session.sessions.removeValue('name', 'Albania');
+*/
