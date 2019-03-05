@@ -16,14 +16,17 @@
 	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=766003327108039&autoLogAppEvents=1"></script>
 	<div class="screen-container">
 		<div class="other-header">
+<!--HAMBURGER MENU--> 
+	<img src="/svg/hamburger.svg" id="line-home" onclick="openNav()"/>
 
-			
-				<img onclick= "goHome()" src="svg/back-btn.svg" alt="BACK" id='btn-back'>
-			
-
-			<a href="/index">
-				<img src="svg/back-btn.svg" alt="BACK" id='btn-back'>
-			</a>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✕</a>
+			<a href="/index">Dashboard</a>
+			<a href="/settings">Settings</a>
+			<!-- REMOVE <a href="/notifications">Notifications</a> -->
+			<a href="/account">Account</a>
+			<a href="/about">About</a>
+	</div>  
 
 			<h1>Account</h1>
 		</div> 
