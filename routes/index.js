@@ -8,8 +8,8 @@ exports.view = function(req, res){
 }; //this DOES NOT
 */
 exports.view = function(req, res){
-  res.render('index', session);
   session['viewAlt'] = false;
+  res.render('index', session);
 }; //this works
 /*
 exports.viewAlt = function(req, res){
@@ -20,8 +20,8 @@ exports.viewAlt = function(req, res){
 };
 */
 exports.viewAlt = function(req, res){
-  res.render('index', session);
   session['viewAlt'] = true;
+  res.render('index', session);
 }; //this works
 
 exports.newSession = function(req, res){
