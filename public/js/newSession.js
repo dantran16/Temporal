@@ -60,13 +60,11 @@ function initializePage() {
   today = yytoday + '-' + mmtoday + '-' + ddtoday;
   document.getElementById("taskdate").setAttribute("min", today);
   
-  //refresh
-  /*
+
     url = location.href;
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
-	*/
 }
 
 
@@ -138,9 +136,6 @@ function next(){
 }
 function addTask() {
   document.getElementById("newTask").style.display = "none";
-  var url = location.href;
-  location.replace(url + "/index");
-  location.replace(url);
 }
 /*
 function deleteRow() {

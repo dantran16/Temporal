@@ -8,7 +8,9 @@ exports.view = function(req, res){
 }; //this DOES NOT
 */
 exports.view = function(req, res){
-  res.render('index', session);
+  res.render('index',{
+	  "sessions": session.sessions,
+	});
   session['viewAlt'] = false;
 }; //this works
 /*
@@ -20,7 +22,9 @@ exports.viewAlt = function(req, res){
 };
 */
 exports.viewAlt = function(req, res){
-  res.render('index', session);
+  res.render('index',{
+	  "sessions": session.sessions,
+	});
   session['viewAlt'] = true;
 }; //this works
 
@@ -48,13 +52,13 @@ exports.newSession = function(req, res){
 	"time": timestring,
 	"tasks": {
 		"name": req.query.taskname,
-		"time": req.query.tasktime,
+		"time": timestring,
 		"duedate": req.query.taskdate
 	}
-	
 	};
+	console.log(newSession);
 	session.sessions.push(newSession);
 	res.render('index',{
 	  "sessions": session.sessions,
-  });
+	});
 };
