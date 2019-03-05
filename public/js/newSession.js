@@ -13,7 +13,7 @@ $(document).ready(function() {
     ga("send", "event", "viewsessionA", "click");
   });
 
-  $("#ABSessions").click(function(){
+  $(".ABTEST").click(function(){
     ga("send", "event", "viewsessionB", "click");
   });
 
