@@ -7,7 +7,7 @@ $(document).ready(function() {
   // GOOGLE ANALYTICS 
   $(".new-session").click(function(){
     ga("send", "event", "newsession", "click");
-  }); 
+  });
 
   $("#Sessions").click(function(){
     ga("send", "event", "viewsessionA", "click");
