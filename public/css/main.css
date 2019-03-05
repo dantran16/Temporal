@@ -310,9 +310,15 @@ top: 152px;
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #000000;
-	margin-top: 100px;
+	margin-top: 70px;
 	color: white;
 	opacity: 0.8;
+}
+
+.appTitle #loginLogo {
+	width: 100%;
+	height: 100px;
+	margin-top: 0px;
 }
 
 h4 {
@@ -401,7 +407,7 @@ ul.list-group-session{
 }
 
 .list-group-session p{
-	font-size: 10pt;
+	font-size: 11pt;
 	margin-bottom: 0px;
 	opacity: 0.6;
 }
@@ -802,28 +808,28 @@ input::placeholder {
 } 
 
 #clockIcon {
-	width: 18px;
-	height: 18px;
+	width: 17px;
+	height: 17px;
 	margin-bottom: 3px;
 	margin-left: 63%;
 	margin-right: 4px;
 	opacity: 0.4;
 }
 
-#clockIcon-session {
-	width: 13px;
-	height: 13px;
+#clockIcon-task {
+	width: 12px;
+	height: 12px;
 	margin-bottom: 3px;
-	margin-right: 4px;
-	opacity: 0.6;
+	margin-right: 6px;
+	opacity: 0.75;
 }
 
 #deleteTaskIcon {
 	width: 16px;
 	height: 16px;
-	margin-left: 5px;
+	margin-left: 6px;
 	margin-bottom: 5px;
-	opacity: 0.18;
+	opacity: 0.15;
 	cursor: pointer;
 }
 
@@ -838,81 +844,7 @@ input::placeholder {
 /* ------------[Container End]------------ */
 
 
-
 /* ------------[Specific Box Styling Start]------------ */
-
-#Favorites {
- 	/* Favorites */
-
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	right: 15px;
-	top: 12px;
-
-	color: #C4C4C4;
-	opacity: 0.9;
-	border-radius: 7px;
-	box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
- } 
-
-
- #Calendar {
- 	position: absolute;
-	width: 100px;
-	height: 72px;
-	left: 36px;
-	top: 75px;
-	
-	background: #6D6D6D;
-	border-radius: 14px;
-	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
-
-	font-family: 'Rubik', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	line-height: normal;
-	font-size: 12px;
-	text-align: center;
-	letter-spacing: 0.08em;
-	color: #FFFFFF;
- }
-
- #Goals {
- 	position: absolute;
-	width: 100px;
-	height: 72px;
-	left: 157px;
-	top: 75px;
-
-	background: #6D6D6D;
-	border-radius: 14px;
-	font-family: 'Rubik', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	line-height: normal;
-	font-size: 12px;
-	text-align: center;
-	letter-spacing: 0.08em;
-
-	color: #FFFFFF;
-
-	box-shadow: 3px 4px 19px rgba(0, 0, 0, 0.25);
- }
-
- #Chem-6A {
-	position: absolute;
-	width: 358px;
-	height: 55px;
-	left: 28px;
-	top: 0px;
-
-	box-shadow: 0px 2px 4px 
-	rgba(0, 0, 0, 0.25);
-	background: #FFFFFF;
-	border-radius: 5px;
-}
-
 
  .new-session {
  	/* + Button */

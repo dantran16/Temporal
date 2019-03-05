@@ -8,6 +8,15 @@ $(document).ready(function() {
   $(".new-session").click(function(){
     ga("send", "event", "newsession", "click");
   }); 
+
+  $("#Sessions").click(function(){
+    ga("send", "event", "viewOLDsession", "click");
+  });
+
+  $("#ABSessions").click(function(){
+    ga("send", "event", "viewNEWsession", "click");
+  });
+
 })
 
 /*
@@ -153,11 +162,6 @@ function deleteTask(i){
     var i = document.getElementById("Session");
   i.remove(i.selectedIndex);
 }
-
-function deleteTask2(key){
-  session.sessions[key].name.remove(key)
-}
-
 
 /*
 Array.prototype.removeValue = function(name, value){
