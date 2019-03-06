@@ -191,5 +191,8 @@ exports.pausetime = function(req, res){
 	});
 }
 
+exports.deletetask = function(req,res){
+}
+
 
 

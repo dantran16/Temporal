@@ -57,18 +57,24 @@ exports.newSession = function(req, res){
 	var sec = "00";
 	var timestring = hrs + ':' + min + ':' + sec;
 	console.log(timestring);
-	
+	var newTask = {
+		"name": req.query.taskname,
+		"time": timestring,
+		"duedate": req.query.taskdate
+	}
 	
 	var newSession = {
 	"name": req.query.sessionname,
 	"duedate": req.query.taskdate,
 	"time": timestring,
-	"tasks": {
-		"name": req.query.taskname,
-		"time": timestring,
-		"duedate": req.query.taskdate
-	}
+	"tasks": [{
+		"name": "2321321",
+		"time": "321321",
+		"duedate": "321312"
+		}
+		]
 	};
+	newSession.tasks[0] = newTask; 
 	console.log(newSession);
 	session.sessions.push(newSession);
 	res.render('index',{

@@ -154,8 +154,11 @@ function deleteRow() {
 */
 
 function deleteTask(i){
-    var i = document.getElementById("Session");
-  i.remove(i.selectedIndex);
+	url = window.location.href.split('?')[0];
+	location.replace(url + "/deletetask");
+	setTimeout(function(){
+		location.replace(url);
+	}, 100);
 }
 
 /*
