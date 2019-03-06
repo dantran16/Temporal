@@ -6,7 +6,20 @@ exports.view = function(req, res){
 	  "sessions": session.sessions,
   });
 }; //this DOES NOT
+<<<<<<< HEAD
+*/
+exports.view = function(req, res){
 
+  res.render('index',{
+	  "sessions": session.sessions,
+	});
+  session['viewAlt'] = false;
+  res.render('index', session);
+}; //this works
+/*
+=======
+
+>>>>>>> 47179544dc98d26f8f838fa13934b156c5388718
 exports.viewAlt = function(req, res){
   session['viewAlt'] = true;
   res.render('index',{
@@ -20,6 +33,10 @@ exports.view = function(req, res){
 }; //this works
 
 exports.viewAlt = function(req, res){
+
+  res.render('index',{
+	  "sessions": session.sessions,
+	});
   session['viewAlt'] = true;
   res.render('index', session);
 }; //this works
@@ -40,21 +57,27 @@ exports.newSession = function(req, res){
 	var sec = "00";
 	var timestring = hrs + ':' + min + ':' + sec;
 	console.log(timestring);
-	
+	var newTask = {
+		"name": req.query.taskname,
+		"time": timestring,
+		"duedate": req.query.taskdate
+	}
 	
 	var newSession = {
 	"name": req.query.sessionname,
 	"duedate": req.query.taskdate,
 	"time": timestring,
-	"tasks": {
-		"name": req.query.taskname,
-		"time": req.query.tasktime,
-		"duedate": req.query.taskdate
-	}
-	
+	"tasks": [{
+		"name": "2321321",
+		"time": "321321",
+		"duedate": "321312"
+		}
+		]
 	};
+	newSession.tasks[0] = newTask; 
+	console.log(newSession);
 	session.sessions.push(newSession);
 	res.render('index',{
 	  "sessions": session.sessions,
-  });
+	});
 };

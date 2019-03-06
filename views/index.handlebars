@@ -77,8 +77,13 @@
 					<ul class="list-group list-unstyled ABTEST" id="ABSessions">
 						{{#each sessions}}
 							<li class="sessions" id="{{id}}"> 
-								<p class="sessionname"> {{name}}</p>
-								<p> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png"> {{time}} </p>
+
+								<p class="sessionname">{{name}} </p>
+								<p> <img id="clockIcon" src="/svg/hourglass.svg"> {{time}} </p>
+
+								<p class="sessionname">{{name}}</p>
+								<p> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png"> {{time}}</p>
+
 							</li>
 						{{/each}}
 					</ul> <!-- AB TEST END -->
@@ -91,7 +96,7 @@
 								<p> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 							</li>
 						{{/each}}
-						</ul>
+					</ul>
 					{{/if}}
 			</div>
 		</div>
@@ -115,7 +120,7 @@
 				<input id="taskname" type="text" placeholder="Enter First Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
-		    	<div></div>
+		    	<br />
 		    	<input id="timeInputBox" type="number" name="hour" min="0" max="30" required>
 		    	<label for="hour"><p>hr</p></label>
 		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>

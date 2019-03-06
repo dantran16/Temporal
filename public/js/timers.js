@@ -108,14 +108,13 @@ function otherStart() {
 
 function starttime(){
 	//swap button for pause
-	if(url == null){
-		url = location.href;
-	}
+	url = window.location.href.split('?')[0];
+	console.log("the url is " + url);
 	location.replace(url + "/starttime");
 	setTimeout(function(){
 		paused = false;
 		location.replace(url);
-	}, 500);
+	}, 100);
 	
 }
 
