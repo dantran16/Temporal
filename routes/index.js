@@ -8,10 +8,14 @@ exports.view = function(req, res){
 }; //this DOES NOT
 */
 exports.view = function(req, res){
+<<<<<<< HEAD
   res.render('index',{
 	  "sessions": session.sessions,
 	});
+=======
+>>>>>>> 2023fa557d045a8fdbaac86f14ceb6573e2e2ae2
   session['viewAlt'] = false;
+  res.render('index', session);
 }; //this works
 /*
 exports.viewAlt = function(req, res){
@@ -22,10 +26,14 @@ exports.viewAlt = function(req, res){
 };
 */
 exports.viewAlt = function(req, res){
+<<<<<<< HEAD
   res.render('index',{
 	  "sessions": session.sessions,
 	});
+=======
+>>>>>>> 2023fa557d045a8fdbaac86f14ceb6573e2e2ae2
   session['viewAlt'] = true;
+  res.render('index', session);
 }; //this works
 
 exports.newSession = function(req, res){

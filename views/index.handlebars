@@ -2,7 +2,7 @@
 <head>
 	<!-- Google Analytics Content Experiment code -->
 	<script>function utmx_section(){}function utmx(){}(function(){var
-	k='190830233-5',d=document,l=d.location,c=d.cookie;
+	k='190830233-2',d=document,l=d.location,c=d.cookie;
 	if(l.search.indexOf('utm_expid='+k)>0)return;
 	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
 	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -78,7 +78,7 @@
 						{{#each sessions}}
 							<li class="sessions" id="{{id}}"> 
 								<p class="sessionname"> {{name}} </p>
-								<p> <img id="clockIcon" src="/svg/hourglass2.svg"> {{time}} </p>
+								<p> <img id="clockIcon" src="/svg/hourglass.svg"> {{time}} </p>
 							</li>
 						{{/each}}
 					</ul> <!-- AB TEST END -->
@@ -88,7 +88,7 @@
 						{{#each sessions}}
 							<li class="sessions" id="{{id}}"> 
 								<p class="sessionname">{{name}} </p>
-								<p> <img id="clockIcon" src="/svg/hourglass2.svg">{{time}}</p>
+								<p> <img id="clockIcon" src="/svg/hourglass.svg">{{time}}</p>
 							</li>
 						{{/each}}
 					</ul>
@@ -112,7 +112,7 @@
 			<form method="get" role="form" action="/index/newSession/">
 				<h2>Create a New Session</h2>
 				<input id="sessionname" type="text" placeholder="Enter Session Name" name="sessionname" required>
-				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
+				<input id="taskname" type="text" placeholder="Enter First Task Name" name="taskname" required>
 
 				<label for="time"><b>How long will it take?</b></label>
 		    	<br />
