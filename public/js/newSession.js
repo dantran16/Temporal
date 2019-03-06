@@ -153,7 +153,7 @@ function deleteRow() {
 }
 */
 
-<<<<<<< HEAD
+
 function deleteTask(){
 
     var i = sessionStorage.getItem('taskId');
@@ -163,15 +163,7 @@ function deleteTask(){
     
 } 
 
-=======
-function deleteTask(i){
-	url = window.location.href.split('?')[0];
-	location.replace(url + "/deletetask");
-	setTimeout(function(){
-		location.replace(url);
-	}, 100);
-}
->>>>>>> b7a5b800fb524ac1ff93f68c1514800e7d47bb58
+
 
 /*
 Array.prototype.removeValue = function(name, value){
