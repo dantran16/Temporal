@@ -134,16 +134,6 @@ exports.addtask = function(req,res){
 	console.log(newTask);
 	session.sessions[key].tasks.push(newTask);
 
-	//loop through object and add times
-	for (i = 0; i < session.sessions.length; i++){
-		if(time > 0){
-			totalTime += session.sessions[i].time;
-			break;
-		}
-  	}
-	//update total session time 
-	session.sessions[key].push(totalTime);
- 
 	res.render('session',{
 	  "sessionname": session.sessions[key].name,
 	  "time": session.sessions[key].time,
