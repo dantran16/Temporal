@@ -37,8 +37,8 @@
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
-				<li class="task" id="{{id}}">{{name}}
-				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
+				<li class="task" id="taskId">{{name}}
+				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick= 'deleteTask()'>
 				</br>
 				<p><img id="clockIcon-task" src="/svg/hourglassColor2.svg">{{time}}</p>
 				</li>
@@ -144,7 +144,11 @@
 			</form>
 		</div>
 <!--end new task pop up-->
+<script>
+if (sessionStorage.deleteTaskIcon){
 
+}
+</script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>

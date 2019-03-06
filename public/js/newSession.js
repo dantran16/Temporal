@@ -158,10 +158,15 @@ function deleteRow() {
 }
 */
 
-function deleteTask(i){
-    var i = document.getElementById("Session");
-  i.remove(i.selectedIndex);
-}
+function deleteTask(){
+
+    var i = sessionStorage.getItem('taskId');
+    document.getElementById('taskID').value = i; 
+    sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
+    
+    
+} 
+
 
 /*
 Array.prototype.removeValue = function(name, value){
