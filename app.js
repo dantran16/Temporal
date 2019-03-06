@@ -13,9 +13,6 @@ var index = require('./routes/index');
 // var user = require('./routes/user');
 //var newSession = require('./routes/newSession');
 var session = require('./routes/session');
-var calendar = require('./routes/calendar');
-var goals = require('./routes/goals');
-var favorites = require('./routes/favorites');
 
 var login = require('./routes/login');
 
@@ -56,9 +53,6 @@ app.get('/', login.view);
 // app.get('/users', user.list);
 app.get('/index', index.view);
 app.get('/session/:name', session.view);
-app.get('/goals', goals.view);
-app.get('/favorites', favorites.view);
-app.get('/calendar', calendar.view);
 app.get('/session/:sessionname/addtask', session.addtask);
 app.get('/index/newSession', index.newSession);
 
@@ -73,7 +67,11 @@ app.get('/about', about.view);
 
 app.get('/session/:sessionname/starttime', session.starttime);
 app.get('/session/:sessionname/pausetime', session.pausetime);
-app.get('/index/viewAlt', index.viewAlt);
+
+//B alt View [TESTING]
+app.get('/viewAlt', index.viewAlt);
+app.get('/viewAlt/newSession', index.newSession);
+
 
 /*
 //app.get('session/:sessionname/startSession', startSession.view);
