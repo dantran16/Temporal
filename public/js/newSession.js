@@ -64,13 +64,25 @@ function initializePage() {
   today = yytoday + '-' + mmtoday + '-' + ddtoday;
   document.getElementById("taskdate").setAttribute("min", today);
   
-  //refresh
-  /*
+
     url = location.href;
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
-	*/
+	
+	//function to make delete task work
+	$("#deleteTaskIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".taskname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deleteTask/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 500);
+	});
+	
+	
 }
 
 
@@ -142,9 +154,6 @@ function next(){
 }
 function addTask() {
   document.getElementById("newTask").style.display = "none";
-  var url = location.href;
-  location.replace(url + "/index");
-  location.replace(url);
 }
 /*
 function deleteRow() {
@@ -162,10 +171,17 @@ function deleteRow() {
 }
 */
 
-function deleteTask(i){
-    var i = document.getElementById("Session");
-  i.remove(i.selectedIndex);
-}
+
+function deleteTask(){
+
+    var i = sessionStorage.getItem('taskId');
+    document.getElementById('taskID').value = i; 
+    sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
+    
+    
+} 
+
+
 
 /*
 Array.prototype.removeValue = function(name, value){
