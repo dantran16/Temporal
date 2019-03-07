@@ -611,6 +611,7 @@ top: 30px;
 .newTaskCard h2 {
 	font-size: 18pt;
 	margin-bottom: 15px;
+	color: white;
 }
 
 .newTaskCard label {
@@ -674,7 +675,9 @@ input::placeholder {
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
-    scroll-behavior: none;
+    scroll-behavior: none; 
+
+    background: linear-gradient(286.67deg, #283E51 0%, #4B79A1 100%);
 }
 
 
