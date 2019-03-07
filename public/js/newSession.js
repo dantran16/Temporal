@@ -198,8 +198,6 @@ function editTasksHide() {
     $(".deleteTaskIcon").css("display", "none");
 }
 
-
-
 function editSessions() {
   $(".deleteSessionIcon").css("display", "inline-block");
 }

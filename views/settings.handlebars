@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body onload="loadSetOptions()">
 	<div class="screen-container">
 		<div class="other-header">
 
@@ -21,8 +21,6 @@
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✕</a>
 			<a href="/index">Dashboard</a>
-			<a href="/settings">Settings</a>
-			<!-- REMOVE <a href="/notifications">Notifications</a> -->
 			<a href="/account">Account</a>
 			<a href="/about">About</a>
 			<a href="/help">Help</a>
@@ -39,11 +37,11 @@
 				Enable Voice Globaly</p>
 
 			<div class="container-options-open-lower" id="settingsToggle">
-				<input type="checkbox" id="switch03" />
-				<label for="switch03">Toggle03</label>
+				<input type="checkbox" id="setNoti" onclick="setNoti()"/>
+				<label for="setNoti">Toggle03</label>
 
-				<input type="checkbox" id="switch04" />
-				<label for="switch04">Toggle04</label>
+				<input type="checkbox" id="setVoice" onclick="setVoice()"/>
+				<label for="setVoice">Toggle04</label>
 			</div>
 
 			<h1>Notifications</h1>
@@ -58,6 +56,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/newSession.js"></script>
 <script src="js/timers.js"></script>
+<script src="js/settings.js"></script>
 
 </body>
 </html>
