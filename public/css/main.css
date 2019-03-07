@@ -69,7 +69,18 @@ top: 152px;
 	left: 85px;
 	top: 5px;
 	background: #9C9C9C;
-	border-radius: 20px;
+	border-radius: 20px; 
+
+	padding: 10px 0px 2px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    margin-right: 6px;
+    margin-left: 3px;
+    color: rgba(255, 255, 255, 0.95);
+    background-color: #4B79A1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 0px solid #ccc;
+    margin-top: auto;
 } 
 
 .other-container .about-container h1{
@@ -100,13 +111,22 @@ top: 152px;
 
 	background: #9C9C9C;
 	border-radius: 20px;
+	padding: 10px 0px 2px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    margin-right: 6px;
+    margin-left: 3px;
+    color: rgba(255, 255, 255, 0.95);
+    background-color: #4B79A1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 0px solid #ccc;
 } 
 
 .body-container p{
 	position: absolute;
 	width: 331px;
 	height: 383px;
-	left: 20px;
+	left: 10px;
 	top: 122px;
 
 	font-family: 'Rubik', sans-serif;
