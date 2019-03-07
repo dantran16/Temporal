@@ -81,6 +81,17 @@ function initializePage() {
 			location.replace(url);
 		}, 500);
 	});
+	//function to make delete session work 
+	$(".deleteSessionIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".sessionname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deletesession/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 500);
+	});
 	
 	
 }
