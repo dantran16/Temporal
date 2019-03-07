@@ -183,7 +183,7 @@ function editSession() {
 }
 
 function editAllSession() {
-  document.getElementById("deleteSessionIcon").style.display = "inline-block";
+  $(".deleteSessionIcon").css("display", "inline-block");
 }
 
 /*
