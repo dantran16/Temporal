@@ -173,15 +173,18 @@ function deleteRow() {
 
 
 function deleteTask(){
-
     var i = sessionStorage.getItem('taskId');
     document.getElementById('taskID').value = i; 
     sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
-    
-    
 } 
 
+function editSession() {
+  document.getElementById("deleteTaskIcon").style.display = "inline-block";
+}
 
+function editAllSession() {
+  document.getElementById("deleteSessionIcon").style.display = "inline-block";
+}
 
 /*
 Array.prototype.removeValue = function(name, value){

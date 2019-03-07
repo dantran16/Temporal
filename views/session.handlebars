@@ -21,6 +21,9 @@
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
+			<a>
+				<img src="/svg/edit.svg" alt="EDIT" id="btn-edit" onclick="editSession()">
+			</a>
 			<div id="session-name">
     			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
@@ -37,12 +40,13 @@
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
-				<li class="task" id="{{id}}"> <p class="taskname">{{name}}</p>
-				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick='deleteTask()'>
-				</br>
-				<p><img id="clockIcon-task" src="/svg/hourglassColor2.svg">{{time}}</p>
+				<li class="task" id="{{id}}"> 
+					<h1 class="taskname">{{name}}</h1>
+
+					<img id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
+
+					<p> <img id="clockIcon-task" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 				</li>
-				<!--<img src="/svg/star.svg" id="star-session">-->
 			{{/each}}
 
 			<div style="display: none;">
