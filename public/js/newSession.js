@@ -178,11 +178,29 @@ function deleteTask(){
     sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
 } 
 
-function editSession() {
-  document.getElementById("deleteTaskIcon").style.display = "inline-block";
+function toggleEdit() {
+  var deleteCheck = document.getElementById("deleteTaskIcon").style.display;
+  
+  if (deleteCheck == "none") {
+      return editTasksShow();
+  }
+  else
+    return editTasksHide();
 }
 
-function editAllSession() {
+function editTasksShow() {
+  //document.getElementById("deleteTaskIcon").style.display = "inline-block";
+    $(".deleteTaskIcon").css("display", "inline-block");
+}
+
+function editTasksHide() {
+  //document.getElementById("deleteTaskIcon").style.display = "inline-block";
+    $(".deleteTaskIcon").css("display", "none");
+}
+
+
+
+function editSessions() {
   $(".deleteSessionIcon").css("display", "inline-block");
 }
 
