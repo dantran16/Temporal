@@ -21,12 +21,11 @@
 			<a href="/index">
 				<img src="/svg/back-btn.svg" alt="BACK" id='btn-back'>
 			</a>
-			<a>
-				<img src="/svg/edit.svg" alt="EDIT" id="btn-edit" onclick="editTasksShow()">
-			</a>
+			
 			<div id="session-name">
     			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
+			<img src="/svg/edit.svg" alt="EDIT" id="btn-edit" onclick="editTasksShow()">
 			<div class="headerTime" id="timeBox">
 				<p>Remaining Time:</p>
 				<div class="time" id="time">{{time}}</div>
@@ -43,7 +42,7 @@
 				<li class="task" id="{{id}}"> 
 					<h1 class="taskname">{{name}}</h1>
 
-					<img id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
+					<img class="deleteTaskIcon" id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
 
 					<p> <img id="clockIcon-task" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 				</li>
