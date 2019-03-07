@@ -71,7 +71,7 @@ function initializePage() {
 	}, 1000);
 	
 	//function to make delete task work
-	$("#deleteTaskIcon").click(function(e){
+	$(".deleteTaskIcon").click(function(e){
 		e.preventDefault();
 		var string = $(this).siblings(".taskname").text();
 		console.log(string);
@@ -173,9 +173,6 @@ function deleteRow() {
 
 
 function deleteTask(){
-    var i = sessionStorage.getItem('taskId');
-    document.getElementById('taskID').value = i; 
-    sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
 } 
 
 function toggleEdit() {

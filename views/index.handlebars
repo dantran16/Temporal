@@ -1,6 +1,6 @@
 <html>
 <head>
-<!-- Google Analytics Content Experiment code -->
+<!-- Google Analytics Content Experiment code ->
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='190830233-2',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -73,9 +73,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 					<ul class="list-group list-unstyled ABTEST" id="ABSessions">
 						{{#each sessions}}
 							<li class="sessions" id="{{id}}"> 
+								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
+								
 								<p class="sessionname">{{name}}</p>
 
-								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
+								
 
 								<p class="timeStyle"> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 
@@ -87,9 +89,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 						<!-- accesses sessions and access all the variables -->
 						{{#each sessions}}
 							<li class="sessions" id="{{id}}"> 
+								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
+								
 								<p class="sessionname">{{name}}</p>
 
-								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
+								
 
 								<p> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 							</li>

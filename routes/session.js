@@ -196,18 +196,8 @@ exports.deletetask = function(req,res){
 	var deletekey = null;
 	for(var i = 0; i < session.sessions[key].tasks.length; i++){
 		if(req.params.taskname == session.sessions[key].tasks[i].name){
-			if(i==0){
-				session.sessions[key].tasks.splice(0, 1);
-				break;
-			}
-			if(i==session.sessions.tasks.length){
-				session.sessions[key].tasks.splice(i, i+1);
-				break;
-			}
-			else{
-				session.sessions.tasks.splice(i,i);
-				break;
-			}
+			session.sessions[key].tasks.splice(i, 1);
+			break;
 		}
 	}
 	var sessiontimeinseconds = 0;
