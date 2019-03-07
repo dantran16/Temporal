@@ -74,7 +74,6 @@ app.get('/viewAlt', index.viewAlt);
 app.get('/viewAlt/newSession', index.newSession);
 
 
-
 /*
 //app.get('session/:sessionname/startSession', startSession.view);
 
