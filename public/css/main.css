@@ -295,12 +295,11 @@ top: 152px;
 }
 
 .login-container {
-	justify-content: center;
 	position: absolute;
-	width: 348px;
+	width: 90%;
 	height: 293px;
-	left: 33px;
-	top: 274px;
+	top: 280px;
+	margin-left: 10px;
 
 	border-radius: 20px;
 	background-blend-mode: screen;
