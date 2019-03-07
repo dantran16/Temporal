@@ -65,6 +65,20 @@ function initializePage() {
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
+	
+	//function to make delete task work
+	$("#deleteTaskIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".taskname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deleteTask/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 100);
+	});
+	
+	
 }
 
 

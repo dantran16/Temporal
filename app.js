@@ -67,6 +67,7 @@ app.get('/about', about.view);
 app.get('/session/:sessionname/deletetask', session.deletetask);
 app.get('/session/:sessionname/starttime', session.starttime);
 app.get('/session/:sessionname/pausetime', session.pausetime);
+app.get('/session/:sessionname/deletetask/:taskname', session.deletetask);
 
 //B alt View [TESTING]
 app.get('/viewAlt', index.viewAlt);

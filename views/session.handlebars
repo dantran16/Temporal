@@ -37,8 +37,8 @@
 			<!-- accesses sessions and access all the variables -->
 			<!-- <li class="duedate" id="duedate">Due by: {{duedate}}</li> -->
 			{{#each tasks}}
-				<li class="task" id="taskId">{{name}}
-				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick= 'deleteTask()'>
+				<li class="task" id="{{id}}"> <p class="taskname">{{name}}</p>
+				<img id="deleteTaskIcon" src="/svg/trash.svg" onclick='deleteTask()'>
 				</br>
 				<p><img id="clockIcon-task" src="/svg/hourglassColor2.svg">{{time}}</p>
 				</li>
