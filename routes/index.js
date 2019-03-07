@@ -71,8 +71,8 @@ exports.newSession = function(req, res){
 exports.deletesession = function(req,res){
 	
 	for(var i = 0; i < session.sessions.length; i++){
-		if(req.params.taskname == session.sessions[key].tasks[i].name){
-			session.sessions[key].tasks.splice(i, 1);
+		if(req.params.sessionname == session.sessions[i].name){
+			session.sessions.splice(i, 1);
 			break;
 		}
 	}
