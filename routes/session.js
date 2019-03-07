@@ -192,6 +192,7 @@ exports.pausetime = function(req, res){
 }
 
 exports.deletetask = function(req,res){
+	
 	var deletekey = null;
 	for(var i = 0; i < session.sessions[key].tasks.length; i++){
 		if(req.params.taskname == session.sessions[key].tasks[i].name){
@@ -209,6 +210,20 @@ exports.deletetask = function(req,res){
 			}
 		}
 	}
+	var sessiontimeinseconds = 0;
+	//changing time from overall time
+	for(var k = 0; k < session.sessions[key].tasks.length; k++){
+		var timestring = session.sessions[key].tasks[k].time;
+		var hrstring = timestring.substring(0,2);
+		var hr = parseInt(hrstring);
+		var minstring = timestring.substring(3,5);
+		var minutes = parseInt(minstring);
+		var secstring = timestring.substring(6,8);
+		var seconds = parseInt(secstring);
+		sessiontimeinseconds += hr * 3600 + minutes * 60 + seconds;
+	}
+	session.sessions[key].time = convertSeconds(sessiontimeinseconds);
+	var sessiontimeinseconds = 0;
 	
 	res.render('session',{
 		"sessionname": session.sessions[key].name,

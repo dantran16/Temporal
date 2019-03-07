@@ -75,7 +75,7 @@ function initializePage() {
 		location.replace(url+"/deleteTask/"+string);
 		setTimeout(function(){
 			location.replace(url);
-		}, 100);
+		}, 500);
 	});
 	
 	
