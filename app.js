@@ -18,7 +18,7 @@ var login = require('./routes/login');
 
 var addtask = require('./routes/addtask');
 var settings = require('./routes/settings');
-var notifications = require('./routes/notifications');
+var help = require('./routes/help');
 var account = require('./routes/account');
 var about = require('./routes/about'); 
 
@@ -59,7 +59,7 @@ app.get('/index/newSession', index.newSession);
 app.get('/session/:sessionname/startSession', startSession.view);
 
 app.get('/settings', settings.view); 
-app.get('/notifications', notifications.view);
+app.get('/help', help.view);
 app.get('/account', account.view);
 app.get('/about', about.view);
 

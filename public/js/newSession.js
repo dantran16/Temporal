@@ -17,6 +17,10 @@ $(document).ready(function() {
     ga("send", "event", "viewsessionB", "click");
   });
 
+    $("#help").click(function(){
+    ga("send", "event", "help", "click");
+  });
+
 })
 
 /*
