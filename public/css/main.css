@@ -305,6 +305,11 @@ top: 152px;
 	background-blend-mode: screen;
 }
 
+.login-container input[type=text] {
+	width: 255px;
+	margin-top: 10px;
+}
+
 #loginBackground {
 	background: linear-gradient(286.67deg, #283E51 0%, #4B79A1 100%);
 }
@@ -625,8 +630,8 @@ top: 30px;
 	font-size: 12pt;
 }
 
-input[type=text] {
-	width: 75%;
+input[type=text], input[type=password]  {
+	width: 255px;
 	margin: 8px 0;
 	box-sizing: border-box;
 	padding-left: 0%;
