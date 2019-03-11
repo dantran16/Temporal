@@ -176,6 +176,7 @@ function deleteTask(){
     var i = sessionStorage.getItem('taskId');
     document.getElementById('taskID').value = i; 
     sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
+    location.replace(url);
 } 
 
 function toggleEdit() {

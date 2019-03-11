@@ -262,7 +262,7 @@ top: 152px;
 	width: 76px;
 	height: 27px;
 	left: 130px;
-	top: 400px;
+	top: 380px;
 
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
@@ -298,7 +298,7 @@ top: 152px;
 	position: absolute;
 	width: 90%;
 	height: 293px;
-	top: 280px;
+	top: 300px;
 	margin-left: 10px;
 
 	border-radius: 20px;
@@ -317,21 +317,35 @@ top: 152px;
 .appTitle h1 {
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: 900;
+	font-weight: 500;
 	line-height: normal;
 	font-size: 40px;
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: #000000;
-	margin-top: 70px;
+	margin-top: 50px;
 	color: white;
-	opacity: 0.8;
+	opacity: 0.9;
+}
+
+.appTitle h2 {
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 0.01em;
+	color: #000000;
+	margin-top: 0px;
+	color: white;
+	opacity: 0.85;
 }
 
 .appTitle #loginLogo {
 	width: 100%;
 	height: 100px;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 
 h4 {
