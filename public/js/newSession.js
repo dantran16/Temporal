@@ -71,12 +71,23 @@ function initializePage() {
 	}, 1000);
 	
 	//function to make delete task work
-	$("#deleteTaskIcon").click(function(e){
+	$(".deleteTaskIcon").click(function(e){
 		e.preventDefault();
 		var string = $(this).siblings(".taskname").text();
 		console.log(string);
 		var url = location.href;
 		location.replace(url+"/deleteTask/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 500);
+	});
+	//function to make delete session work 
+	$(".deleteSessionIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".sessionname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deletesession/"+string);
 		setTimeout(function(){
 			location.replace(url);
 		}, 500);
@@ -173,10 +184,13 @@ function deleteRow() {
 
 
 function deleteTask(){
+<<<<<<< HEAD
     var i = sessionStorage.getItem('taskId');
     document.getElementById('taskID').value = i; 
     sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
     location.replace(url);
+=======
+>>>>>>> 251f165ea9d0e0d12294aeb728236d5102ab3593
 } 
 
 function toggleEdit() {

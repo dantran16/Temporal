@@ -64,10 +64,10 @@ app.get('/account', account.view);
 app.get('/about', about.view);
 
 //app.get('/start', session.start);
-app.get('/session/:sessionname/deletetask', session.deletetask);
 app.get('/session/:sessionname/starttime', session.starttime);
 app.get('/session/:sessionname/pausetime', session.pausetime);
 app.get('/session/:sessionname/deletetask/:taskname', session.deletetask);
+app.get('/index/deletesession/:sessionname', index.deletesession);
 
 //B alt View [TESTING]
 app.get('/viewAlt', index.viewAlt);

@@ -67,3 +67,19 @@ exports.newSession = function(req, res){
 	  "sessions": session.sessions,
 	});
 };
+
+exports.deletesession = function(req,res){
+	
+	for(var i = 0; i < session.sessions.length; i++){
+		if(req.params.sessionname == session.sessions[i].name){
+			session.sessions.splice(i, 1);
+			break;
+		}
+	}
+	res.render('index',{
+	  "sessions": session.sessions,
+	});
+}
+
+
+

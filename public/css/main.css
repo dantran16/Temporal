@@ -883,6 +883,7 @@ input::placeholder {
 }
 
 #deleteSessionIcon {
+	position: absolute;  
 	display: none; /*inline-block*/
 	width: 16px;
 	height: 16px;
