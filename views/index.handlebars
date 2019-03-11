@@ -69,7 +69,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<div class="onGoingSessions-container">
 				<h1>CURRENT SESSIONS</h1>
 					
-					{{#if viewAlt}} <!-- AB TEST -->
 					<ul class="list-group list-unstyled ABTEST" id="ABSessions">
 						{{#each sessions}}
 								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
@@ -78,34 +77,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 									<p class="timeStyle"> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
 								</li>
 						{{/each}}
-					</ul> <!-- AB TEST END -->
-					{{else}}
-					<ul class="list-group list-unstyled" id="Sessions">
-						<!-- accesses sessions and access all the variables -->
-						{{#each sessions}}
-							<li class="sessions" id="{{id}}"> 
-								<p class="sessionname">{{name}}</p>
-
-								<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg" onclick="deleteTask()">
-
-								<p> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
-							</li>
-						{{/each}}
 					</ul>
-					{{/if}}
 			</div>
 		</div>
 <!-- END onGoing Sessions -->
 </div> <!--- END OF SCREEN CONTAINER -->
-{{#if viewAlt}}
 		<div class="container-footer">
 			<button onclick="openNewSession()" class="btn new-session" id="button-deets" style="background-color: red;"> + New Session </button>
 		</div>
-{{else}}
-		<div class="container-footer">
-			<button onclick="openNewSession()" class="btn new-session" id="button-deets" style="background: #4B79A1;"> + New Session </button>
-		</div>
-{{/if}}
 		
 	
 <!--new task pop up-->

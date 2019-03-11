@@ -173,12 +173,6 @@ function deleteRow() {
 
 
 function deleteTask(){
-<<<<<<< HEAD
-    var i = sessionStorage.getItem('taskId');
-    document.getElementById('taskID').value = i; 
-    sessionStorage.setItem('taskID', sessionStorage.removeItem(i));
-=======
->>>>>>> 7c0709b745e2471e38fb973005ce8392cbc93089
 } 
 
 function toggleEdit() {
