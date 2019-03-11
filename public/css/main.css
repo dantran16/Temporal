@@ -817,8 +817,8 @@ input::placeholder {
 }
 
 .container-footer {
-	position: absolute;
-	width: 100%;
+	position: fixed;
+	width: 93%;
 	height: 73px; /* 73px */
 	bottom: 0px;
 	display: flex;
@@ -921,7 +921,7 @@ input::placeholder {
 	bottom: 25px;
 	text-align: center;
 
-	background: #6D6D6D;
+	background: red;
 	border-radius: 100px;
 
 	justify-content: center;
