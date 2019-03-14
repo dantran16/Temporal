@@ -64,14 +64,14 @@ function initializePage() {
   today = yytoday + '-' + mmtoday + '-' + ddtoday;
   document.getElementById("taskdate").setAttribute("min", today);
   
-
+	//time
     url = location.href;
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
 	
 	//function to make delete task work
-	$("#deleteTaskIcon").click(function(e){
+	$(".deleteTaskIcon").click(function(e){
 		e.preventDefault();
 		var string = $(this).siblings(".taskname").text();
 		console.log(string);
@@ -81,7 +81,7 @@ function initializePage() {
 			location.replace(url);
 		}, 500);
 	});
-	
+
 	
 }
 
@@ -155,6 +155,17 @@ function next(){
 function addTask() {
   document.getElementById("newTask").style.display = "none";
 }
+
+function deleteTask(){
+	var string = $(this).siblings(".taskname").text();
+	console.log(string);
+	var url = location.href;
+	location.replace(url+"/deleteTask/"+string);
+	setTimeout(function(){
+		location.replace(url);
+	}, 500);
+}
+
 /*
 function deleteRow() {
   JSONOject jObject = new JSONOject( {{sessions}} );
@@ -193,7 +204,18 @@ function editTasksHide() {
 }
 
 function editSessions() {
-  $(".deleteSessionIcon").css("display", "inline-block");
+	$(".deleteSessionIcon").css("display", "inline-block");
+	$(".sessions").unbind();
+	$(".deleteSessionIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".sessionname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deletesession/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 500);
+	});
 }
 
 /*
