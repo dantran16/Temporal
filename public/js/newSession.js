@@ -81,7 +81,16 @@ function initializePage() {
 			location.replace(url);
 		}, 500);
 	});
-
+	$(".deleteSessionIcon").click(function(e){
+		e.preventDefault();
+		var string = $(this).siblings(".sessionname").text();
+		console.log(string);
+		var url = location.href;
+		location.replace(url+"/deletesession/"+string);
+		setTimeout(function(){
+			location.replace(url);
+		}, 500);
+	});
 	
 }
 
@@ -206,43 +215,22 @@ function editTasksHide() {
 function editSessions() {
 	$(".deleteSessionIcon").css("display", "inline-block");
 	$(".sessions").unbind();
-	$(".deleteSessionIcon").click(function(e){
-		e.preventDefault();
-		var string = $(this).siblings(".sessionname").text();
-		console.log(string);
-		var url = location.href;
-		location.replace(url+"/deletesession/"+string);
-		setTimeout(function(){
-			location.replace(url);
-		}, 500);
-	});
 }
 
 $("#btn-edit-session").click(function(){
-  $(".deleteSessionIcon").toggle(
-	function(){
-		$(".deleteSessionIcon").unbind();
-		$(".sessions").click(function(e){
-			e.preventDefault();
-			var string = $(".sessionname", this).text();
-			console.log(string);
-			location.replace("/session/"+string);
-		});
-	},
-	function(){
-		$(".sessions").unbind();
-		$(".deleteSessionIcon").click(function(e){
-			e.preventDefault();
-			var string = $(this).siblings(".sessionname").text();
-			console.log(string);
-			var url = location.href;
-			location.replace(url+"/deletesession/"+string);
-			setTimeout(function(){
-				location.replace(url);
-			}, 500);
-		});
+  $(".deleteSessionIcon").toggle();
+  if($("#deleteSessionIcon").css('display') == "none" || $("#deleteSessionIcon").css('display') == "hidden"){
+	$(".sessions").click(function(e){
+		e.preventDefault();
+		var string = $(".sessionname", this).text();
+		console.log(string);
+		location.replace("/session/"+string);
 	});
-});
+  }
+  else{
+	$(".sessions").unbind();
+	}
+ });
 
 $("#btn-edit-task").click(function(){
   $(".deleteTaskIcon").toggle();

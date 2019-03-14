@@ -108,14 +108,13 @@ function starttime(){
 }
 
 function pausetime(){
-<<<<<<< HEAD
+
 	url = window.location.href.split('?')[0];
 	console.log("the url is " + url);
-=======
+
 	//swap color for start
 	document.getElementById("time").style.color = "#283E51";
 	
->>>>>>> c42d7368ce657baccb4d913888f49bc5f12d529f
 	location.replace(url + "/pausetime");
 	setTimeout(function(){
 		paused = true;
