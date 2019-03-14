@@ -416,14 +416,14 @@ ul.list-group-session{
  	margin-left: inherit;
 
 	height: 460px; width: 90%;
-	top: 190px;
+	top: 200px;
 	list-style-type: none; 
 
 	padding: 0px 25px;
 
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 	line-height: inherit;
 	font-size: 21px;
 	letter-spacing: 0.03em;
@@ -440,6 +440,8 @@ ul.list-group-session{
 
 .list-group-session p {
 	font-size: 11pt;
+	font-weight: 400;
+
 	margin-bottom: 0px;
 	opacity: 0.5;
 }
@@ -450,20 +452,14 @@ ul.list-group-session{
 
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 21px;
 	letter-spacing: 0.03em;
 	margin-top: 0px;
 }
 
 .headerTime {
-	display: inline-block;
-	justify-content: center;
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 95px;
-	text-align: center;
+	top: 90px;
 
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
@@ -471,27 +467,47 @@ ul.list-group-session{
 	line-height: inherit;
 }
 
-.headerTime p {
+#timeBox {
+	text-align: center;
+	position: absolute;
+
+	padding: 7px 0px 7px 0px;
+
+	width: 220px;
+	height: 100px;
+	background-color: lightgrey;
+	border-radius: 6px;
+}
+
+#timeBox p {
 	font-size: 14px;
 	letter-spacing: 0.07em;
-	opacity: 0.6;
 	margin-bottom: 0.0em;
+	font-weight: 400;
+	opacity: 0.8;
 }
 
 #time {
-	font-size: 25pt;
-	color: lightgreen;
+	font-size: 22pt;
+	color: #283E51;
 
 	font-family: 'Rubik', sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: inherit;
 }
 
 #duedate {
 	left: 90px;
-	font-size: 12pt;
-	opacity: 0.6;
+	font-size: 10pt;
+	opacity: 0.7;
+	font-weight: 400;
+	color: black;
+	background-color: grey;
+	border-radius: 20px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 3%;
 }
 
 
@@ -601,6 +617,7 @@ top: 30px;
 .newTaskCard input[type=text]:focus, .newTaskCard input[type=time]:focus, .newTaskCard input[type=date]:focus {
   background-color: #ddd;
   outline: none;
+ 	mix-blend-mode: overlay;
 }
 
 
@@ -614,6 +631,8 @@ top: 30px;
   box-sizing: border-box;
   text-align: center;
 
+  mix-blend-mode: overlay;
+
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -624,13 +643,21 @@ top: 30px;
 	font-size: 18pt;
 	margin-bottom: 15px;
 	color: white;
+	font-weight: 700;
 }
 
-.newTaskCard label {
+.newTaskCard label{
 	font-size: 12pt;
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	opacity: 0.9;
+	padding-right: 10px;
 }
 
-input[type=text], input[type=password]  {
+
+input[type=text], input[type=password] {
 	width: 255px;
 	margin: 8px 0;
 	box-sizing: border-box;
@@ -645,6 +672,8 @@ input[type=text], input[type=password]  {
 	letter-spacing: 0.05em;
 
 	color: #000000;
+
+	mix-blend-mode: overlay;
 
 	background: transparent;
     border-top: transparent !important;
@@ -702,17 +731,20 @@ input::placeholder {
 }
 
 .newTaskCard #timeInputBox {
-	width: 30px;
-	height: 25px;
+	width: 35px;
+	height: 27px;
 	border-radius: 5px;
 	text-align: center;
+	margin-bottom: 25px; 
 
 	font-family: 'Rubik', sans-serif;
-	font-style: bold;
 	font-weight: 500;
 	line-height: normal;
 	font-size: 14px;
 	letter-spacing: 0.05em;
+
+    background: linear-gradient(286.67deg, #283E51 0%, #4B79A1 100%);
+	mix-blend-mode: overlay;
 
 	background: lightgrey;
     border-top: transparent !important;
@@ -744,54 +776,6 @@ input::placeholder {
 	-webkit-transition : -webkit-filter 200ms linear;
 }
 
-.container-header {
- 	/* Header */
-	position: absolute;
-	width: 100%;
-	height: 124px;
-	left: 0px;
-	top: 0px;
-	background-color: #C4C4C4;
- }
-
-.container-header h1 {
-	position: absolute;
-	width: 151px;
-	height: 25px;
-	left: 66px;
-	top: 8px;
-
-	font-family: 'Rubik', sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-
-	color: #000000;
- }
-
-.container-header h2 {
-	/* Edit Name... */
-
-	position: absolute;
-	width: 173px;
-	height: 34px;
-	left: 66px;
-	top: 60px;
-
-	font-family: 'Rubik', sans-serif;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	font-size: 28px;
-	letter-spacing: 0.02em;
-
-	color: #000000;
-
-	opacity: 0.4;
-}
-
 #edit-name {
 	position: absolute;
 	width: 100%;
@@ -809,11 +793,10 @@ input::placeholder {
 
 #session-name {
 	position: absolute;
-	width: 80%;
+	width: 90%;
 	height: 90%;
 	margin-left: 65px;
 	margin-top: 14px;
-	color: red;
 }
 
 .container-footer {
@@ -855,7 +838,7 @@ input::placeholder {
 } 
 
 .timeStyle { 
-	opacity: 0.6;
+	opacity: 0.75;
 } 
 
 #clockIcon {
@@ -1003,24 +986,24 @@ input::placeholder {
 
 #btn-edit-session {
 	position: absolute;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	right: 22px;
-	top: 24px;
+	top: 26px;
 
-	mix-blend-mode: normal;
-	opacity: 0.8;
+	mix-blend-mode: overlay;
+	opacity: 1.0;
 }
 
 #btn-edit-task {
 	position: absolute;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	right: 22px;
-	top: 24px;
+	top: 26px;
 
-	mix-blend-mode: normal;
-	opacity: 0.8;
+	mix-blend-mode: overlay;
+	opacity: 1.0;
 }
 
 #btn-info {
@@ -1127,7 +1110,7 @@ input::placeholder {
 }
 
 #startTimer {
- 	display: block;
+ 	display: none;
 	position: absolute;
 	background-color: #6FCF97;
  }
@@ -1135,7 +1118,8 @@ input::placeholder {
  #stopTimer {
  	display: none;
 	position: absolute;
-	background-color: red;
+	background-color: #FFED65;
+	color: black;
  }
 /*
 .btn-pause {
@@ -1275,7 +1259,7 @@ input::placeholder {
 	top: 13px;
 
 	transform: rotate(90deg);
-	mix-blend-mode: normal;
+	mix-blend-mode: overlay;
 	opacity: 0.54;
 }
 
@@ -1289,7 +1273,7 @@ input::placeholder {
 	top: 13px;
 
 	transform: rotate(-90deg);
-	mix-blend-mode: normal;
+	mix-blend-mode: overlay;
 	opacity: 0.54;
 
 	-webkit-transition: 1s;
@@ -1297,7 +1281,6 @@ input::placeholder {
 
 #session-option-txt {
 	 /* Session Options */
-
 	position: absolute;
 	width: 140px;
 	height: 22px;
@@ -1311,7 +1294,8 @@ input::placeholder {
 	font-size: 18px;
 	letter-spacing: 0.02em;
 
-	color: #000000;
+	color: white;
+	opacity: 0.7;
 }
 
 /* ----- TOGGLE SWITCH ----- */
@@ -1513,7 +1497,7 @@ html {
 	letter-spacing: 0.05em;
 
 	color: white;
-	opacity: 0.8;
+	opacity: 1.0;
  }
 
  .calendar {

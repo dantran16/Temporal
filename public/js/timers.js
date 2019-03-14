@@ -3,7 +3,7 @@ $(document).ready(function() {
 	if(paused == true){
 		document.getElementById("startTimer").style.display = "block";
 		document.getElementById("stopTimer").style.display = "none";
-		document.getElementById("time").style.color = "lightgreen";
+		document.getElementById("time").style.color = "#283E51";
 	}
 	else{
 		document.getElementById("startTimer").style.display = "none";
@@ -22,8 +22,6 @@ var paused = true;
 
 function start(){
 	//swap button for pause
-	document.getElementById("startTimer").style.display = "none";
-	document.getElementById("stopTimer").style.display = "block";
 	document.getElementById("time").style.color = "red";
 
 	//timeleft = document.getElementById("time");
@@ -73,11 +71,8 @@ function pause(){
 	clearInterval(interval);
 
 	//swap pause with START on click
-	document.getElementById("startTimer").style.display = "block";
-	document.getElementById("stopTimer").style.display = "none";
-	document.getElementById("time").style.color = "lightgreen";
+	document.getElementById("time").style.color = "#283E51";
 }
-
 
 function convertSeconds(seconds){
 	var hrs = Math.floor(seconds/3600);
@@ -100,14 +95,10 @@ function convertSeconds(seconds){
 	return string;
 }
 
-function otherStart() {
-	location.replace(location.href+"/start");
-	//start();
-	//document.getElementById("time").style.color = "red";
-}
-
 function starttime(){
-	//swap button for pause
+	//swap color for pause
+	document.getElementById("time").style.color = "red";
+
 	url = window.location.href.split('?')[0];
 	console.log("the url is " + url);
 	location.replace(url + "/starttime");
@@ -115,14 +106,29 @@ function starttime(){
 		paused = false;
 		location.replace(url);
 	}, 100);
-	
 }
 
 function pausetime(){
+	//swap color for start
+	document.getElementById("time").style.color = "#283E51";
+	
 	location.replace(url + "/pausetime");
 	setTimeout(function(){
 		paused = true;
 		location.replace(url);
 	}, 500);
-	
 }
+
+//toggle stopTimer to show and hide start
+$("#startTimer").click(function(){
+	start();
+  $("#startTimer").hide();
+  $("#stopTimer").show();
+});
+
+//toggle startTimer to show and hide stop
+$("#stopTimer").click(function(){
+	pause();
+  $("#stopTimer").hide();
+  $("#startTimer").show();
+});
