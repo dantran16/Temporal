@@ -83,6 +83,7 @@ exports.view = function(req, res){
 	  "time": session.sessions[key].time,
 	  "tasks": session.sessions[key].tasks,
 	  "duedate": session.sessions[key].duedate,
+	  "running": session.sessions[key].running
 	});
 };
 
@@ -139,11 +140,13 @@ exports.addtask = function(req,res){
 	  "time": session.sessions[key].time,
 	  "tasks": session.sessions[key].tasks,
 	  "duedate": session.sessions[key].duedate,
+	  "running": session.sessions[key].running
 	});
 
 };
 
 exports.starttime = function(req,res){
+	session.sessions[key].running = "true"
 	var timestring = session.sessions[key].time;
 	console.log(timestring);
 	var hrstring = timestring.substring(0,2);
@@ -176,18 +179,21 @@ exports.starttime = function(req,res){
 			"time": session.sessions[key].time,
 			"tasks": session.sessions[key].tasks,
 			"duedate": session.sessions[key].duedate,
+			"running": session.sessions[key].running
 		});
 	}
 	interval = setInterval(timer, 1000);
 };
 
 exports.pausetime = function(req, res){
+	session.sessions[key].running = "false";
 	clearInterval(interval);
 	res.render('session',{
 		"sessionname": session.sessions[key].name,
 		"time": session.sessions[key].time,
 		"tasks": session.sessions[key].tasks,
 		"duedate": session.sessions[key].duedate,
+		"running": session.sessions[key].running
 	});
 }
 
@@ -220,6 +226,7 @@ exports.deletetask = function(req,res){
 		"time": session.sessions[key].time,
 		"tasks": session.sessions[key].tasks,
 		"duedate": session.sessions[key].duedate,
+		"running": session.sessions[key].running
 	});
 }
 

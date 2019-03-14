@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	initializePage();
-	if(paused == true){
-		document.getElementById("startTimer").style.display = "block";
-		document.getElementById("stopTimer").style.display = "none";
-		document.getElementById("time").style.color = "#283E51";
+	var running = $("#running").text();
+	console.log(running);
+	if(running == "true"){
+		$("#startTimer").hide();
+		$("#stopTimer").show();
 	}
 	else{
-		document.getElementById("startTimer").style.display = "none";
-		document.getElementById("stopTimer").style.display = "block";
-		document.getElementById("time").style.color = "red";
+		$("#stopTimer").hide();
+		$("#startTimer").show();
 	}
 })
 
@@ -96,19 +96,20 @@ function convertSeconds(seconds){
 }
 
 function starttime(){
-	//swap color for pause
-	document.getElementById("time").style.color = "red";
 
 	url = window.location.href.split('?')[0];
 	console.log("the url is " + url);
 	location.replace(url + "/starttime");
 	setTimeout(function(){
-		paused = false;
 		location.replace(url);
 	}, 100);
 }
 
 function pausetime(){
+
+	url = window.location.href.split('?')[0];
+	console.log("the url is " + url);
+
 	//swap color for start
 	document.getElementById("time").style.color = "#283E51";
 	
@@ -121,14 +122,11 @@ function pausetime(){
 
 //toggle stopTimer to show and hide start
 $("#startTimer").click(function(){
-	start();
-  $("#startTimer").hide();
-  $("#stopTimer").show();
+	starttime();
+
 });
 
 //toggle startTimer to show and hide stop
 $("#stopTimer").click(function(){
-	pause();
-  $("#stopTimer").hide();
-  $("#startTimer").show();
+	pausetime();
 });
