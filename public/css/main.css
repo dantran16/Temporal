@@ -1001,7 +1001,18 @@ input::placeholder {
 	opacity: 0.54;
 }
 
-#btn-edit {
+#btn-edit-session {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: 22px;
+	top: 24px;
+
+	mix-blend-mode: normal;
+	opacity: 0.8;
+}
+
+#btn-edit-task {
 	position: absolute;
 	width: 30px;
 	height: 30px;

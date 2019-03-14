@@ -218,6 +218,14 @@ function editSessions() {
 	});
 }
 
+$("#btn-edit-session").click(function(){
+  $(".deleteSessionIcon").toggle();
+});
+
+$("#btn-edit-task").click(function(){
+  $(".deleteTaskIcon").toggle();
+});
+
 /*
 Array.prototype.removeValue = function(name, value){
    var array = $.map(this, function(v,i){
