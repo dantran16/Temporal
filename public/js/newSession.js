@@ -219,7 +219,29 @@ function editSessions() {
 }
 
 $("#btn-edit-session").click(function(){
-  $(".deleteSessionIcon").toggle();
+  $(".deleteSessionIcon").toggle(
+	function(){
+		$(".deleteSessionIcon").unbind();
+		$(".sessions").click(function(e){
+			e.preventDefault();
+			var string = $(".sessionname", this).text();
+			console.log(string);
+			location.replace("/session/"+string);
+		});
+	},
+	function(){
+		$(".sessions").unbind();
+		$(".deleteSessionIcon").click(function(e){
+			e.preventDefault();
+			var string = $(this).siblings(".sessionname").text();
+			console.log(string);
+			var url = location.href;
+			location.replace(url+"/deletesession/"+string);
+			setTimeout(function(){
+				location.replace(url);
+			}, 500);
+		});
+	});
 });
 
 $("#btn-edit-task").click(function(){

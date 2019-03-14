@@ -112,13 +112,14 @@ function starttime(){
 	console.log("the url is " + url);
 	location.replace(url + "/starttime");
 	setTimeout(function(){
-		paused = false;
 		location.replace(url);
 	}, 100);
 	
 }
 
 function pausetime(){
+	url = window.location.href.split('?')[0];
+	console.log("the url is " + url);
 	location.replace(url + "/pausetime");
 	setTimeout(function(){
 		paused = true;
