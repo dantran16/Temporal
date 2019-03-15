@@ -44,10 +44,10 @@
 					
 					<ul class="list-group list-unstyled ABTEST" id="ABSessions">
 						{{#each sessions}}
+						<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg">
 								<li class="sessions" id="{{id}}"> 
 									<p class="sessionname">{{name}}</p>
 									<p class="timeStyle"> <img id="clockIcon" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
-									<img class="deleteSessionIcon" id="deleteSessionIcon" src="/svg/trash.svg">
 								</li>
 						{{/each}}
 					</ul>
