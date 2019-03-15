@@ -152,7 +152,12 @@ function next(){
 function addTask() {
   document.getElementById("newTask").style.display = "none";
 }
-
+function opentaskfix(){
+	var url = location.href;
+		setTimeout(function(){
+			location.replace(url);
+		}, 10);
+}
 function deleteTask(){
 	var string = $(this).siblings(".taskname").text();
 	console.log(string);
