@@ -3,24 +3,6 @@ var url;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
   initializePage();
-  
-  // GOOGLE ANALYTICS 
-  $(".new-session").click(function(){
-    ga("send", "event", "newsession", "click");
-  });
-
-  $("#Sessions").click(function(){
-    ga("send", "event", "viewsessionA", "click");
-  });
-
-  $("#ABSessions").click(function(){
-    ga("send", "event", "viewsessionB", "click");
-  });
-
-    $("#help").click(function(){
-    ga("send", "event", "help", "click");
-  });
-
 })
 
 /*
@@ -69,7 +51,7 @@ function initializePage() {
 	setInterval( function(){
 		$('#time').load(document.URL + ' #time');
 	}, 1000);
-	
+
 	//function to make delete task work
 	$(".deleteTaskIcon").click(function(e){
 		e.preventDefault();
@@ -77,10 +59,13 @@ function initializePage() {
 		console.log(string);
 		var url = location.href;
 		location.replace(url+"/deleteTask/"+string);
+
 		setTimeout(function(){
 			location.replace(url);
 		}, 500);
 	});
+
+  //function to make delete session work
 	$(".deleteSessionIcon").click(function(e){
 		e.preventDefault();
 		var string = $(this).siblings(".sessionname").text();
@@ -89,12 +74,15 @@ function initializePage() {
 		location.replace(url+"/deletesession/"+string);
 		setTimeout(function(){
 			location.replace(url);
-		}, 500);
+		}, 10);
 	});
 	
 }
 
-
+function refreshUrl() {
+  var url = location.href;
+  location.assign(url);
+}
 
 function newSession(){
   location.replace("newSession");
@@ -172,7 +160,7 @@ function deleteTask(){
 	location.replace(url+"/deleteTask/"+string);
 	setTimeout(function(){
 		location.replace(url);
-	}, 500);
+	}, 10);
 }
 
 /*

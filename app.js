@@ -69,18 +69,7 @@ app.get('/session/:sessionname/pausetime', session.pausetime);
 app.get('/session/:sessionname/deletetask/:taskname', session.deletetask);
 app.get('/index/deletesession/:sessionname', index.deletesession);
 
-//B alt View [TESTING]
-app.get('/viewAlt', index.viewAlt);
-app.get('/viewAlt/newSession', index.newSession);
 
-
-/*
-//app.get('session/:sessionname/startSession', startSession.view);
-
-app.get('session/:sessionname/startSession', function(req, res){
-  res.render('startSession.view');
-});
-*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
