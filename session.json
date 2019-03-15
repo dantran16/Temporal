@@ -1,85 +1,44 @@
 {
 	"sessions": [
 		{
-			"name": "Chem 6A Study",
-			"time": "06:00:00",
+			"name": "Welcome to Temporal",
+			"time": "00:03:00",
 			"duedate": "2019-03-15",
 			"running": "false",
 			"tasks": 
 				[
 					{
-						"name": "Do Homework",
-						"time": "02:00:00",
+						"name": "Begin by pressing '+ New Session'",
+						"time": "00:00:30",
 						"duedate": "2019-03-15"
 					},
 					{
-						"name": "Do readings",
-						"time": "02:00:00",
+						"name": "Enter a 'Session Name'",
+						"time": "00:00:30",
 						"duedate": "2019-03-10"
 					},
 					{
-						"name": "Work on practice midterm",
-						"time": "02:00:00",
+						"name": "Enter your first 'Task' name",
+						"time": "00:00:30",
+						"duedate": "2019-03-09"
+					},
+					{
+						"name": "Enter a time frame to finish that first task",
+						"time": "00:00:30",
+						"duedate": "2019-03-09"
+					},
+					{
+						"name": "Choose a date to finish the session by.",
+						"time": "00:00:30",
+						"duedate": "2019-03-09"
+					},
+					{
+						"name": "Press 'SAVE' and you're ready to START!",
+						"time": "00:00:30",
 						"duedate": "2019-03-09"
 					}
 				]
-		},
-		{
-			"name": "Workout",
-			"time": "01:00:00",
-			"duedate": "2019-03-07",
-			"running": "false",
-			"tasks": 
-				[
-					{
-						"name": "Weights",
-						"time": "00:30:00",
-						"duedate": "2019-03-07"
-					},
-					{
-						"name": "Running",
-						"time": "00:30:00",
-						"duedate": "2019-03-07"
-					}
-				]
-		},
-		{
-			"name": "Study",
-			"time": "02:00:00",
-			"duedate": "2019-03-07",
-			"running": "false",
-			"tasks": 
-				[
-					{
-						"name": "Do Homework",
-						"time": "01:00:00",
-						"duedate": "2019-03-05"
-					},
-					{
-						"name": "Do readings",
-						"time": "01:00:00",
-						"duedate": "2019-03-07"
-					}
-				]
-		},
-		{
-			"name": "Chores",
-			"time": "00:00:10",
-			"duedate": "2019-03-07",
-			"running": "false",
-			"tasks": 
-				[
-					{
-						"name": "Do dishes",
-						"time": "00:00:05",
-						"duedate": "2019-03-07"
-					},
-					{
-						"name": "Laundry",
-						"time": "00:00:05",
-						"duedate": "2019-03-07"
-					}
-				]
 		}
+		
 	]
 }

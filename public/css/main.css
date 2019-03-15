@@ -601,6 +601,8 @@ top: 30px;
 .newTaskCard .btn-save {
   background-color: #6FCF97;
   color: white;
+  font-weight: 500;
+  letter-spacing: 0.15em;
 
   padding: 16px 20px;
   box-sizing: border-box;
