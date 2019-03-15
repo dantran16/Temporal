@@ -115,9 +115,8 @@ function pausetime(){
 	
 	location.replace(url + "/pausetime");
 	setTimeout(function(){
-		paused = true;
 		location.replace(url);
-	}, 500);
+	}, 10);
 }
 
 //toggle stopTimer to show and hide start

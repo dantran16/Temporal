@@ -74,7 +74,7 @@ function initializePage() {
 		location.replace(url+"/deletesession/"+string);
 		setTimeout(function(){
 			location.replace(url);
-		}, 500);
+		}, 10);
 	});
 	
 }
@@ -160,7 +160,7 @@ function deleteTask(){
 	location.replace(url+"/deleteTask/"+string);
 	setTimeout(function(){
 		location.replace(url);
-	}, 500);
+	}, 10);
 }
 
 /*
