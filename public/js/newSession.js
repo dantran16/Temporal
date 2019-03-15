@@ -192,13 +192,12 @@ function deleteRow() {
 */
 
 
-<<<<<<< HEAD
+
 function deleteTask(){
 
 } 
 
-=======
->>>>>>> 0ac37719203ddc322f0a9ef285ff561b0c1c954f
+
 function toggleEdit() {
   var deleteCheck = document.getElementById("deleteTaskIcon").style.display;
   

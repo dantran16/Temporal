@@ -46,6 +46,7 @@ top: 152px;
 	left: 118px;
 	top: 530px;
 	background: #6D6D6D; 
+	border-radius: 6px;
 	
 
 	font-family: 'Rubik', sans-serif;
@@ -57,7 +58,102 @@ top: 152px;
 
 	color: #FFFFFF;
 }
+.fbLogout-container{
+	position: absolute;
+	width: 177px;
+	height: 52px;
+	left: 118px;
+	top: 420px;
 
+	background: #3B5998;
+	border-radius: 10px;
+}
+#fbLogout-btn{
+	position: absolute;
+	width: 49px;
+	height: 48px;
+	left: 10px;
+	top: 2px
+} 
+.fbLogout-container p{
+	position: absolute;
+	width: 60px;
+	height: 39px;
+	left: 88px;
+	top: 15px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: normal;
+	color: white;
+} 
+
+.reset-password{
+	padding: 5px 5px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 290px;
+    
+    background-color: #4B79A1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 0px solid #ccc;
+}
+.reset-password h1{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	margin-top: 10px; 
+	color:white;
+	text-align: center;
+	
+}
+.delete-account{
+	padding: 5px 5px;
+    margin-bottom: 100px;
+    border-radius: 6px;
+    margin-right: 35px;
+    margin-left: 35px;
+    
+    background-color: #4B79A1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    border-bottom: 0px solid #ccc;
+}
+.delete-account h1{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	margin-top: 10px;
+	color:white;
+	text-align: center;
+	
+}
+
+.profile-container{
+	position: absolute;
+	width: 414px;
+	height: 659px;
+}
+
+.name-container{
+	position: absolute;
+    width: 100%;
+    top: 250px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    opacity: 0.80;
+    color: #000000;
+}
 
 
 /*ACCOUNT END*/
