@@ -8,9 +8,11 @@
 		<link href="/css/main-theme.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta charset="ISO-8859-1"> <!-- UNICODE -->
-		<style> @import url('https://fonts.googleapis.com/css?family=Rubik');</style>
+		<style> 
+			@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+			@import url('https://fonts.googleapis.com/css?family=Montserrat:700,800,900');
+		</style>
 		<link rel="shortcut icon" type="image/png" href="favicon/hourglassColor2.svg"/>
-
 
 </head>
 <body onload="loadNotiOptions()">
@@ -25,12 +27,13 @@
 			<div id="session-name">
     			<input type="text" id="sessionname" name="sessionname" placeholder="{{sessionname}}">
 			</div>
-			<img src="/svg/edit.svg" alt="EDIT" id="btn-edit" onclick="editTasksShow()">
-			<div class="headerTime" id="timeBox">
-				<p>Remaining Time:</p>
-				<div class="time" id="time">{{time}}</div>
-				<div class="duedate" id="duedate">Due by: {{duedate}}</div>
-			</div>
+			<img src="/svg/edit.svg" alt="EDIT" id="btn-edit-task">
+		</div>
+
+		<div class="headerTime" id="timeBox">
+			<p>Remaining Time:</p>
+			<div class="time" id="time">{{time}}</div>
+			<div class="duedate" id="duedate">Due: {{duedate}}</div>
 		</div>
 		<!-- END header -->
 
@@ -42,9 +45,9 @@
 				<li class="task" id="{{id}}"> 
 					<h1 class="taskname">{{name}}</h1>
 
-					<img class="deleteTaskIcon" id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
-
 					<p> <img id="clockIcon-task" src="https://img.icons8.com/material-rounded/24/000000/time.png">{{time}}</p>
+
+					<img class="deleteTaskIcon" id="deleteTaskIcon" src="/svg/trash.svg" onclick="deleteTask()">
 				</li>
 			{{/each}}
 
@@ -69,7 +72,8 @@
 
 		<!--- END ongoing session --->
 
-		<button class="btn-timer" id="startTimer" onclick="start()">START</button>
+		<button class="btn-timer" id="startTimer">START</button>
+		<button class="btn-timer" id="stopTimer">PAUSE</button>
 <!--
 		<button class="btn-timer" id="otherStartTimer" onclick="otherStart()" style="margin-right:100px; background-color:orange;">OTHER</button> 
 
@@ -95,7 +99,7 @@
 
 			<div class="container-options-open-lower">
 				<p>Push Notifications <br/>
-				Voice Notifications</p>
+				Session Sound Alert</p>
 					<div class="toggleContainer_01" id="optionToggle">
 						<input type="checkbox" id="pushNoti" onclick="toggleNoti()"/>
 						<label for="pushNoti">Toggle01</label>
@@ -130,15 +134,15 @@
 			<form method="get" role="form" action="/session/{{sessionname}}/addtask">
 				<h2>Add a New Task</h2>
 				<input id="taskname" type="text" placeholder="Enter Task Name" name="taskname" required>
-
-				<label for="time"><b>How long will it take?</b></label>
+				<b></b>
+				<label for="time">How long will it take?</label>
 				<div></div>
 		    	<input id="timeInputBox" type="number" name="hour" min="0" max="30" required>
 		    	<label for="hour"><p>hr</p></label>
 		    	<input id="timeInputBox" type="number" name="minute" min="0" max="59" required>
 		    	<label for="min"><p>min</p></label> <br>
-
-		    	<label for="date"><b>Finish By:</b></label>
+				<b></b>
+		    	<label for="date">Finish By:</label>
 		    	<input id="taskdate" type="date" placeholder="Pick Date" name="taskdate" required>
 				
 		    	<button type="button" class="btn-cancel" onclick="closeNewTask()">✕</button>
@@ -147,11 +151,9 @@
 			</form>
 		</div>
 <!--end new task pop up-->
-<script>
-if (sessionStorage.deleteTaskIcon){
-
-}
-</script>
+		<div style="display: none"> 
+			<p id="running">{{running}}</p>
+		</div>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/newSession.js"></script>

@@ -4,6 +4,7 @@
 			"name": "Chem 6A Study",
 			"time": "06:00:00",
 			"duedate": "2019-03-15",
+			"running": "false",
 			"tasks": 
 				[
 					{
@@ -27,6 +28,7 @@
 			"name": "Workout",
 			"time": "01:00:00",
 			"duedate": "2019-03-07",
+			"running": "false",
 			"tasks": 
 				[
 					{
@@ -45,6 +47,7 @@
 			"name": "Study",
 			"time": "02:00:00",
 			"duedate": "2019-03-07",
+			"running": "false",
 			"tasks": 
 				[
 					{
@@ -63,6 +66,7 @@
 			"name": "Chores",
 			"time": "00:00:10",
 			"duedate": "2019-03-07",
+			"running": "false",
 			"tasks": 
 				[
 					{
