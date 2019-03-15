@@ -62,7 +62,7 @@ function initializePage() {
 
 		setTimeout(function(){
 			location.replace(url);
-		}, 500);
+		}, 10);
 	});
 
   //function to make delete session work
